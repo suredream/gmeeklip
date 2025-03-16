@@ -1,6 +1,7 @@
 {
-    "title":"Blog Title",
-    "subTitle":"Blog description",
+    "title":"Web Clip",
+    "subTitle":"你有权随时退隐到自己的内心",
+    "homeUrl":"https://github.com/suredream/gmeeklip",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
     "GMEEK_VERSION":"last"
 }
