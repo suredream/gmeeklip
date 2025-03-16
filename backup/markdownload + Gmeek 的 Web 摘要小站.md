@@ -1,5 +1,3 @@
-# markdownload + Gmeek 的 Web 摘要小站
-
 很喜欢类似[https://clip.owenyoung.com/](https://clip.owenyoung.com/)的网站，希望将一些有趣的文章全文留在便于浏览的地方，但不要进bookmark，也不要进知识管理系统，就是单纯地留个记录。
 
 也没有时间折腾，就利用现有的工具串一个workflow。再次感谢 [Meekdai](https://github.com/Meekdai) 和 [owen](https://github.com/theowenyoung) 。
