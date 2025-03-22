@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="AI 让开发者变得更蠢
+[AI is Making Developers Dumb | James](https://eli.cx/blog/ai-is-making-developers-dumb)
+
+There’s a reason behind why I say this. Over time, you develop a reliance on LLM tools. This is to the point where is starts to become hard for you to work without one.  
+我这么说是有原因的。">
+<meta property="og:title" content="AI 让开发者变得更蠢">
+<meta property="og:description" content="AI 让开发者变得更蠢
+[AI is Making Developers Dumb | James](https://eli.cx/blog/ai-is-making-developers-dumb)
+
+There’s a reason behind why I say this. Over time, you develop a reliance on LLM tools. This is to the point where is starts to become hard for you to work without one.  
+我这么说是有原因的。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://github.com/suredream/gmeeklip/post/AI%20-rang-kai-fa-zhe-bian-de-geng-chun.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>AI 让开发者变得更蠢</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">AI 让开发者变得更蠢</h1>
+<div class="title-right">
+    <a href="https://github.com/suredream/gmeeklip" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suredream/gmeeklip/issues/6" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>AI 让开发者变得更蠢<br>
+<a href="https://eli.cx/blog/ai-is-making-developers-dumb" rel="nofollow">AI is Making Developers Dumb | James</a></p>
+<p>There’s a reason behind why I say this. Over time, you develop a reliance on LLM tools. This is to the point where is starts to become hard for you to work without one.<br>
+我这么说是有原因的。随着时间的推移，你会逐渐依赖工具。到了一定程度，如果没有工具，你很难工作。</p>
+<p>I got into software engineering because I love building things and figuring out how stuff works. That means that I enjoy partaking in the laborious process of pressing buttons on my keyboard to form blocks of code.<br>
+我之所以从事软件工程是因为我喜欢构建东西并弄清楚事物的工作原理。这意味着我喜欢参与按下键盘上的按钮来形成代码块的繁琐过程。</p>
+<p>LLM-assisted workflows take this away. Instead of the satisfaction of figuring out a problem by hand, one simply asks the LLM to take a guess.<br>
+辅助工作流程可以解决这个问题。人们不再需要手动解决问题，而是只需让机器进行猜测即可。</p>
+<p>Instead of understanding why things work in the way they do, you become dependent on an assistant to tell you what you should do.<br>
+你不再理解事物运作的原因，而是依赖助手来告诉你应该做什么。</p>
+<p>Some people might not enjoy writing their own code. If that’s the case, as harsh as it may seem, I would say that they’re trying to work in a field that isn’t for them. Maybe you’re just here for the money? Fair enough. That happens with every profession, and it generally shows through one’s enthusiasm and demeanor.<br>
+有些人可能不喜欢自己编写代码。如果是这样的话，尽管听起来很残酷，但我想说他们正在尝试从事不适合自己的领域。也许你只是为了钱？这很公平。每个职业都会发生这种情况，而且通常会通过一个人的热情和举止表现出来。</p>
+<p>The best engineers I’ve met are people who will spend hours at the weekend building their own version of a tool or software. Heck, that’s where you get innovation and advancements from. You can’t find performance improvements without a good understanding of how a system works, otherwise you’re just shooting in the dark.<br>
+我见过的最好的工程师是那些愿意在周末花几个小时构建自己版本的工具或软件的人。哎呀，这就是你获得创新和进步的地方。如果你不了解系统的工作原理，你就无法找到性能改进，否则你就只是在黑暗中摸索。</p>
+<p>There is a concept called “Copilot Lag”. It refers to a state where after each action, an engineer pauses, waiting for something to prompt them what to do next. There is no self-sufficiency, just the act of waiting for an AI to tell them what should come next. It’s akin to where a junior in the field might start - relying on their more senior colleagues to guide them and understand how to proceed.<br>
+有一个概念叫“副驾驶延迟”。它指的是工程师在每次操作后都会暂停，等待某些东西提示他们下一步该做什么的状态。他们无法自给自足，只能等待人工智能告诉他们下一步该做什么。这类似于该领域的初级人员可能刚开始的情况——依靠更资深的同事来指导他们并了解如何进行。</p>
+<p>It’s a real thing.  这是真实的事情。</p>
+<p>Eons ago, I used to use GitHub Copilot in VS Code. When I look back on that time period now, I’m amazed I didn’t do more damage to knowledge retention.<br>
+很久以前，我曾经在 VS Code 中使用过 GitHub Copilot。现在回想起那段时间，我很惊讶自己没有对知识保留造成更大的损害。</p>
+<p>Over time, I started to forget basic foundational elements of the languages I worked with. I started to forget parts of the syntax, how basic statements are used. It’s pretty embarrassing to look back and think about how I was eroding the knowledge I had gathered just because I wanted a short term speed increase.<br>
+随着时间的推移，我开始忘记我所使用的语言的基本基础元素。我开始忘记部分语法，忘记基本语句的使用方法。回想起来，我只是为了短期内提高速度而浪费了我积累的知识，这真是令人尴尬。</p>
+<p>That’s the reality of what happens when you use Copilot for a year. You start to forget things, because you are no longer having to think about what you’re doing in the same way that you would when you try to figure out how to solve a problem yourself.<br>
+这就是使用 Copilot 一年后会发生的现实情况。你会开始忘记一些事情，因为你不再需要像自己想办法解决问题那样思考自己在做什么。</p>
+<p>It was actually a video by ThePrimeagen that made me realise this and confront reality. He had a clip from one of his streams where he was talking about Copilot lag. What a wake up call that was!<br>
+实际上，是 ThePrimeagen 的一段视频让我意识到了这一点，并直面现实。他在一次直播中剪辑了一段关于 Copilot 延迟的视频。这真是一个警钟！</p>
+<p>I stopped using LLM assistants for coding after that, and I’m glad I did.<br>
+从那以后，我就不再使用助手来编写代码了，我很高兴我这么做了。</p>
+<p>To give an example, compilers are an area that I find super interesting. I had actually tried to work through Thorsten Ball’s <a href="https://interpreterbook.com/" rel="nofollow">Writing An Interpreter In Go</a> at the time. But it was completely pointless. Instead of learning about the topics and techniques in the book, Copilot was just outputting the code for me. Sure, it might feel cool that you just wrote a parser, but could you do it again if you turned Copilot off? Probably not. You also lose the chance to learn about concepts like memory management or data oriented design, because Copilot just gives you some code that it thinks might work, instead of you researching topics and understanding nuances.<br>
+举个例子，编译器是我觉得非常有趣的一个领域。当时我实际上曾尝试过阅读 Thorsten Ball 的 <a href="https://interpreterbook.com/" rel="nofollow">《用 Go 编写解释器》</a> 。但完全没有意义。Copilot 并没有让我学习书中的主题和技术，而是直接输出代码。当然，编写解析器可能会感觉很酷，但如果你关闭 Copilot，你还能再写一次吗？可能不行。你也失去了学习内存管理或面向数据设计等概念的机会，因为 Copilot 只会给你一些它认为可能有用的代码，而不是让你研究主题和理解细微差别。</p>
+<p>That actually leads into another angle. Research. This time with a more positive spin on AI.<br>
+这实际上引出了另一个角度。研究。这次是对人工智能的更积极的看法。</p>
+<p>It’s true. LLMs are useful. They’re like a search engine. We used to use stack overflow to get help with a programming problem. Since LLMs are trained on all that data, they can be effective tools to learn more about a concept. But only if you use them with an inquisitive mindset and don’t trust their output.<br>
+确实如此。LLMs 很有用。它们就像搜索引擎。我们过去常常使用 Stack Overflow 来解决编程问题。由于 LLMs 经过了所有数据的训练，因此它们可以成为学习概念的有效工具。但前提是你要带着好奇的心态使用它们，并且不要相信它们的输出。</p>
+<p>As they’re notorious for making crap up because, well, that’s how LLMs work by design, it means that they’re probably making up nonsense half the time. It’s just about patterns and token sequences, not real statements by people that are insanely knowledgeable. It’s trained on content created by people who know what they’re talking about, but it regurgitates it in a manner that differs from the source material.<br>
+由于他们以胡编乱造而臭名昭著，因为，嗯，这就是设计的工作方式，这意味着他们可能有一半的时间都在胡编乱造。它们只是关于模式和标记序列，而不是知识渊博的人的真实陈述。它接受过由知道自己在说什么的人创建的内容的训练，但它以不同于源材料的方式重新表达了这些内容。</p>
+<p>Anyway, interrogating responses and trying to figure out why it's recommending certain approaches is the only real way to get benefits from an LLM. Treat it like a conversation with someone, where you’re trying to understand why they like a certain technique. If you don’t understand why something is being suggested, or what it’s actually doing under the hood, then you have failed.<br>
+无论如何，询问回复并试图弄清楚为什么它推荐某些方法是从中获益的唯一真正方法。把它当作与某人的对话，你试图理解他们为什么喜欢某种技术。如果你不明白为什么会建议某些东西，或者它实际上在幕后做什么，那么你就失败了。</p>
+<p>And make notes! Lots of them! I recently started playing around with Zig, and I constantly make notes on things that I am learning about the language, especially considering that it’s my first time dealing with memory management. They can be a useful reference point and handy when you’re stuck, or maybe even something to share with others!<br>
+做笔记！做很多笔记！我最近开始玩 Zig，我经常记下我正在学习的语言知识，尤其是考虑到这是我第一次处理内存管理。当你遇到困难时，它们可以成为有用的参考点和方便之物，甚至可以与他人分享！</p>
+<p>I wrote this post on my morning commute, and my Tube has arrived at its destination, so I’ll leave it here.<br>
+我在早上通勤时写了这篇文章，我的地铁已经到达目的地，所以我就把它留在这里了。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://github.com/suredream/gmeeklip">Web Clip</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suredream/gmeeklip");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
