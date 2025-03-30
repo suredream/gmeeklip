@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# Implementers, Solvers, and Finders
+
+src: [Implementers, Solvers, and Finders](https://rkoutnik.com/2016/04/21/implementers-solvers-and-finders.html)
+
+I was talking to a former student when he brought up [an article written by a well-seasoned programmer regretting his choice of career](http://thecodist.com/article/my-biggest-regret-as-a-programmer). This fellow had rejected the management path in order to stay in the coding trenches and as a result, ended up in some absolutely crummy situations. He writes about management antipattern after antipattern that left him sitting with the bill.  
+我和一位以前的学生聊天时，他提到了[一篇文章，作者是一位经验丰富的程序员，他对自己选择的职业感到后悔](http://thecodist.com/article/my-biggest-regret-as-a-programmer) 。">
+<meta property="og:title" content="# Implementers, Solvers, and Finders">
+<meta property="og:description" content="# Implementers, Solvers, and Finders
+
+src: [Implementers, Solvers, and Finders](https://rkoutnik.com/2016/04/21/implementers-solvers-and-finders.html)
+
+I was talking to a former student when he brought up [an article written by a well-seasoned programmer regretting his choice of career](http://thecodist.com/article/my-biggest-regret-as-a-programmer). This fellow had rejected the management path in order to stay in the coding trenches and as a result, ended up in some absolutely crummy situations. He writes about management antipattern after antipattern that left him sitting with the bill.  
+我和一位以前的学生聊天时，他提到了[一篇文章，作者是一位经验丰富的程序员，他对自己选择的职业感到后悔](http://thecodist.com/article/my-biggest-regret-as-a-programmer) 。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://github.com/suredream/gmeeklip/post/%23%20Implementers%2C%20Solvers%2C%20and%20Finders.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title># Implementers, Solvers, and Finders</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle"># Implementers, Solvers, and Finders</h1>
+<div class="title-right">
+    <a href="https://github.com/suredream/gmeeklip" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suredream/gmeeklip/issues/8" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>Implementers, Solvers, and Finders</h1>
+<p>src: <a href="https://rkoutnik.com/2016/04/21/implementers-solvers-and-finders.html" rel="nofollow">Implementers, Solvers, and Finders</a></p>
+<p>I was talking to a former student when he brought up <a href="http://thecodist.com/article/my-biggest-regret-as-a-programmer" rel="nofollow">an article written by a well-seasoned programmer regretting his choice of career</a>. This fellow had rejected the management path in order to stay in the coding trenches and as a result, ended up in some absolutely crummy situations. He writes about management antipattern after antipattern that left him sitting with the bill.<br>
+我和一位以前的学生聊天时，他提到了<a href="http://thecodist.com/article/my-biggest-regret-as-a-programmer" rel="nofollow">一篇文章，作者是一位经验丰富的程序员，他对自己选择的职业感到后悔</a> 。这位程序员拒绝了管理之路，只为留在编程界，结果陷入了非常糟糕的境地。他写了一篇又一篇的管理反模式，最终让他不得不买单。</p>
+<p>Hearing about a dismal career like that is depressing. So much so, that my student who previously was one of my most enthusiastic programmers had turned morose. Who’d blame him? All he had to look forward to was a life filled with misery caused by other folks’ poor decision-making skills. Learning that sub-par managers will dictate your whole life is almost as traumatizing as dealing with said managers. To make matters worse, his team had recently mulled over their future career plans at lunch. None of them anticipated that they’d remain programmers. As soon as they could, they were going to take the leap into management, avoiding what our blogging friend refered to as his “biggest regret”.<br>
+听到这样惨淡的职业生涯让人沮丧。以至于我的学生，曾经是我最热情的程序员之一，现在变得郁郁寡欢。谁会责怪他呢？他唯一能期待的就是充满痛苦的生活，因为其他人糟糕的决策能力。得知不合格的经理将决定你的一生，几乎和与上述经理打交道一样令人痛苦。更糟糕的是，他的团队最近在午餐时仔细考虑了他们未来的职业规划。他们中没有人预料到他们会继续做程序员。只要他们有机会，他们就会跳槽到管理层，避免我们的博客朋友所说的“最大的遗憾”。</p>
+<p>I’ve talked to a lot of people who live, eat and breathe programming. It’s hard to stand next to them without hearing about the latest library or tool they’re checking out and how what they’re building is awesome and going to revolutionize everything (or is useless but _ aren’t neural networks cool!?!_). Almost all of them echoed the earlier sentiment - programming as a profession wasn’t for them.<br>
+我和许多生活、饮食和呼吸都离不开编程的人交谈过。站在他们旁边，很难不听到他们正在检查的最新库或工具，以及他们正在构建的东西是多么棒，将彻底改变一切（或者说是无用的，但神经网络不是很酷吗！？！）。几乎所有人都呼应了之前的观点——编程不适合他们。</p>
+<p>How could this be? A group of people, granted the ability to do what they love for great pay &amp; perks, all wanting to move on? It all comes down to:<br>
+怎么会这样呢？一群人被赋予了做自己喜欢的事情、获得高薪和福利的能力，却都想离开？这一切都归结于：</p>
+<h1>People want to <em>make</em> decisions rather than execute them</h1>
+<p>人们想要<em>做出</em>决定，而不是执行决定</p>
+<p>Turns out science agrees on this: <a href="http://www.theatlantic.com/health/archive/2016/03/people-want-power-because-they-want-autonomy/474669/" rel="nofollow">People want power because they want autonomy</a>. Most of the time, folks desire to move up the career ladder not for pay, better title, or keys to the executive washroom (are those still a thing?) but because they wish to be able to exercise greater autonomy over their lives. <a href="https://www.youtube.com/watch?v=u6XAPnuFjJc" rel="nofollow">Psychologist Daniel Pink agrees</a> - he’s found that the three qualities that contribute most to workplace satisfaction and overall productivity are autonomy, mastery &amp; purpose.<br>
+事实证明，科学界对此表示认同： <a href="http://www.theatlantic.com/health/archive/2016/03/people-want-power-because-they-want-autonomy/474669/" rel="nofollow">人们想要权力，因为他们想要自主权</a> 。大多数时候，人们希望在职业阶梯上更上一层楼，不是为了薪水、更好的头衔或行政洗手间的钥匙（这些现在还存在吗？），而是因为他们希望能够对自己的生活行使更大的自主权。 <a href="https://www.youtube.com/watch?v=u6XAPnuFjJc" rel="nofollow">心理学家丹尼尔·平克对此表示赞同</a> ——他发现，对工作场所满意度和整体生产力贡献最大的三个品质是自主权、精通和目标。</p>
+<p>I too, was bitten by the “Management = autonomy” bug. My original career goal was to rise up in the ranks of programmers, eventually crowning myself king of my own startup, the ultimate in autonomy (or so I thought). I carefully chose the work I did at each job to align with this goal - and succeeded, eventually earning the rank of a lead position (before the company ultimately collapsed, but that’s another story).<br>
+我也曾被“管理 = 自主权”这个理念所困扰。我最初的职业目标是跻身程序员行列，最终成为自己创业公司的老板，实现终极自主权（至少我是这么认为的）。我仔细选择了每一份工作，以符合这个目标 - 并取得了成功，最终获得了领导职位（在公司最终倒闭之前，但那是另一个故事）。</p>
+<p>During my last job hunt, I had two fantastic options:<br>
+在我上次找工作的时候，我有两个很棒的选择：</p>
+<ul>
+<li>Leader, with a few constraints<br>
+领导者，但有一些限制</li>
+<li>Not Leader, with full autonomy<br>
+不是领导者，拥有完全的自主权</li>
+</ul>
+<p>This was it! I could capitalize on my previous work and <em>finally</em> …not program. Something was wrong here - what did I ultimately want? When it came down to it, I wanted to write code. I love building things and I didn’t want to give that up. Sure, startups mean doing a little bit of everything but the success case everyone’s working towards means outsourcing all of your own work until you’ve forgotten all of the shortcuts to your favorite IDE. I chose the latter job, the one that would grant me the most autonomy.<br>
+就是这样！我可以利用我以前的工作， <em>最终</em> ……不再编程。这里有些不对劲——我最终想要什么？归根结底，我想写代码。我喜欢创造东西，我不想放弃。当然，创业意味着什么都做一点，但每个人都在努力实现的成功案例意味着将自己的所有工作外包，直到你忘记了所有你最喜欢的 IDE 的快捷方式。我选择了后者，因为它能给我最大的自主权。</p>
+<h2>Implementers, Solvers, and Finders</h2>
+<p>实施者、解决者和发现者</p>
+<p>Could it be that we’ve utterly mischaracterized how career development as a programmer should work? The guiding trifecta of Junior, Regular, &amp; Senior is <a href="https://inmailfail.com/posts/the-fed-needs-to-cut-down-on-title-inflation" rel="nofollow">incredibly easy to game</a> (A misguided company offered me a senior level job just under a year into my career). A word ceases to be useful when we can’t agree on its purpose - title relativism means a given title can convey entirely separate messages to different companies. Which is more impressive, a “Senior UI Engineer” or a “Javascript Architect”?<br>
+难道我们完全误解了程序员的职业发展方式？初级、普通和高级的指导性三重奏<a href="https://inmailfail.com/posts/the-fed-needs-to-cut-down-on-title-inflation" rel="nofollow">非常容易被玩弄</a> （一家被误导的公司在我入职不到一年时就为我提供了一份高级职位）。当我们无法就某个词的用途达成一致时，它就不再有用——头衔相对主义意味着一个特定的头衔可以向不同的公司传达完全不同的信息。哪个更令人印象深刻，“高级 UI 工程师”和“Javascript 架构师”？</p>
+<p>If we’re to escape this situation where fantastic fanatic programmers can’t see themselves programming in three years, we need to couple our words to real world meaning. Instead of Jr/Sr nonsense (which already reeks of the years-of-experience antipattern), why don’t we talk about what the job will actually entail? Let’s define your job title by how much autonomy your day-to-day work gives you.<br>
+如果我们要摆脱这种狂热的程序员无法想象自己在三年内编程的境况，我们需要将我们的话语与现实世界联系起来。与其说初级/高级的废话（这已经散发出多年经验反模式的恶臭），我们为什么不谈谈这份工作实际上需要做什么呢？让我们根据你的日常工作给你多少自主权来定义你的职位。</p>
+<p>Do you find that most of your time is simply closing tickets, and your team rarely considers your input? Your title is <em>Solution Implementer</em>.<br>
+您是否发现您的大部分时间都只是在处理工单，而您的团队很少考虑您的意见？您的头衔是<em>解决方案实施者</em> 。</p>
+<p>Are you given general problems and left to your own devices on how they’re fixed? When brainstorming, is your input considered by your teammates? You’re working as a <em>Problem Solver</em>.<br>
+您是否会遇到一般性问题，并自行决定如何解决？集思广益时，您的意见是否会被队友采纳？您是一名<em>问题解决者</em> 。</p>
+<p>Are you given near-total autonomy in choosing what you work on? Can you tell your boss “That’s an interesting idea but my time would be better spent elsewhere” (and <em>not</em> get fired on the spot)? You’re a <em>Problem Finder</em>.<br>
+您是否被赋予了几乎完全的自主权来选择工作内容？您是否能告诉老板“这是一个有趣的想法，但我的时间最好花在其他地方”（而<em>不会</em>当场被解雇）？您是<em>问题发现者</em> 。</p>
+<p>Our regretful fellow author of the post above spent most of his time as an Implementer. People (often non-technical) assigned concrete tasks without room for feedback or innovation. Every one of his stories shares the same problem: <em>He wasn’t given autonomy</em>.<br>
+令人遗憾的是，上述文章的作者大部分时间都是一名实施者。人们（通常是非技术人员）被分配了具体的任务，没有反馈或创新的空间。他的每一个故事都存在同样的问题： <em>他没有被赋予自主权</em> 。</p>
+<p>I don’t mean to say that everyone who’s at the Solution Implementer level should immediately quit their jobs, or that life as an Implementer de facto means you’re a bad programmer. Beginning programmers who are still learning the base concepts will thrive as Implementers <em>if</em> handed solutions matching the challenge level they’re willing to accept. The mere task of implementing something provides plenty of opportunities to learn (in fact, I’d say it’s the only way to truly understand something). Beginners of all skill levels will get lost if thrown at a problem with too big of a scope for them to handle.<br>
+我并不是说所有处于解决方案实施者级别的人都应该立即辞职，或者说作为实施者的生活实际上意味着你是一个糟糕的程序员。 <em>如果</em>交给他们符合他们愿意接受的挑战级别的解决方案，仍在学习基本概念的初级程序员将作为实施者茁壮成长。仅仅实施某件事就提供了大量的学习机会（事实上，我认为这是真正理解某件事的唯一方法）。如果遇到一个范围太大而无法处理的问题，所有技能水平的初学者都会迷失方向。</p>
+<p>One can’t remain a beginner forever. There needs to be a way for these implementers to level up. We, as a community, don’t have an agreed-upon way to take a budding programmer and hand them continually-increasing challenge. The standard practice in leveling up seems to be to quit and start hunting for a new job at the next level. This is why my standing advice to beginning programmers is to find a new job after six months (hopefully in the same company).<br>
+一个人不可能永远都是初学者。需要有一种方式让这些实施者升级。作为一个社区，我们没有一个一致认可的方式来接受一个崭露头角的程序员并给他们不断增加的挑战。升级的标准做法似乎是辞职并开始在下一个级别寻找新工作。这就是为什么我对初级程序员的长期建议是在六个月后找一份新工作（希望在同一家公司）。</p>
+<p>It can be difficult to tell if a company is actually looking for a Problem Solver or the work is just Implementation in disguise. One org smell to look out for is the ratio of programmers to project/product managers. I’ve fallen for this, thinking I’d get to take charge of a frontend when what they really wanted me to do was slog through 17,000 issues in JIRA. Determining the true culture of a company is troublesome, you can start by <a href="https://rkoutnik.com/articles/Questions-to-ask-your-interviewer.html" rel="nofollow">interviewing your interviewer</a>.<br>
+很难判断一家公司是真的在寻找问题解决者，还是只是伪装的实施者。需要注意的一个组织气味是程序员与项目/产品经理的比例。我曾经陷入其中，以为我会负责前端，但他们真正想让我做的是处理 JIRA 中的 17,000 个问题。确定一家公司的真实文化很麻烦，你可以从<a href="https://rkoutnik.com/articles/Questions-to-ask-your-interviewer.html" rel="nofollow">面试你的面试官</a>开始。</p>
+<p>On the other hand, if our programmer does land that Solver job, they will start spreading their wings beyond the basics. At this point their opinion starts to mean something, and the challenges they face take on a new shape as their sphere of responsibility grows. There’s an entirely new set of skills to learn - suddenly effective communication means a whole lot more than “following the JIRA process correctly”. Solvers need to learn how to evangelize their favorite solutions and defend them against other Solvers who have different preferences.<br>
+另一方面，如果我们的程序员确实获得了 Solver 的工作，他们将开始在基础之外拓展自己的领域。此时，他们的观点开始有意义，随着职责范围的扩大，他们面临的挑战也呈现出新的面貌。有一套全新的技能需要学习——突然间，有效的沟通意味着比“正确遵循 JIRA 流程”更多的东西。Solver 需要学习如何宣传他们最喜欢的解决方案，并保护这些解决方案免受其他具有不同偏好的 Solver 的影响。</p>
+<p>Solver is a enormous growth area and the typical Solver may spend years making mistakes, learning, and causing <em>new</em> catastrophes until their knowledge grows to the point where they’re ready to make the final leap to Finder.<br>
+Solver 是一个巨大的增长领域，典型的 Solver 可能要花费数年时间犯错、学习并造成<em>新的</em>灾难，直到他们的知识增长到准备好最终飞跃到 Finder 的地步。</p>
+<p>Mid-size Startups (&gt; 50 people) are a great place for Solvers - there’s plenty of problems begging for solutions and often Solvers can branch out into areas that would be verboten to them at a larger, established company. As the startup grows, so does their responsibility - this is a common way for a Solver to grow into a Finder. Another case is for a company to create fertile ground for Finders and recruit them directly.<br>
+中型初创公司（约 50 名员工）是解决者的理想之地 - 那里有很多问题需要解决，而且解决者通常可以涉足大型成熟公司禁止他们涉足的领域。随着初创公司的发展，他们的责任也随之增加 - 这是解决者成长为发现者的常见方式。另一种情况是，公司为发现者创造肥沃的土壤并直接招募他们。</p>
+<p>The final stage of programmer evolution is the Finder. These folks are considered experts in their chosen domain (and are prudent about others). Writing Finder job descriptions is an exercise in futility. As my boss put it: “I can’t tell you the specifics of what you’ll be doing here because your first task will be to figure that out.” A Finder will be able to anticipate problems before they happen, usually because they’ve been in that situation before. Finders are the canonical “<a href="https://steve-yegge.blogspot.com/2008/06/done-and-gets-things-smart.html" rel="nofollow">Done and get things smart</a>” that Steve Yegge likes to talk about. Empathy is a critical key in a Finder’s toolbox. Finders need to work with a variety of other folks without swinging the “I’m smart &amp; because I said so” hammer (otherwise they’re <a href="http://www.inc.com/jim-schleckser/why-netflix-doesn-t-tolerate-brilliant-jerks.html" rel="nofollow">Brilliant Jerks</a>).<br>
+程序员进化的最后阶段是 Finder。这些人被认为是他们所选领域的专家（并且对其他人很谨慎）。撰写 Finder 职位描述是徒劳的。正如我的老板所说：“我无法告诉你你在这里将要做什么的具体内容，因为你的首要任务是弄清楚这一点。” Finder 能够在问题发生之前预见到问题，通常是因为他们以前遇到过这种情况。Finder 是 Steve Yegge 喜欢谈论的典型的“ <a href="https://steve-yegge.blogspot.com/2008/06/done-and-gets-things-smart.html" rel="nofollow">完成并让事情变得聪明</a> ”的人。同理心是 Finder 工具箱中的关键。Finder 需要与各种各样的人一起工作，而不是挥舞“我很聪明，因为我这么说”的锤子（否则他们就是<a href="http://www.inc.com/jim-schleckser/why-netflix-doesn-t-tolerate-brilliant-jerks.html" rel="nofollow">聪明的混蛋</a> ）。</p>
+<p>Finders need autonomy, by definition. Any job that puts significant restraints on what a programmer can &amp; can’t do is a poor fit for a Finder. Poorly-managed startups love to hire smart people and then tell them what to do in precise detail. No one wins.<br>
+从定义上来说，Finder 需要自主权。任何对程序员能做什么和不能做什么有严格限制的工作都不适合 Finder。管理不善的初创公司喜欢雇佣聪明的人，然后详细地告诉他们该做什么。这样谁都赢不了。</p>
+<p>My hope is this post will create shared vocabulary. This triumvirate of concepts can help great folks find the job that’s best for them. A company may be honestly seeking an Implementor, and effectively communicating that to a Solver or Finder will save both parties a lot of time.<br>
+我希望这篇文章能创造共享词汇。这三个概念可以帮助优秀的人找到最适合他们的工作。一家公司可能正在诚实地寻找实施者，有效地将这一情况传达给解决者或发现者将为双方节省大量时间。</p>
+<p>More importantly, I want programmers everywhere to realize that it’s possible to have autonomy while still writing code for a living. Some may find fulfillment in leadership (I know I do, the siren song has abated but is not gone) but plenty of hackers out there just want to make great things. There’s hope for us yet!<br>
+更重要的是，我希望世界各地的程序员都能意识到，在靠编写代码谋生的同时，拥有自主权也是可能的。有些人可能会在领导岗位上找到成就感（我知道我是这样，诱惑已经减弱但并没有消失），但很多黑客只是想做出伟大的事情。我们还有希望！</p>
+<p>Postscript: If this article rang true to you and you feel like you’re ready to level up, I’d love to hear from you. What brought you to your current job? What changed? How are you looking for the job that fits you?<br>
+后记：如果这篇文章对你有启发，并且你觉得自己已经准备好升级了，我很乐意听听你的意见。是什么让你选择了现在的工作？什么改变了？你是如何寻找适合自己的工作的？</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://github.com/suredream/gmeeklip">Web Clip</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suredream/gmeeklip");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
