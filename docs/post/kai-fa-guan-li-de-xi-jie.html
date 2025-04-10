@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="开发管理的细节
+作者：Jeff Tao  
+链接：https://zhuanlan.zhihu.com/p/13371989355  
+来源：知乎  
+著作权归作者所有。">
+<meta property="og:title" content="开发管理的细节">
+<meta property="og:description" content="开发管理的细节
+作者：Jeff Tao  
+链接：https://zhuanlan.zhihu.com/p/13371989355  
+来源：知乎  
+著作权归作者所有。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://github.com/suredream/gmeeklip/post/kai-fa-guan-li-de-xi-jie.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>开发管理的细节</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">开发管理的细节</h1>
+<div class="title-right">
+    <a href="https://github.com/suredream/gmeeklip" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suredream/gmeeklip/issues/9" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>开发管理的细节<br>
+作者：Jeff Tao<br>
+链接：<a href="https://zhuanlan.zhihu.com/p/13371989355" rel="nofollow">https://zhuanlan.zhihu.com/p/13371989355</a><br>
+来源：知乎<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>软件开发，在人员规模就几个人的时候，人效往往很高。但随着项目本身的复杂度的增加，要处理的场景越来越多，代码量也越来越大。比如<a href="https://link.zhihu.com/?target=https%3A//www.taosdata.com/" rel="nofollow">TDengine</a>，第一个版本不到15万行代码，但现在已经是超过70万行代码，测试代码都接近一百万行了。到今天，<a href="https://link.zhihu.com/?target=https%3A//www.taosdata.com/" rel="nofollow">TDengine</a>这个软件已经不是几个人能搞定了。随着团队规模的增加，协同沟通的成本急剧上升。而且为保证品质，团队引入了各种质量控制的流程，整个研发节奏慢了下来，人效大为下降。具体可以表现在几个场景：</p>
+<ol>
+<li>
+<p>研发在客户现场解决了一个BUG，改了几行代码，客户急着上线，但研发因为各种环境依赖，无法在自己笔记本上Build一个新的可以交付的版本，只能递交PR，等着发版负责人发版，然后下载安装。一般情况下，这一操作需要等待几个小时，在现场支持的人只能干着急。</p>
+</li>
+<li>
+<p>一位新入职的研发同学，至少要花上好几天时间才能自己独立的写程序、编译、测试，中间还需要不断的“骚扰”其他同事，问这问那。如果没有人协助，估计一周都搞不定。因此新人入职，我们美其名曰“熟悉环境”。</p>
+</li>
+<li>
+<p>公司建有CI/CD系统，看上去很不错，但所有人递交的PR都需要过一遍整个流程，特别是测试流程。TDengine整个测试例已经超过1500个，跑完都要2个多小时，这样导致一个PR的递交，要等很长时间。如果递交的PR有问题，还需要再递交，因此让新代码的递交效率大大降低。</p>
+</li>
+<li>
+<p>整个公司没有人能说出来到底有哪些场景的测试例在跑，虽然有测试设计文档，列出了哪些测试例，但实际跑的与文档上差别太大。而且很多情况下，测试例各写各的，虽然测试例的数量在不断增长，但测试有重叠，覆盖率依然不够。</p>
+</li>
+<li>
+<p>要测试某个用户场景，无论是研发，还是售前、交付，第一件事情就是申请计算资源。虽然我们已经有2600多个核的测试机房，但这些机器都被人为的分配给了不同的组和个人。因此要协调出新的资源，挺困难，不是鼠标点击一下就能解决的，往往就要开会协调，几个人的一个小时就这样过去了。</p>
+</li>
+</ol>
+<p>上面描写的五个场景在<a href="https://link.zhihu.com/?target=https%3A//www.taosdata.com/" rel="nofollow">TDengine</a>全部存在。整体来讲，我们研发效率是低下的。如果从我们对BUG修复的时长以及数目来看，与传统的大公司的研发相比，效率已经高不了多少，但与我们创业初期相比，1/3都没有。由于效率低下，导致我们的投入不够，也就导致产品的质量难以保证。</p>
+<h2><strong>效率低下的根本原因</strong></h2>
+<p>随着团队规模的增大，为什么协同沟通成本就急剧增加？研发效率就大幅下降呢？仔细分析，有几点原因：</p>
+<ol>
+<li>
+<p>**好些工作都难重复，都藏在个人的脑子里。**比如开发环境的依赖，都是各搞各的。每个人都要下载各种软件包、各种工具，读一大堆文档，按自己的理解做各种配置，最后工作，当然很开心。另外一个人，又是要走同样的路，手脚快的，也许几个小时搞定，但碰上手脚慢的，一天都搞不定，卡在什么地方，还没人能帮。</p>
+</li>
+<li>
+<p>**不重视工具、工作流管理的代码，没把他们纳入代码的版本管理。**比如发版工作，本来应该是全自动化，而且也确实做到了。但一旦发版的工作流做些修改，CI/CD又卡在一个人手里，取决于这个人的水平高低，有可能很快，也有可能很慢。但总之，即使水平低，你也没办法，因为其他人没法上手马上让它工作，而且相当多程序员往往不屑于写这类程序。因此让CI/CD跑起来，只有这位“牛人”能做。</p>
+</li>
+<li>
+<p>**文档与代码脱节。**比如我们TDengine测试代码，就与Testing Spec脱节。Testing Spec往往是过期的，初稿review之后再也不会有人改。新增、修改的测试例在文档里是反映不出来的。</p>
+</li>
+<li>
+<p>**对用户手册重视程度不足。**虽然 TDengine 的用户手册已经远远好于中国绝大部分技术公司，但与全球顶尖的软件公司比，还有不小的差距。用户手册由于本身的性质，导致它很容易落后于代码的更新。而且研发同学普遍的共识是，写用户手册不是研发工作，无法体现自己研发水平，因此投入不够。在这种情况下，售前、交付、还有用户的问题，都只能依赖我们产品的“专家”来亲自回答，而且有时自己都拿捏不准，还要问周围同事大半天，才能给用户一个精准的回答。而且因为他能回答客户产品问题，理所当然，还会被大家认为是高手。</p>
+</li>
+<li>
+<p>公司计算、网络资源的管理还是原始时代，完全是靠Excel表格人工在管理。</p>
+</li>
+</ol>
+<h2><strong>一切都需要代码化</strong></h2>
+<p>全球软件开发行业发展到今天，早有了成熟的方法应对这些效率低下、产品质量难以保证的场景，那就是一切都要代码化。因此我们会经常听到Infrastructure as code, Environment as code, Pipeline as code, Documentation as code, Security as code, Network as code这些词。这些词是"as code movement" 在一些具体场景的体现。代码化的核心目的是让一切可自动化、可重复、可回溯，每个研发不用做低水平的重复性的工作，从而提升研发效率，进而有更多资源投入来提升产品的质量。针对<a href="https://link.zhihu.com/?target=https%3A//www.taosdata.com/" rel="nofollow">TDengine</a>，我们可以明显看到需要做或改进的地方有：</p>
+<ol>
+<li>
+<p>**Environment as code：**即开发环境、测试环境的自动化部署。我们不能依赖某个人脑子的记忆或经验，依赖研发同学快速阅读第三方工具用户手册、试错的能力，而是要将这些经验、能力固化成为代码。一个人趟过所有的坑后，通过代码让其他同事都能享受他工作的结果，一键就能把自己的环境设置好，根本不用去了解Maven怎么安装，MQTT数据源怎么设置等等，而且其他同学可以在他代码基础上做调整。</p>
+</li>
+<li>
+<p>**Pipeline as code：**CI/CD的workflow代码化。我们早已代码化，但要把这些代码纳入到正常的版本管理，任何人都可以在现有的代码基础上修改、优化，增加新的步骤等。而且要保证我们的代码不能有任何环境的依赖，比如某台具体的测试机器，这样任何人Clone完代码后，自己一下就能把workflow搭建出来。同时，整个workflow包含的内容要越来越多。我们已经增加了Release Notes，测试覆盖率报告、性能测试报告自动生成。今后我们还要看哪些内容可以自动生成，哪些检查工具可以加上。</p>
+</li>
+<li>
+<p>**Documentation as code：**文档代码化。除用户手册之外，最重要的是测试例的列表。我们需要从测试例脚本本身自动生成测试例列表，而且自动分类。这样让任何人，包括售前、交付的同学，一看就知道到底测试过哪些场景，针对某个具体客户，是否需要新增场景。用户手册我们已经代码化，但做的还不够好，因此我们现在对于一个新的功能或BUG，研发负责人有项专门的工作，就是合并PR时，检查用户手册是否有更新。</p>
+</li>
+<li>
+<p>**Benchmark as code：**对比测试代码化。<a href="https://link.zhihu.com/?target=https%3A//www.taosdata.com/" rel="nofollow">TDengine</a>与其他时序数据库（Time Series Database）相比，有卓越的性能。但每个版本我们都要做对比测试，而且要不断增加与其他竞品的对比。我们已经部分实现，但还不够彻底，有一定的环境依赖。</p>
+</li>
+<li>
+<p>**Infrastructure as code：**即计算资源的分配要自动化。把我们内部的服务器资源的管理完全虚拟化、脚本化，对于闲置的资源自动释放。自动化后，我们一家100人的公司，测试机房有2600多个核，根本不会存在测试资源不够的时候。要新的计算资源，几秒钟搞定。</p>
+</li>
+</ol>
+<p>对于研发团队，现在我能看到无法完全代码化的工作是产品设计文档，有一些工具可以帮助大家，但难以100%代码化。抛开设计文档，其他所有工作都是可以，而且必须代码化的。代码化后，个人的经验、能力就转化为团队的经验和能力，沟通交流成本大幅下降，一切都是代码说话。这也是我们为什么要对整个研发团队统计代码量的原因。代码量不是绝对，更不是唯一指标，代码量大的同学，工作不一定出色，但代码量一直很低的同学，工作是一定有问题的。在我们过去，有的同学一个月都没有递交过一次代码，这种情况再也不能发生。</p>
+<h2><strong>一切代码化后的效果</strong></h2>
+<p>一切代码化后，很多工作改变了，我们可以明显的看到如下的结果：</p>
+<ol>
+<li>
+<p>任何人在自己不联网的计算机上都可以打包、发布版本。如果在客户现场发现BUG并解决了它，可以马上给它安装上自己的版本，而不会有任何不兼容的事情发生。</p>
+</li>
+<li>
+<p>任何人在自己计算机上，都可以跑测试，包括全量测试、稳定性测试、性能测试、性能对比测试、检查测试覆盖率等，而且不依赖公司的测试资源。因此完成一项功能或解决一个BUG，自己就可以全部跑一次，以避免递交PR时无法递交。</p>
+</li>
+<li>
+<p>性能优化的同学，可以一键先在自己计算机上跑性能测试，看性能是否确实提升了没有，而不是直接递交到测试平台，等待结果之后再看。</p>
+</li>
+<li>
+<p>新加入的同事，根本不需要熟悉环境，几个小时，就可以配置好开发环境，Clone代码，编译、运行、测试起来。手快的，就可以马上开始debug了。</p>
+</li>
+<li>
+<p>客户、售前、交付同学关于产品的问题，研发同学一律是把用户手册的截图或链接发给对方。如果无法做到，马上去修改文档，递交PR。这样我们每个人都不用脑子里记住或记录一些产品如何避坑的小技巧了。我们留给客户的印象就是专业，产品没有瑕疵，出错全怪我自己，是由于自己没细看文档。</p>
+</li>
+<li>
+<p>任何人，包括非研发团队的同学，可以清晰的看到每个发布的版本，进行了哪些具体测试，发布的版本是否有任何报错或报警。针对自己客户的场景，马上就知道还需要补充哪些测试用例，才能确保产品上线没有问题。</p>
+</li>
+<li>
+<p>需要计算资源的同学，只要登录内部网站鼠标点击几下，想要的硬件资源、配置的软件环境就马上准备好了。</p>
+</li>
+<li>
+<p>在我询问研发平台组同学的工作时，如果问负责发版的同学，他的回答是“Jeff，我这周又把发版流程优化、调整了一下，加了更多的检查，来保证产品质量”，而不是“我这周忙死了，发了几个什么版本”。如果问稳定性测试的同学，他的回答是“Jeff，这周我又新增了几个破坏性的测试场景”，而不是“我这周发现了2个BUG”。问性能测试的同学，他的回答是“Jeff，这周我新增了几个查询场景的性能测试”，而不是“我这周完成了性能对比测试”。</p>
+</li>
+</ol>
+<p>一切代码化还可以让新人迅速进入角色，而不是受制于需要长时间沟通才能获取的信息。每个人需要依靠自己的能力，而不是掌控的信息或资源，来成为研发高手。</p>
+<p>举个例子，听你来说，新人指的是刚毕业一两年的甚至应届生的水平，他们往往没有经历过工程开发环境安装的系统培训。</p>
+<p>如果几小时搭起环境，势必就是docker pull或者直接笔记本由it预装。那么三年之内，这套环境怎么装的知识就只在少部分老人手里，为什么这么搞的架构一旦离职，环境搭建方法论也没了，就算留下文档，新培育的人也没经过训练。owner必然会变成守墓人。</p>
+<p>自动化过高的话，核心组会很小很核心，因为其他人只需要用就好了，甚至只需要用黑盒就好了。doc as code可行，但是某些as code不可行。</p>
+<p>如果你是老工程师，你就会明白，如果你希望长期雇佣的话，新人的培养就是从踩坑开始。否则就是当牛马养，然后挖人。挖人势必导致一个架构师一代技术方案。</p>
+<p>痛点总结的挺好，思路方向也是对的，但魔鬼在细节，在做的程度，小步慢挪，弄一个点，弄的彻底，玩明白了，再整下一个点，不能先定好大目标，容易迈的步子太子，扯着蛋。</p>
+<p>所以这块都属于企业重要资产，必须绑定在某个技术高管手里直属管理，少数公司骨干参与维护。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/678491314" rel="nofollow">https://zhuanlan.zhihu.com/p/678491314</a></p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://github.com/suredream/gmeeklip">Web Clip</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suredream/gmeeklip");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
