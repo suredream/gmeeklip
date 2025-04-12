@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="人工智能导致开源情报 (OSINT) 批判性思维逐渐崩溃
+
+
+https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai
+
+
+_OSINT used to be a thinking game. Now it’s becoming a trusting game and that should terrify you.  
+开源情报（OSINT）曾经是一场思考游戏。">
+<meta property="og:title" content="人工智能导致开源情报 (OSINT) 批判性思维逐渐崩溃">
+<meta property="og:description" content="人工智能导致开源情报 (OSINT) 批判性思维逐渐崩溃
+
+
+https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai
+
+
+_OSINT used to be a thinking game. Now it’s becoming a trusting game and that should terrify you.  
+开源情报（OSINT）曾经是一场思考游戏。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://github.com/suredream/gmeeklip/post/ren-gong-zhi-neng-dao-zhi-kai-yuan-qing-bao-%20%28OSINT%29%20-pi-pan-xing-si-wei-zhu-jian-beng-kui.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>人工智能导致开源情报 (OSINT) 批判性思维逐渐崩溃</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">人工智能导致开源情报 (OSINT) 批判性思维逐渐崩溃</h1>
+<div class="title-right">
+    <a href="https://github.com/suredream/gmeeklip" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suredream/gmeeklip/issues/10" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>人工智能导致开源情报 (OSINT) 批判性思维逐渐崩溃</p>
+<p><a href="https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai" rel="nofollow">https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai</a></p>
+<p><em>OSINT used to be a thinking game. Now it’s becoming a trusting game and that should terrify you.<br>
+开源情报（OSINT）曾经是一场思考游戏。现在它正在变成一场信任游戏，这应该会让你感到恐惧。</em></p>
+<p>I’ve seen it firsthand, analysts running solid investigations, then slowly shifting more and more of the thinking to GenAI tools. At first, it’s small. You use ChatGPT to summarise a document or translate a foreign post. Then it’s helping draft your reports. Then it’s generating leads. And eventually, you’re not thinking as critically as you used to. You’re verifying less, questioning less, relying more.<br>
+我亲眼目睹过这种情况：分析师们进行着扎实的调查，然后慢慢地将越来越多的思考转移到 GenAI 工具上。起初，它的作用很小。你用 ChatGPT 来总结一份文件或翻译一篇外国帖子。然后它帮你起草报告。再然后，它开始帮你寻找线索。最终，你的批判性思维不再像以前那样了。你核实得更少，质疑得更少，依赖得更多。</p>
+<p>We tell ourselves we’re “working smarter.” But somewhere along the way, we stop noticing how much of the actual thinking is being offloaded.<br>
+我们告诉自己，我们正在“更聪明地工作”。但不知何故，我们却没有注意到有多少实际的思考被卸下了。</p>
+<p>This isn’t a rant against AI. I use it daily, ChatGPT, Copilot, Claude, Gemini. They’re in my workflow like everyone else’s. But the tradecraft is slipping. Analysts are skipping the hard parts. They’re trusting GenAI to do the heavy cognitive lifting, and it’s changing how we operate at a foundational level.<br>
+这并不是对人工智能的抱怨。我每天都在使用人工智能，ChatGPT、Copilot、Claude、Gemini。它们就像其他人一样，融入了我的工作流程。但人工智能的技巧正在下滑。分析师们正在跳过最难的部分。他们把繁重的认知工作交给 GenAI 来做，而 GenAI 正在从根本上改变我们的运作方式。</p>
+<p>When OSINT becomes too easy, too efficient, too comfortable… you should be worried. Tradecraft isn’t just about speed, it’s about judgment. And judgment doesn’t come from a language model. If we keep going down this path without pushing back, without actively preserving the critical habits that define our profession, we risk becoming operators of automation instead of investigators.<br>
+当开源情报 (OSINT) 变得过于简单、过于高效、过于舒适时……你就应该担心了。谍报技术不仅关乎速度，更关乎判断力。而判断力并非源于语言模型。如果我们继续沿着这条路走下去，不去努力，不积极维护定义我们职业的关键习惯，我们就有可能沦为自动化操作者，而不是调查员。</p>
+<p>This blog is a wake-up call. For myself. <a href="https://shadowdragon.io/blog/what-is-osint/" rel="nofollow"><span>For anyone working in OSINT</span></a>. For the people teaching it, and the people just getting started. If we don’t reclaim the thinking side of this game, we’ll lose the game entirely.<br>
+这篇博客是一个警钟。对我自己， <a href="https://shadowdragon.io/blog/what-is-osint/" rel="nofollow"><span> 对所有从事开源情报 (OSINT) 工作的人 </span></a> ，对教授开源情报的人，以及刚刚起步的人，都是如此。如果我们不重新掌控这场游戏的思考层面，我们就会彻底输掉这场游戏。</p>
+<h2>The Study That Should Alarm You</h2>
+<p>值得警惕的研究</p>
+<p>What they found is a warning shot.<br>
+他们发现的是一个警告信号。</p>
+<p>The study revealed a clear pattern: the more confidence users had in the AI, the less they thought critically. In contrast, the more confident they were in themselves, the more likely they were to question the output, verify the information, and think deeply about the task.<br>
+研究揭示了一个清晰的模式：用户对人工智能越有信心，批判性思考就越少。相反，他们对自己越有信心，就越有可能质疑人工智能的输出、验证信息，并深入思考任务。</p>
+<p>Let that sink in: Confidence in AI replaces confidence in self and with it, the thinking disappears.<br>
+让我们深刻地认识到：对人工智能的信心取代了对自我的信心，随之而来的是思维的消失。</p>
+<p>Here’s the punchline:  笑话的妙处如下：</p>
+<p>High trust in GenAI consistently led to reduced critical thinking and less cognitive effort across the board.<br>
+对 GenAI 的高度信任始终会导致批判性思维的减少和认知努力的减少。</p>
+<p>Participants weren’t lazy. They were experienced professionals. But when the tool responded quickly, confidently, and clearly they stopped doing the hard part. They stopped questioning. Stopped verifying. Stopped applying the mental friction that separates automation from investigation.<br>
+参与者并不懒惰。他们都是经验丰富的专业人士。但当工具快速、自信、清晰地做出反应时，他们就不再做最困难的部分了。他们不再质疑，不再核实，不再费力地处理自动化和调查之间的心理障碍。</p>
+<p>The scary part is that many users still believed they were thinking critically, because GenAI made them feel smart.<br>
+可怕的是，许多用户仍然相信他们正在进行批判性思考，因为 GenAI 让他们感觉自己很聪明。</p>
+<p>The researchers saw a new type of behavior emerge:<br>
+研究人员发现一种新的行为类型出现：</p>
+<p>• Instead of forming hypotheses, users asked the AI for ideas.<br>
+• 用户不是形成假设，而是向人工智能寻求想法。</p>
+<p>• Instead of validating sources, they assumed the AI had already done so.<br>
+• 他们没有验证来源，而是假设人工智能已经这样做了。</p>
+<p>• Instead of assessing multiple perspectives, they integrated and edited the AI’s summary and moved on.<br>
+• 他们没有评估多个观点，而是整合并编辑了人工智能的摘要，然后继续前进。</p>
+<p>This isn’t hypothetical. This is happening now, in real-world workflows. And if you’re in OSINT, you know how dangerous that is.<br>
+这不是假设。这正在现实世界的工作流程中发生。如果你从事开源情报收集工作，你就会知道这有多危险。</p>
+<p>In our line of work, you can’t afford false confidence. You can’t afford a hallucinated source, a mistranslated post, or a manipulated summary. But the more trust you place in GenAI, without friction, without skepticism, the more you risk exactly that.<br>
+在我们这个行业，你承受不起虚假的信心。你承受不起虚假的来源、翻译错误的帖子或被篡改的摘要。但是，你对 GenAI 的信任程度越高，越没有摩擦，越没有怀疑，你面临的风险就越大。</p>
+<p>The study didn’t focus on OSINT directly. But it doesn’t have to. The findings hit home harder here than anywhere else. Because if we lose critical thinking in this field, we don’t just lose accuracy, we lose integrity.<br>
+这项研究并未直接关注开源情报 (OSINT)。但其实也不必如此。这项研究的发现在这里比其他任何地方都更具冲击力。因为如果我们在这个领域失去批判性思维，我们失去的不仅仅是准确性，还有诚信。</p>
+<h2>What This Means for OSINT</h2>
+<p>这对开源情报 (OSINT) 意味着什么</p>
+<p>That’s what’s at risk.  这就是危险所在。</p>
+<p>The <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf?utm_source=newsletter.danielmiessler.com&amp;utm_medium=newsletter&amp;utm_campaign=unsupervised-learning-no-475" rel="nofollow"><span>Lee et al. study </span></a> wasn’t about OSINT specifically, but it described exactly what’s happening in OSINT shops, government teams, threat intel units, and open-source communities around the world. The creeping shift from thinking to prompting, from analyst to editor. Let’s talk real.<br>
+<a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf?utm_source=newsletter.danielmiessler.com&amp;utm_medium=newsletter&amp;utm_campaign=unsupervised-learning-no-475" rel="nofollow"><span>Lee 等人的研究</span></a>并非专门针对开源情报 (OSINT)，但它准确地描述了世界各地开源情报机构、政府团队、威胁情报部门和开源社区正在发生的事情。从思考到提示，从分析师到编辑，这种转变正在悄然发生。让我们谈谈现实吧。</p>
+<h3>Real-World OSINT Scenarios Affected by GenAI Complacency</h3>
+<p>受 GenAI 自满情绪影响的现实世界 OSINT 场景</p>
+<p><span>Scenario 1: Image Verification<span lang="zh-CN"><br><span><span>场景一：图像验证</span></span></span></span></p>
+<p>You upload a protest photo into a tool like Gemini and ask, “Where was this taken?” It spits out a convincing response: “Paris, near Place de la République.” It sounds right. You move on.<br>
+你把一张抗议照片上传到 Gemini 之类的工具，然后问：“这张照片是在哪里拍的？”它会给出一个令人信服的答案：“巴黎，共和国广场附近。” 听起来很对。你继续往下看。</p>
+<p>But a trained eye would notice the signage is Belgian. The license plates are off. The architecture doesn’t match. You trusted the AI and missed the location by a country.<br>
+但训练有素的人会注意到，路牌是比利时的。车牌不对，建筑风格也不匹配。你太相信人工智能了，结果错过了一个国家的位置。</p>
+<p><span>Scenario 2: Person of Interest Profile<span lang="zh-CN"><br><span><span>场景 2：嫌疑人资料</span></span></span></span></p>
+<p>You use Claude to summarize a person’s online presence. It generates a clean narrative: activist, tech worker, harmless. But it completely omits their links to far-right forums because the model didn’t surface the fringe platforms. You never check. That person ends up speaking at a sensitive public event.<br>
+你用克劳德来概括一个人的在线形象。它会生成一个清晰的叙述：活动家、科技工作者、无害。但它完全忽略了他们与极右翼论坛的链接，因为该模型没有显示边缘平台。你从不检查。这个人最终在一个敏感的公共活动上发言。</p>
+<p><span>Scenario 3: Disinformation Campaign Detection<span lang="zh-CN"><br><span><span>场景 3：虚假信息活动检测</span></span></span></span></p>
+<p>You feed a stream of Telegram messages into ChatGPT and ask for “summary and patterns.” It flags some keywords, but misses the subtle linguistic shift that points to a known Russian influence cell, something only a trained mind would notice by comparing phrasing across sources. But you’ve stopped reading the raw content. You trusted the summary<br>
+你将一连串 Telegram 消息输入 ChatGPT，并请求获取“摘要和模式”。它标记了一些关键词，但却忽略了指向已知俄罗斯影响小组的细微语言变化，只有训练有素的头脑才能通过比较不同来源的措辞注意到这一点。但你已停止阅读原始内容。你信任的是摘要。</p>
+<p>These aren’t edge cases. These are plausible daily failures in modern OSINT workflows.<br>
+这些并非边缘案例。这些都是现代开源情报 (OSINT) 工作流程中可能出现的日常故障。</p>
+<p>And here’s the kicker: in each case, the analyst didn’t fail because of bad intent or laziness. They failed because the tools were just good enough to feel trustworthy and just wrong enough to be dangerous.<br>
+关键在于：在每一个案例中，分析师的失败并非出于恶意或懒惰。他们失败是因为工具好到让人觉得值得信赖，但又差到让人觉得危险。</p>
+<p>AI doesn’t break OSINT. But unquestioned AI does.<br>
+人工智能不会破坏开源情报 (OSINT)。但毫无疑问，人工智能会。</p>
+<p>GenAI doesn’t understand context, risk, geopolitical nuance, or how bad actors use language to hide intent. It doesn’t know when to doubt itself. That’s your job and too many are forgetting that.<br>
+GenAI 不理解背景、风险、地缘政治的细微差别，也不了解恶意行为者如何利用语言来隐藏意图。它不知道何时应该自我怀疑。这是你的职责所在，但太多人都忘记了这一点。</p>
+<h2>The Creeping Death of Tradecraft</h2>
+<p>谍报技术的逐渐消亡</p>
+<p>Tradecraft isn’t just a list of tools. It’s a way of thinking. It’s the habit of looking again when something feels off. It’s verifying metadata, cross-checking timestamps, spotting a street sign that doesn’t match the language in the caption. It’s the instinct to question the obvious.<br>
+谍报技巧不仅仅是一堆工具的清单，而是一种思维方式。它是一种习惯，一旦感觉不对劲，就会重新审视。它需要核实元数据，交叉核对时间戳，甚至发现与图片说明语言不符的路牌。它是一种质疑显而易见事物的本能。</p>
+<p>And that instinct is quietly dying.<br>
+而这种本能正在悄然消亡。</p>
+<p>Not because analysts are getting lazy, but because AI is making the job feel easier than it actually is. You’re still working. You’re still clicking. But the mental friction is gone.<br>
+这并不是因为分析师变懒了，而是因为人工智能让这项工作感觉比实际更容易。你仍在工作，仍在点击，但思维上的摩擦消失了。</p>
+<p>That friction used to be where tradecraft lived.<br>
+这种摩擦曾经是谍报技巧存在的地方。</p>
+<p>Let’s get brutally honest about what’s happening:<br>
+让我们坦诚地面对正在发生的事情：</p>
+<h3>Then vs. Now: What OSINT Analysts Used to Do</h3>
+<p>过去与现在：OSINT 分析师过去做什么</p>
+<p><span>Then:<span lang="zh-CN"><span>  </span><span><span>然后：</span></span></span></span></p>
+<p>• Saw a blurry image, opened it in three tools, zoomed in, rotated it, looked for EXIF, cropped landmarks, and reverse searched five times.<br>
+• 看到一张模糊的图像，用三种工具打开它，放大、旋转、查找 EXIF、裁剪地标，并反向搜索五次。</p>
+<p>• Read a social post in broken Russian, translated it manually, checked slang, looked up associated hashtags, and verified the account’s activity history.<br>
+• 阅读一篇蹩脚俄语的社交帖子，手动翻译，检查俚语，查找相关标签，并验证该帐户的活动历史记录。</p>
+<p>• Traced a domain name through WHOIS, looked at subdomains, searched for reused infrastructure, and mapped out connected email addresses.<br>
+• 通过 WHOIS 追踪域名，查看子域名，搜索重复使用的基础设施，并映射连接的电子邮件地址。</p>
+<p><span>Now:<span lang="zh-CN"><span>  </span><span><span>现在：</span></span></span></span></p>
+<p>• Paste the image into the AI tool, read the suggested location, and move on.<br>
+• 将图像粘贴到 AI 工具中，阅读建议的位置，然后继续。</p>
+<p>• Dump a thread into ChatGPT for summary.<br>
+• 将线程转储到 ChatGPT 中以供总结。</p>
+<p>• Ask Gemini, “Who runs this domain?” and accept the top-line answer.<br>
+• 询问 Gemini，“谁运营这个域名？”并接受第一行答案。</p>
+<p>This isn’t about nostalgia, it’s about recognising a dangerous shift in behavior. The more we “trust the tool,” the less we build the skills that make the tool useful. We’re automating our edge away.<br>
+这不是怀旧，而是认识到行为的危险转变。我们越“信任工具”，就越缺乏培养使其发挥作用的技能。我们正在自动化，从而丧失优势。</p>
+<p>And GenAI isn’t just fast, it’s persuasive. It writes with confidence. It fills in gaps. It doesn’t hesitate, and that creates a dangerous illusion of accuracy. Analysts are making decisions based on language model confidence, not evidence. It’s happening slowly. Silently. Like rot.<br>
+GenAI 不仅速度快，而且极具说服力。它写起来充满自信，能够填补空白，毫不犹豫，这造成了一种危险的准确性错觉。分析师的决策是基于语言模型的置信度，而不是证据。这一切进展缓慢，悄无声息，如同腐烂一般。</p>
+<h4>What Dies When Tradecraft Goes Passive?</h4>
+<p>当谍报技术变得被动时，什么会消亡？</p>
+<p>• Contextual reasoning: spotting when something doesn’t add up, even if it “looks right.”<br>
+• 情境推理：发现某些事情不合情理，即使它“看起来正确”。</p>
+<p>• Cross-source verification: confirming a fact with at least two or three unrelated sources.<br>
+• 跨源验证：通过至少两个或三个不相关的来源确认事实。</p>
+<p>• Hypothesis testing: building and breaking possible explanations for what you’re seeing.<br>
+• 假设检验：对您所看到的事情建立和打破可能的解释。</p>
+<p>• Refusal to settle: the instinct to keep digging, even when the AI gave you a plausible answer.<br>
+• 拒绝解决：即使人工智能给出了合理的答案，你仍然本能地继续挖掘。</p>
+<p>Without these, OSINT becomes automated guesswork with a shiny UI.<br>
+没有这些，OSINT 就会变成具有华丽用户界面的自动猜测。</p>
+<p>And make no mistake, bad actors know this. They’ll test your tools. Feed them poisoned content. Exploit AI’s tendency to repeat, simplify, and hallucinate. If your entire workflow is built on trust in the machine, you’re walking into a trap.<br>
+别误会，坏人知道这一点。他们会测试你的工具，给他们喂有毒的内容，利用人工智能重复、简化和产生幻觉的倾向。如果你的整个工作流程都建立在对机器的信任之上，那么你就会掉进陷阱。</p>
+<p>Tradecraft is slow. Tradecraft is uncomfortable. Tradecraft is what keeps your work accurate, defensible, and trusted. Without it, you’re just another person typing prompts and hoping for truth.<br>
+谍报技术进展缓慢，令人不适。谍报技术能确保你的工作准确、可靠且值得信赖。没有它，你只不过是一个输入提示、期盼真相的人。</p>
+<h3>The New Role of the Analyst: AI Overseer, Not AI Believer</h3>
+<p>分析师的新角色：人工智能监督者，而非人工智能信徒</p>
+<p>Here’s the truth: GenAI is here to stay. It’s not going away. And for OSINT, it’s not the enemy. But it is a liability, if you don’t treat it like one.<br>
+事实是：GenAI 将会持续存在，不会消失。对于开源情报 (OSINT) 来说，它并非敌人。但如果你不把它当成敌人来对待，它就会成为一种负担。</p>
+<p>The analyst’s job has changed. Or rather, it needs to.<br>
+分析师的工作已经改变。或者更确切地说，它需要改变。</p>
+<p>You’re no longer just a researcher, a data miner, a pattern spotter.<br>
+您不再仅仅是一名研究人员、一名数据挖掘者、一名模式发现者。</p>
+<p>You’re now an AI overseer. A challenger. A verifier. A filter.<br>
+你现在是一名人工智能监督者。一名挑战者。一名验证者。一名过滤器。</p>
+<p>If you treat ChatGPT, Claude, Gemini, or Copilot as reliable assistants, they’ll eventually lead you to errors, because they’re not assistants. They’re high-speed, high-confidence content engines with zero lived experience and no sense of consequence. Your role is to make sure they don’t get away with anything.<br>
+如果你把 ChatGPT、Claude、Gemini 或 Copilot 当作可靠的助手，它们最终会让你犯错，因为它们根本就不是助手。它们是高速、高可信度的内容引擎，没有任何实际经验，也没有任何后果意识。你的职责是确保它们不会有任何疏忽。</p>
+<p>How the Analyst Mindset Must Shift:<br>
+分析师思维必须如何转变：</p>
+<markdown-accessiblity-table><table role="table"><tbody><tr><td><p dir="auto" id="user-content-viewer-e3jko338"><span><strong><span><span>Old Role<span lang="zh-CN"><span>  </span><span><span>旧角色</span></span></span></span></span></strong></span></p></td><td><p dir="auto" id="user-content-viewer-j8pw6341"><span><strong><span><span>New Role<span lang="zh-CN"><span>  </span><span><span>新角色</span></span></span></span></span></strong></span></p></td></tr><tr><td><p dir="auto" id="user-content-viewer-19hap345"><span><span><span>Ask AI a question<span lang="zh-CN"><span>  </span><span><span>向 AI 提问</span></span></span></span></span></span></p></td><td><p dir="auto" id="user-content-viewer-78j4v348"><span><span><span>Interrogate AI answers<span lang="zh-CN"><span>  </span><span><span>询问人工智能答案</span></span></span></span></span></span></p></td></tr><tr><td><p dir="auto" id="user-content-viewer-fmziu352"><span><span><span>Accept summaries<span lang="zh-CN"><span>  </span><span><span>接受摘要</span></span></span></span></span></span></p></td><td><p dir="auto" id="user-content-viewer-h40zt355"><span><span><span>Dissect summaries<span lang="zh-CN"><span>  </span><span><span>剖析总结</span></span></span></span></span></span></p></td></tr><tr><td><p dir="auto" id="user-content-viewer-9tb1m359"><span><span><span>Use suggestions<span lang="zh-CN"><span>  </span><span><span>使用建议</span></span></span></span></span></span></p></td><td><p dir="auto" id="user-content-viewer-iuqn8362"><span><span><span>Break suggestions apart<span lang="zh-CN"><span>  </span><span><span>分解建议</span></span></span></span></span></span></p></td></tr><tr><td><p dir="auto" id="user-content-viewer-w83y0366"><span><span><span>Trust clean answers<span lang="zh-CN"><span>  </span><span><span>相信清晰的答案</span></span></span></span></span></span></p></td><td><p dir="auto" id="user-content-viewer-8fmdr369"><span><span><span>Trace dirty origins<span lang="zh-CN"><span>  </span><span><span>追溯肮脏的起源</span></span></span></span></span></span></p></td></tr><tr><td><p dir="auto" id="user-content-viewer-60dgq373"><span><span><span>Generate profiles<span lang="zh-CN"><span>  </span><span><span>生成配置文件</span></span></span></span></span></span></p></td><td><p dir="auto" id="user-content-viewer-ubk85376"><span><span><span>Validate narratives<span lang="zh-CN"><span>  </span><span><span>验证叙述</span></span></span></span></span></span></p></td></tr><tr><td><p dir="auto" id="user-content-viewer-dq1k0380"><span><span><span>Draft and ship<span lang="zh-CN"><span>  </span><span><span>吃水和运输</span></span></span></span></span></span></p></td><td><p dir="auto" id="user-content-viewer-1u047383"><span><span><span>Draft, rip apart, and rebuild<span lang="zh-CN"><br><span><span>起草、拆解、重建</span></span></span></span></span></span></p></td></tr></tbody></table></markdown-accessiblity-table>
+<p>You’re not there to be impressed by what the model says. You’re there to break it, test it, and decide what survives. That means:<br>
+你不是去对模型的描述印象深刻的。你去打破它，测试它，并决定哪些能存活下来。这意味着：</p>
+<p>• Running the AI’s claim through manual OSINT methods<br>
+• 通过手动 OSINT 方法运行 AI 的声明</p>
+<p>• Fact-checking what it didn’t cite<br>
+• 对未引用的内容进行事实核查</p>
+<p>• Comparing AI output against real-world source behavior<br>
+• 将人工智能输出与现实世界源行为进行比较</p>
+<p>• Asking “What isn’t it telling me?”<br>
+• 询问“它没有告诉我什么？”</p>
+<p>AI tools should trigger suspicion, not satisfaction. Every time the answer seems too clean, too simple, too aligned with your bias, you should feel that OSINT tingle in your brain: “Wait… prove it.” <br>
+人工智能工具应该引发怀疑，而不是满足。每当答案看起来太过清晰、太过简单、太过符合你的偏见时，你应该感受到 OSINT 的刺激感：“等等……证明一下。”</p>
+<p>You wouldn’t blindly trust a witness in an investigation just because they speak confidently. Don’t trust a model either. It’s not about being anti-AI. It’s about preserving cognitive sovereignty. Because the moment you let the model do the thinking for you, you stop being an investigator, you become an operator.<br>
+在调查中，你不会仅仅因为证人说话自信就盲目信任他们。也不要相信模型。这不是反对人工智能，而是维护认知主权。因为一旦你让模型替你思考，你就不再是调查员，而是操作员了。</p>
+<h2>Reviving Critical Thinking in the AI Era</h2>
+<p>人工智能时代的批判性思维复兴</p>
+<p>If critical thinking is dying, it’s not because we don’t care, it’s because we stopped practicing it. The good news? You can take it back. But it won’t happen by accident. It requires intention.<br>
+如果批判性思维正在消亡，那不是因为我们不在乎，而是因为我们停止了实践。好消息是，你可以重新拥有它。但这并非偶然，需要用心。</p>
+<p>Here’s how OSINT practitioners can stay sharp in a GenAI world:<br>
+以下是 OSINT 从业者在 GenAI 世界中保持敏锐的方法：</p>
+<p><strong>Introduce Friction on Purpose<br>
+故意引入摩擦</strong></p>
+<p>GenAI is fast. That’s the trap.<br>
+GenAI 速度很快。这就是陷阱所在。</p>
+<p>You need to slow yourself down (<em>deliberately</em>) before trusting anything it gives you.<br>
+在相信它给你的任何东西之前， 你需要（ <em>故意地</em> ） 放慢自己的速度 。</p>
+<p><strong>Tactics:  策略：</strong></p>
+<p>• Pause and ask: <em>What sources would I have checked without AI?</em> Go check them anyway.<br>
+• 停下来问问自己： <em>如果没有人工智能，我会查阅哪些资料？</em> 无论如何，还是去查阅吧。</p>
+<p>• Require yourself to find <strong>one contradiction</strong> to the AI’s output before accepting it.<br>
+• 要求自己在接受 AI 的输出之前找到<strong>一个与之相矛盾的地方</strong> 。</p>
+<p>• Use a second model (Claude, Gemini, etc.) and force a contradiction: <em>“Give me the opposite interpretation.”</em><br>
+• 使用第二个模型（Claude、Gemini 等）并强制矛盾： <em>“给我相反的解释。”</em></p>
+<p><strong>Rebuild Your Source Discipline<br>
+重建你的源学科</strong></p>
+<p>GenAI doesn’t cite like an OSINT analyst does. So don’t let it train you into laziness.<br>
+GenAI 的引用方式与 OSINT 分析师不同。所以别让它把你变成懒惰的人。</p>
+<p><strong>Tactics:  策略：</strong></p>
+<p>• If a model gives you a name, quote, link, or claim, don’t just Google it. Trace it.<br>
+• 如果某个模特给你提供了名字、引言、链接或主张，不要只用 Google 来搜索，还要追踪它。</p>
+<p>• Keep a side-by-side log: AI output vs. verified source. Where’s the gap?<br>
+• 并排记录：AI 输出与已验证来源。差距在哪里？</p>
+<p>• When using summaries, always open the original material anyway. Always.<br>
+• 使用摘要时，务必打开原始材料。务必。</p>
+<p><strong>Use AI as a Thought Partner, Not an Oracle<br>
+将人工智能用作思想伙伴，而不是神谕</strong></p>
+<p>Treat GenAI like a junior analyst: decent ideas, but needs supervision.<br>
+将 GenAI 视为初级分析师：想法不错，但需要监督。</p>
+<p><strong>Tactics:  策略：</strong></p>
+<p>• Ask it to argue against your current hypothesis.<br>
+• 要求它反驳你当前的假设。</p>
+<p>• Feed it your working notes and ask, “What’s missing? What assumptions am I making?”<br>
+• 输入你的工作笔记并询问：“缺少了什么？我做了哪些假设？”</p>
+<p>• Use it to simulate perspectives, not to define reality.<br>
+• 用它来模拟观点，而不是定义现实。</p>
+<p><strong>Cross-Model Interrogation<br>
+跨模型询问</strong></p>
+<p>Different models have different blind spots. Use that.<br>
+不同车型的盲区不同，请利用这一点。</p>
+<p><strong>Tactics:  策略：</strong></p>
+<p>• Ask the same question across ChatGPT, Claude, Gemini, and Copilot. Compare outputs.<br>
+• 在 ChatGPT、Claude、Gemini 和 Copilot 上提出相同的问题。比较输出结果。</p>
+<p>• Note contradictions. Investigate <em>why</em> they differ.<br>
+• 注意矛盾之处。探究其不同之_处_ 。</p>
+<p>• Treat divergence as signal, not noise.<br>
+• 将分歧视为信号，而不是噪音。</p>
+<p><strong>Force Failure  强制失败</strong></p>
+<p>If you’re not actively trying to break the model, you’re not using it critically.<br>
+如果您没有积极尝试打破该模型，那么您就没有批判性地使用它。</p>
+<p><strong>Tactics:  策略：</strong></p>
+<p>• Intentionally feed it misleading prompts and watch what it hallucinates.<br>
+• 故意向其提供误导性提示并观察其产生什么幻觉。</p>
+<p>• Track how it behaves under ambiguity, contradiction, or incomplete data.<br>
+• 跟踪其在模糊、矛盾或不完整数据下的行为。</p>
+<p>• Learn its failure modes and build your tradecraft to fill the gaps.<br>
+• 了解其故障模式并建立自己的技能来填补空白。</p>
+<p><strong>Keep Doing the Hard Stuff<br>
+继续做困难的事情</strong></p>
+<p>The tools should speed you up, but they should never <em>replace</em> the hard parts.<br>
+工具应该能加快你的速度，但它们永远不能_取代_硬件部分。</p>
+<p><strong>Tactics:  策略：</strong></p>
+<p>• Geolocate manually before checking with AI.<br>
+• 在使用 AI 检查之前先进行手动地理定位。</p>
+<p>• Write your own summary before reading the AI’s.<br>
+• 在阅读 AI 之前先写下您自己的摘要。</p>
+<p>• Build your own profile first, then ask the AI to challenge it.<br>
+• 首先建立自己的个人资料，然后让 AI 对其进行挑战。</p>
+<h2>The Quiet Collapse and How We Fight It</h2>
+<p>静悄悄的崩溃以及我们如何应对它</p>
+<p>The fall of critical thinking in OSINT won’t come with a bang. It’ll come quietly. It’ll look like faster reports. Cleaner narratives. Fewer questions asked. It’ll feel efficient. It’ll look like progress.<br>
+开源情报 (OSINT) 中批判性思维的衰落不会带来轰动，而是悄无声息地发生。看起来，报告会更快速，叙述更清晰，问题更少。感觉起来更高效，看起来像是进步。</p>
+<p>Until it isn’t.  直到它不再存在。</p>
+<p>Until you miss the real location. Trust the wrong source. Assume the wrong intent. Attribute the wrong actor. And by then, your tradecraft won’t save you, because you won’t have practiced it.<br>
+直到你错过了真正的地点。相信了错误的消息来源。假设了错误的意图。认定了错误的行动者。到那时，你的谍报技巧就救不了你了，因为你根本就没练习过。</p>
+<p>This is how it starts. It starts with trusting summaries. With accepting citations you didn’t check. With replacing your judgment with something that <em>sounds</em> like judgment. The collapse won’t be obvious. It will feel convenient. That’s what makes it so dangerous. But here’s the part that matters: it’s reversible.<br>
+事情就是这样开始的。从轻信摘要开始。从接受你没核实的引文开始。从用_听起来_像判断的东西取代你的判断开始。崩溃不会很明显。感觉很方便。这就是它如此危险的原因。但重要的是：它是可逆的。</p>
+<p>You don’t need to ditch GenAI. You need to confront it. Challenge it. Break it. Question it. Use it, but never trust it without a fight. You’re not just a user of tools. You’re an investigator.<br>
+你不需要抛弃 GenAI。你需要直面它，挑战它，打破它，质疑它。使用它，但绝不要轻易相信它。你不仅仅是一个工具的使用者，你还是一名调查员。</p>
+<p>You think critically. You trace evidence. You challenge assumptions. That’s the job.<br>
+你要批判性地思考。你要追踪证据。你要挑战假设。这就是你的工作。</p>
+<p>Don’t let the machine do the thinking for you.<br>
+不要让机器替你思考。</p>
+<p><strong>Bonus: OSINT Anti-Overreliance Checklist<br>
+奖励：OSINT 反过度依赖清单</strong></p>
+<p>Keep this near your screen. Use it when GenAI enters your workflow.<br>
+把它放在你的屏幕附近。当 GenAI 进入你的工作流程时使用它。</p>
+<p>✅ <strong>Did I verify osint-vs-ai the original source of any AI output?</strong><br>
+✅ <strong>我是否验证了 osint-vs-ai 任何 AI 输出的原始来源？</strong></p>
+<p>✅ <strong>Did I consult non-AI sources before accepting the answer?</strong><br>
+✅ <strong>在接受答案之前我是否咨询过非 AI 来源？</strong></p>
+<p>✅ <strong>Did I challenge the output with a counter-hypothesis or alternate model?</strong><br>
+✅ <strong>我是否用反假设或替代模型对输出进行了挑战？</strong></p>
+<p>✅ <strong>Did I cross-reference data across at least two human-curated sources?</strong><br>
+✅ <strong>我是否交叉引用了至少两个人工策划的来源的数据？</strong></p>
+<p>✅ <strong>Did I perform at least one task manually before accepting the AI’s version?</strong><br>
+✅ <strong>在接受 AI 的版本之前，我是否至少手动执行过一项任务？</strong></p>
+<p>✅ <strong>Did I identify any unstated assumptions in the AI’s output?</strong><br>
+✅ <strong>我是否在 AI 的输出中发现任何未说明的假设？</strong></p>
+<p>✅ <strong>Did I treat GenAI as a thought partner—not a source of truth?</strong><br>
+✅ <strong>我是否将 GenAI 视为思想伙伴，而不是真理来源？</strong></p>
+<p>✅ <strong>Did I deliberately introduce friction into the process (slowing down, comparing, double-checking)?</strong><br>
+✅ <strong>我是否故意在过程中引入摩擦（放慢速度、比较、复查）？</strong></p>
+<p>✅ <strong>Did I stop and ask: What am I trusting without verifying?</strong><br>
+✅ <strong>我是否停下来问过：未经核实我就相信什么？</strong></p>
+<p>✅ <strong>Did we share/cite with the reader of our OSINT product how we used AI</strong>?<br>
+✅ <strong>我们是否与 OSINT 产品的读者分享/引用了我们如何使用 AI</strong> ？</p>
+<p><a href="https://shadowdragon.io/blog/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai/" rel="nofollow"><em><span>This blog </span></em></a> <em>has been crossposted on</em> <a href="http://shadowdragaon.io/" rel="nofollow"><em><span>ShadowDragaon.io</span></em></a> <em>where i am currently working as the Director of Intelligence &amp; Collection innovation.</em><br>
+<a href="https://shadowdragon.io/blog/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai/" rel="nofollow"><em><span>该博客</span></em></a><em>已在</em> <a href="http://shadowdragaon.io/" rel="nofollow"><em><span>ShadowDragaon.io</span></em></a> 上转发 <em>，我目前在该网站上担任情报与收集创新总监。</em></p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://github.com/suredream/gmeeklip">Web Clip</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suredream/gmeeklip");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>

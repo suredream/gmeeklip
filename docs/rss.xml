@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Web Clip</title><link>https://github.com/suredream/gmeeklip</link><description>你有权随时退隐到自己的内心</description><copyright>Web Clip</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://github.com/suredream/gmeeklip</link></image><lastBuildDate>Thu, 10 Apr 2025 16:08:44 +0000</lastBuildDate><managingEditor>Web Clip</managingEditor><ttl>60</ttl><webMaster>Web Clip</webMaster><item><title>开发管理的细节</title><link>https://github.com/suredream/gmeeklip/post/kai-fa-guan-li-de-xi-jie.html</link><description>开发管理的细节
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Web Clip</title><link>https://github.com/suredream/gmeeklip</link><description>你有权随时退隐到自己的内心</description><copyright>Web Clip</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://github.com/suredream/gmeeklip</link></image><lastBuildDate>Sat, 12 Apr 2025 16:07:36 +0000</lastBuildDate><managingEditor>Web Clip</managingEditor><ttl>60</ttl><webMaster>Web Clip</webMaster><item><title>人工智能导致开源情报 (OSINT) 批判性思维逐渐崩溃</title><link>https://github.com/suredream/gmeeklip/post/ren-gong-zhi-neng-dao-zhi-kai-yuan-qing-bao-%20%28OSINT%29%20-pi-pan-xing-si-wei-zhu-jian-beng-kui.html</link><description>人工智能导致开源情报 (OSINT) 批判性思维逐渐崩溃
+
+
+https://www.dutchosintguy.com/post/the-slow-collapse-of-critical-thinking-in-osint-due-to-ai
+
+
+_OSINT used to be a thinking game. Now it’s becoming a trusting game and that should terrify you.  
+开源情报（OSINT）曾经是一场思考游戏。</description><guid isPermaLink="true">https://github.com/suredream/gmeeklip/post/ren-gong-zhi-neng-dao-zhi-kai-yuan-qing-bao-%20%28OSINT%29%20-pi-pan-xing-si-wei-zhu-jian-beng-kui.html</guid><pubDate>Fri, 11 Apr 2025 22:09:01 +0000</pubDate></item><item><title>开发管理的细节</title><link>https://github.com/suredream/gmeeklip/post/kai-fa-guan-li-de-xi-jie.html</link><description>开发管理的细节
 作者：Jeff Tao  
 链接：https://zhuanlan.zhihu.com/p/13371989355  
 来源：知乎  
