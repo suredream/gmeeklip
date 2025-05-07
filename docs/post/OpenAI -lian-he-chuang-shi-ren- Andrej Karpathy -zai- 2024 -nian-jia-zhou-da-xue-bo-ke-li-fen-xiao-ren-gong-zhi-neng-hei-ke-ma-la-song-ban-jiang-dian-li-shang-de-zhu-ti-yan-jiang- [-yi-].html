@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="OpenAI 联合创始人 Andrej Karpathy 在 2024 年加州大学伯克利分校人工智能黑客马拉松颁奖典礼上的主题演讲 [译]
+原文：Andrej Karpathy's Keynote & Winner Pitches at UC Berkeley AI Hackathon 2024 Awards Ceremony
+
+主持人: 你想听 Andrej 的演讲吗？
+
+观众: 是的！
+
+主持人: 请热烈欢迎我们的演讲人，OpenAI 的创始成员。">
+<meta property="og:title" content="OpenAI 联合创始人 Andrej Karpathy 在 2024 年加州大学伯克利分校人工智能黑客马拉松颁奖典礼上的主题演讲 [译]">
+<meta property="og:description" content="OpenAI 联合创始人 Andrej Karpathy 在 2024 年加州大学伯克利分校人工智能黑客马拉松颁奖典礼上的主题演讲 [译]
+原文：Andrej Karpathy's Keynote & Winner Pitches at UC Berkeley AI Hackathon 2024 Awards Ceremony
+
+主持人: 你想听 Andrej 的演讲吗？
+
+观众: 是的！
+
+主持人: 请热烈欢迎我们的演讲人，OpenAI 的创始成员。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://github.com/suredream/gmeeklip/post/OpenAI%20-lian-he-chuang-shi-ren-%20Andrej%20Karpathy%20-zai-%202024%20-nian-jia-zhou-da-xue-bo-ke-li-fen-xiao-ren-gong-zhi-neng-hei-ke-ma-la-song-ban-jiang-dian-li-shang-de-zhu-ti-yan-jiang-%20%5B-yi-%5D.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>OpenAI 联合创始人 Andrej Karpathy 在 2024 年加州大学伯克利分校人工智能黑客马拉松颁奖典礼上的主题演讲 [译]</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">OpenAI 联合创始人 Andrej Karpathy 在 2024 年加州大学伯克利分校人工智能黑客马拉松颁奖典礼上的主题演讲 [译]</h1>
+<div class="title-right">
+    <a href="https://github.com/suredream/gmeeklip" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suredream/gmeeklip/issues/22" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>OpenAI 联合创始人 Andrej Karpathy 在 2024 年加州大学伯克利分校人工智能黑客马拉松颁奖典礼上的主题演讲 [译]<br>
+原文：Andrej Karpathy's Keynote &amp; Winner Pitches at UC Berkeley AI Hackathon 2024 Awards Ceremony</p>
+<p>主持人: 你想听 Andrej 的演讲吗？</p>
+<p>观众: 是的！</p>
+<p>主持人: 请热烈欢迎我们的演讲人，OpenAI 的创始成员。请给我鼓掌。来吧，鼓掌声再大一些。Andrej，快来吧。</p>
+<p>Andrej Karpathy: 谢谢大家。大家好，感谢邀请我来。我很高兴能在这里。我非常喜欢黑客马拉松，因为这里蕴含着巨大的能量和创造力。年轻人在一起学习和创新，这是我最喜欢的地方。我也参加过不少黑客马拉松，所以很高兴能在这里和大家交流。</p>
+<p>Andrej Karpathy: 这里比我预期的大得多，真的很大。黑客马拉松的规模相当大。我想从这个角度开始，如果你在疑惑，我想说，这并不是 AI 的常态。我已从事人工智能领域大约 15 年，因此可以确信地说，这个领域有了巨大的发展。人工智能曾经是几百位学者在研讨会中讨论数学细节。这是我过去习惯的情景。大约 15 年前，我初次接触人工智能就是这样。当时你在训练神经网络时使用的是来自 MNIST 的小数字，你在训练受限玻尔兹曼机，使用对比散度训练网络。那时的氛围与众不同，没有现在这么浮躁。虽然现在的情况有些过头，但看到这份活力也令人欣慰。</p>
+<p>Andrej Karpathy: 今天，15 年过去了，人工智能呈现的面貌更像这样（观众笑）。所以，这就是今天的人工智能。NVIDIA，这个生产 GPU 的公司，现在已经成为美国市值最大的公司，成了行业的领头羊。这就是我们现在生活的时代，也是为什么有这么多黑客马拉松比赛，我觉得这真的很不可思议，也是前所未有的。现在是一个非常独特的时期。你们中的许多人可能正步入 AI 领域。这种情况并不常见，非常有趣，充满独特魅力。很多事情正在发生。我认为这背后的最根本原因是计算的本质正在发生变化。我们似乎正在步入一个新的计算范式，这种情况极其罕见。我有种感觉，好像回到了计算机的 1980 年代。</p>
+<p>Andrej Karpathy: 而现在，我们拥有的不再是在字节上执行指令的中央处理器，而是大语言模型，这些模型就像在处理小字符串片段的 Tokens 上的中央处理器。除此之外，我们现在拥有的是令牌的上下文窗口，而不再是字节的 RAM。我们也拥有相当于磁盘和其他所有硬件的设备。所以它有点像一台电脑。这就是指挥中心。这就是为什么我把它称为大语言模型操作系统，或者 LLM OS。我以前在推特上详细讨论过这个问题。因此，我认为这就是我们所有人正在学习如何编程的新型电脑。它在什么地方表现出色，又在哪些地方表现不佳。如何将其融入到产品中。以及如何最大程度地发挥其作用。我认为这是一件非常激动人心的事情。</p>
+<p>Andrej Karpathy: 我想你们中的许多人可能已经看过几周前 OpenAI 发布的 GPT-4 演示。你开始真切地感觉到这是一种你可以实际与之交流的事物。它就像在你常用的音频界面上回应你。它可以看，可以听，可以画画，可以做所有这些事情。我想你们中的很多人可能已经看过这部电影了。如果你还没看过，我真心推荐你去看看。这部电影名叫《她》，对我们现在的启发非常大。在这部电影里，主角与一个被称为操作系统的 AI 进行对话。我认为这部电影非常接近现实。这是一部非常精彩的电影，我建议你去看一看。</p>
+<p>Andrej Karpathy: 现在问题来了，在这部电影中，重点似乎很大程度上在于这些模型的情绪智能方面。但在实际生活中，我们的社会可能会利用这些模型在数字空间中解决大量问题。所以，它不仅仅是一个几乎与人类相似的数字实体。也许有许多这样的数字实体。也许我们可以给它们分配任务，它们可以互相交谈，进行协作，甚至可以有模拟的 Slack 对话。它们在数字领域进行了大量工作，自动化了大量的数字基础设施。不仅仅是数字基础设施，甚至可能包括物理基础设施。虽然这方面还处于初级阶段，但我想说的是，这可能会稍稍落后于许多数字化创新，因为处理数字比处理实物要容易得多。</p>
+<p>Andrej Karpathy: 此外，我想向你推荐一部电影。它是我最喜欢的电影之一，名字叫《我，机器人》，是 2004 年出的，主演是威尔·史密斯。这部电影探索了一个未来，那里的机器人可以像人一样在社会中执行许多任务。剧透一下，在那部电影里，人们的生活并没有变得更好，反而似乎被机器人所主导。但我认为这个设想相当有趣。我强烈建议你去看看这部电影。电影中描绘的故事发生在 2035 年，也就是我们的十年后。也许十年后，我们可能会生活在一个机器人在我们周围走动、和我们交谈、在实体世界和数字世界中执行任务的环境中。那会是什么样子呢？这是什么意思呢？我们如何去编程呢？我们怎样才能让它们按照我们的预期进行操作呢？</p>
+<p>Andrej Karpathy: 当你考虑所有这些因素时，你可能会有一种通用人工智能的感觉。这意味着你深刻地理解了，如果这些技术继续发展，我们可能在不远的将来遇见什么。我们可能在数字领域和物理领域实现大规模的自动化。现在，我不知道你们的想法，但我个人对这个情景感到有些沮丧。这是我用过去几分钟的谈话内容作为输入，用图像生成器生成的图片。实际上，我并不喜欢这幅画。我觉得我们可以做得更好。我们这里有几千人。你们即将进入这个行业，开始研究这些技术。你们将对这些技术进行塑造，对它们有一定的掌控权。所以我不知道，也许我们希望它看起来像这样。这就是我想要的样子。人类、动物和自然和谐共存的场景。虽然有大量的自动化，但它们都被隐藏起来，不会直接出现在你的眼前。也许这就是我们所追求的。你应该对你期望的未来有很大的把控力，因为你将要塑造它。我希望我们可以达成共识，认为这比之前的规划要好。</p>
+<p>Andrej Karpathy: 对于这次黑客马拉松的问题——你们很多人在过去一两天已经做了许多很酷的项目。问题是，我们如何从黑客活动转变为真正改变世界和构建未来，无论那对你意味着什么？在这次演讲中，我想分享在这个行业过去 15 年左右的经历。我认为我了解了项目如何变为现实世界的变革。我有一些经验教训和观察，也许我应该分享一下。我发现的第一件很神奇的事情就是，有时候很小的项目，就像小雪球一样，实际上可以发展成非常大的项目。这种观察过程十分令人惊奇。比如，我参加过一些黑客马拉松，就像我之前提到的。这些是我在过去 15 年左右的时间里做过的一些项目。我曾做过一个小型的魔方颜色提取器项目。13 年前，我在 YouTube 上发布了一些游戏编程教程，尝试教人们如何进行游戏编程。我有很多视频游戏。我还有一个有趣的神经进化模拟器。并非所有这些项目都能产生雪球效应。很多只是探索和尝试。事实上，这三个项目对我来说并没有产生多大的影响。不能说它们是无用功，只是没有为我带来预期的效果，但仍然对我有所帮助。我会在后面再谈这个。</p>
+<p>Andrej Karpathy: 但游戏编程教程却以某种方式为我带来了雪球效应，这引导我从游戏编程教程转向了一些颇受欢迎的魔方视频。这激发了我对教学的热情。后来，当我在斯坦福大学攻读博士学位时，有幸开设并教授了 CS231N 课程，这是斯坦福大学的首门重点深度学习课程。许多人对此产生了极大的兴趣。之后，我创建了一个 YouTube 频道，推出了为深度学习和大语言模型制作的"从零到高手"系列。很多人都喜欢这个。在此基础上，雪球效应继续，我目前非常感兴趣的一个项目是下一步的课程。我在思考它应该是什么样子，以及如何能让它更好。我将这个课程命名为 LLM 101N，目的是教你创建一个讲故事的工具，类似于你可以用来生成故事的 ChatGPT。这个课程的设计思路是让你从零开始学习，从基础知识到创建一个在讲故事领域的类似 ChatGPT 的工具。我认为，从头开始学习创建这个工具将是非常有启发性的，也会非常有趣。两三天前，我在 GitHub 上发布了这个课程，它还很初级，但我对此非常兴奋。对我来说，这就像是一颗滚雪球，越滚越大。它始于 13 年前的一个小游戏编程。我正在设计一个我认为会非常有趣的课程。</p>
+<p>Andrej Karpathy: 在我生活中的另一个例子，就是我在 OpenAI 中所见证的雪球效应。正如之前简单提到的，我是 OpenAI 的创始成员，研究员。七年前，我在 OpenAI 工作，这是一些公开的图片，展示了我们八个人在 Greg 的公寓里工作的情况。OpenAI 的创立就是为了成为对 Google 的一种平衡。Google 就像是一只拥有 700 亿美元自由现金流的大猩猩。那时，Google 几乎雇佣了 AI 研究行业的一半人员。这是一个相当有趣的格局。而我们只是八个带着笔记本电脑的人。这真的很有趣。和我的背景很相似，OpenAI 最后在内部探索了大量的项目。我们聘请了一些非常优秀的人才。许多人的项目并未取得太大进展，但有些人的项目确实取得了成效。举例来说，这是一个早期项目，像一个小雪球，在 OpenAI 早期历史中。有人在研发一个 Reddit 的聊天机器人。当你瞥见他们的桌子，你可能会问，当有人正在开发一个 Reddit 的聊天机器人时，这看起来像什么？我们正在试图与 Google 竞争，你却在开发一个 Reddit 的聊天机器人。我们应该做一些更大的事情。因此，这些刚刚起步的项目很容易被忽视，因为它们在初期非常脆弱。但实际上，这个 Reddit 的聊天机器人--顺便说一句，不要过度解读这些细节。这些只是一些随机的截图，仅供参考。但这是一个基于 Reddit 的聊天机器人，看起来非常初级。但实际上，Reddit 聊天机器人是什么？它是一个语言模型。而且恰好是在 Reddit 上进行训练的。不过，你完全可以利用任何数据来训练这样的语言模型，并不仅限于 Reddit。</p>
+<p>Andrej Karpathy: 当 Transformer 出现后，这个模型变得更为完善。然后，其应用领域从只有 Reddit 扩展到许多其他的网页。突然之间，你就可以看到 GPT-1，GPT-2，3，4，最后是 GPT-4 的出现。所以，这个看似并不起眼的 Reddit 聊天机器人，最终却催生了 GPT-4，我们现在认为它是计算范式的改变。你可以和它进行对话，它的回应令人惊艳。因此，对我来说，能够亲眼见证这些小雪球一点点滚成大雪球，十分激动人心。今天，OpenAI 的估值可能接近 1000 亿美元。看到小雪球逐渐滚成大雪球的成果，令人难以置信。所以我想说，过去的两天里，你们中的许多人也在做一些小项目，也许现在看起来只是个小雪球。虽然其中有些项目可能停滞不前，但也有一些项目实际上是有可能成功的。你应该坚持你的项目，让它们逐渐积累，也许它们可以变成个大雪球。这一切的发展，都是令人难以置信的。</p>
+<p>Andrej Karpathy: 接下来我想简单谈谈由 Malcolm Gladwell 提出并推广的“一万小时”定律。我非常坚信这一点。我认为，成功源于反复的实践和大量的付出。你应当愿意投入那 10000 个小时，去认真计算你投入的时间。不要过于紧张，我在做些什么？我是成功还是失败？只需简单地统计你投入的时间，一切都会累积起来。即便是那些我失败的项目，没有产生什么效果，它们也增加了我提升专业技能的时间，让我更有信心地承担这些项目，使它们能够成功。有几个例子可以说明这一点。几周前，我制作了一个非常粗糙的网站。这是我一个周末的项目，名字叫做 awesomemovies.life。你可以去看一看，我想它应该还能用。我不完全确定，实际上我并不推荐你去那里。我试图做的是一个电影推荐引擎，因为那个周六我想看电影。所以我就上线了这个网站。有人在推特上回复我说：“哇，你周末就搞定了，好酷啊。”我对此产生了些许思考，因为我并不觉得这有多么神奇。原因是这个人没看到的是，这已经是我第 20 次做这样的网站了。我知道我要做的每一步。首先，我需要 Linode，然后是 Flask 服务器。我写一些 JavaScript，样式表，HTML，然后把这些组合起来。我需要抓取所有这些网页，提取 tf.idf 向量，训练 SVM。这些都是我已经做过 20 次的事情，我甚至有之前项目的代码片段。我只是在重新组合我已有的资源。我已经全部都做过了，重新组合所有内容实际上并没有那么复杂，我可以在一个周末完成。这并不是什么不可思议的事情，这只是经验的积累，只有通过多次实践，你才能如此自信地完成这项工作。</p>
+<p>Andrej Karpathy: 另一个例子是我在特斯拉自动驾驶项目中的经历。大约 7、8 年前，我被聘请来领导特斯拉自动驾驶的计算机视觉团队。加入团队后，我做的第一件事之一就是用 PyTorch 重新编写计算机视觉深度学习网络训练的代码库在我加入团队的头几个月。我基本上从头开始重新编写了整个项目。这就成为了现在项目的核心部分。对于一些人来说，这在当时看起来可能很惊人，但对我来说并非如此，因为我是基于我博士的经验，我花了五年时间做类似的事情，我清楚地知道需要什么。我需要训练集，评估集，我需要在 PyTorch 中的训练循环，我需要配置文件，我需要日志目录，我需要引入 ResNet，我需要做检测，我们正在进行回归和分类，因此，整个过程，我都预见到了所有的步骤，这种预见只有经验才能带来，只有在之前已经做过 20 次的经验才能有。</p>
+<p>Andrej Karpathy: 因此，我认为这产生了巨大的影响，那些看起来令人印象深刻的事情，如果你已经做过 20 次，对你来说可能就没那么了不起了。所以，真正去尝试达到你的 10,000 个小时，这真的会有很大的影响，这就是全部。顺便说一下，10,000 个小时，如果你每天工作六小时，大约需要五年。所以，你需要大约像完成一个博士学位那样的时间来在某个领域发展出专业技能。我认为这个估计是准确的，大概就是一个博士学位的长度。</p>
+<p>Andrej Karpathy: 我还发现，保持大脑释放多巴胺其实很有用。你要了解你的心理状况，你的大脑，它是如何运作的，维持活力，如何保持受到启发。特别是，你的大脑就像一个奖励机器，它渴望得到奖励，你需要满足这个需求。那么，有什么好的方法可以给予奖励呢？在我的经验中，这可以通过做项目，进行项目，并且持续发布它们来实现。这里我展示了一个网页片段，记录了我过去完成的一些项目。这些项目包括黑客马拉松项目和其他随机项目，并不是所有项目都很成功。有些项目完成的并不好，但我喜欢做项目有几个原因。首先，项目能让你全面深入地做一些事情。比如，当你去上课时，你通常是在广泛地学习。你学习很多东西，以防在未来可能用得到。但当你在进行一个项目时，你知道你需要什么，是根据需求来学习，只是想让它开始运作。我认为这是一种非常不同的学习模式，很好地补充了广泛的学习方式，这非常重要。所以，我强烈鼓励大家去做项目。</p>
+<p>Andrej Karpathy: 另一个原因是，发布项目实际上也是一种非常好的策略。如果你计划发布一些东西，那么你会开始考虑所有可能看到它的人，你的朋友、团队成员、家人和未来的雇主。因此，这无疑提高了你对自己工作的要求。会让你更努力地去工作。因为他人会评价你的工作，如果工作质量差，你会感到羞愧。因此，你会更加努力，甚至付出额外的努力，以确保工作的优秀。这种压力有时是有帮助的。最后，当他人关注你的项目时，你会得到满足感。因为他们喜欢它，欣赏它，他们会复制它。他们会在你的基础上进行进一步的工作。这种成就感会让你感到愉快。因此，这样的整合方式其实就是你正在体验工作的愉悦。你会觉得非常愉快。这样你就可以积累到 10,000 小时的经验。这对你的提升有很大的帮助。你的项目就像小雪球一样开始，然后逐渐变大，最终在世界上产生影响。总的来说，我认为这就是事情的大致运作方式。所传达的信息就是不断的挑战。就是这样。</p>
+<p>Andrej Karpathy: 最后希望我们可以一起从“小雪球”开始打造图片这样美好的未来，而不是我展示的第一张图片那样，希望如此。就是这样。谢谢。 </p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://github.com/suredream/gmeeklip">Web Clip</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suredream/gmeeklip");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
