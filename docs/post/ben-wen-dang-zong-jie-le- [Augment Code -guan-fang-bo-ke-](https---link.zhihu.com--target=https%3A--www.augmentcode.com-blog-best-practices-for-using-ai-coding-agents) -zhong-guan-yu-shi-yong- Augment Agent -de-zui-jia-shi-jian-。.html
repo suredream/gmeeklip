@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="本文档总结了 [Augment Code 官方博客](https://link.zhihu.com/?target=https%3A//www.augmentcode.com/blog/best-practices-for-using-ai-coding-agents) 中关于使用 Augment Agent 的最佳实践。">
+<meta property="og:title" content="本文档总结了 [Augment Code 官方博客](https://link.zhihu.com/?target=https%3A//www.augmentcode.com/blog/best-practices-for-using-ai-coding-agents) 中关于使用 Augment Agent 的最佳实践。">
+<meta property="og:description" content="本文档总结了 [Augment Code 官方博客](https://link.zhihu.com/?target=https%3A//www.augmentcode.com/blog/best-practices-for-using-ai-coding-agents) 中关于使用 Augment Agent 的最佳实践。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://github.com/suredream/gmeeklip/post/ben-wen-dang-zong-jie-le-%20%5BAugment%20Code%20-guan-fang-bo-ke-%5D%28https---link.zhihu.com--target%3Dhttps%253A--www.augmentcode.com-blog-best-practices-for-using-ai-coding-agents%29%20-zhong-guan-yu-shi-yong-%20Augment%20Agent%20-de-zui-jia-shi-jian-%E3%80%82.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>本文档总结了 [Augment Code 官方博客](https://link.zhihu.com/?target=https%3A//www.augmentcode.com/blog/best-practices-for-using-ai-coding-agents) 中关于使用 Augment Agent 的最佳实践。</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">本文档总结了 [Augment Code 官方博客](https://link.zhihu.com/?target=https%3A//www.augmentcode.com/blog/best-practices-for-using-ai-coding-agents) 中关于使用 Augment Agent 的最佳实践。</h1>
+<div class="title-right">
+    <a href="https://github.com/suredream/gmeeklip" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suredream/gmeeklip/issues/27" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>本文档总结了 <a href="https://link.zhihu.com/?target=https%3A//www.augmentcode.com/blog/best-practices-for-using-ai-coding-agents" rel="nofollow">Augment Code 官方博客</a> 中关于使用 Augment Agent 的最佳实践。</p>
+<h2>目录</h2>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/write#%E7%AE%80%E4%BB%8B" rel="nofollow">简介</a></li>
+<li><a href="https://zhuanlan.zhihu.com/write#augment-agent-%E9%80%82%E5%90%88%E5%81%9A%E4%BB%80%E4%B9%88" rel="nofollow">Augment Agent 适合做什么？</a></li>
+<li><a href="https://zhuanlan.zhihu.com/write#%E5%A6%82%E4%BD%95%E5%90%91-agent-%E5%88%86%E9%85%8D%E4%BB%BB%E5%8A%A1" rel="nofollow">如何向 Agent 分配任务？</a></li>
+<li><a href="https://zhuanlan.zhihu.com/write#%E5%BD%93-agent-%E6%B2%A1%E6%9C%89%E6%8C%89%E7%85%A7%E9%A2%84%E6%9C%9F%E5%B7%A5%E4%BD%9C%E6%97%B6%E6%80%8E%E4%B9%88%E5%8A%9E" rel="nofollow">当 Agent 没有按照预期工作时怎么办？</a></li>
+<li><a href="https://zhuanlan.zhihu.com/write#%E5%A6%82%E6%9E%9C%E4%B8%8D%E4%BF%A1%E4%BB%BB-agent-%E6%80%8E%E4%B9%88%E5%8A%9E" rel="nofollow">如果不信任 Agent 怎么办？</a></li>
+<li><a href="https://zhuanlan.zhihu.com/write#agent-%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BA%94%E8%AF%A5%E5%81%9A%E4%BB%80%E4%B9%88" rel="nofollow">Agent 运行时应该做什么？</a></li>
+<li><a href="https://zhuanlan.zhihu.com/write#%E5%A6%82%E4%BD%95%E5%AE%A1%E6%9F%A5-agent-%E7%BC%96%E5%86%99%E7%9A%84%E4%BB%A3%E7%A0%81" rel="nofollow">如何审查 Agent 编写的代码？</a></li>
+</ul>
+<h2>简介</h2>
+<p>AI 编码代理（如 Augment Agent）的工作方式与人类相似。最有效的使用方法是<strong>将其视为与一位聪明但经验较少的工程师合作</strong>。近期 AI 的进步与人类工作方式有许多相似之处：</p>
+<ul>
+<li><strong>更多思考时间，更好的结果</strong> – 与人类一样，AI 在有时间思考时表现更好</li>
+<li><strong>使用工具</strong> – AI 在拥有更好的工具时能力会增强</li>
+<li><strong>从反馈中学习</strong> – AI 通过反馈循环改进，类似于人类的学习方式</li>
+<li><strong>受奖励激励</strong> – 与人类类似，AI 也可以通过激励机制提高表现</li>
+</ul>
+<h2>Augment Agent 适合做什么？</h2>
+<p>Augment Agent 在以下方面表现出色：</p>
+<ul>
+<li>修复可重现和"可测试"的 bug</li>
+<li>实现具有明确规格（来自任务单或设计文档）或定义清晰的需求的功能</li>
+<li>头脑风暴和原型设计</li>
+<li>深入探索复杂的代码库</li>
+<li>处理 PR 审查评论</li>
+</ul>
+<p>随着开发人员发现新的应用场景，这个列表还在不断扩展。</p>
+<h2>如何向 Agent 分配任务？</h2>
+<h3>1. 使用详细的提示</h3>
+<p>❌ <strong>不好的例子</strong>："将 <code class="notranslate">[SettingsWebviewPanel](https://zhida.zhihu.com/search?content_id=256109949&amp;content_type=Article&amp;match_order=1&amp;q=SettingsWebviewPanel&amp;zhida_source=entity)</code> 类改为使用事件"</p>
+<p>✅ <strong>好的例子</strong>：</p>
+<pre lang="text" class="notranslate"><code class="notranslate">目前，我们通过导入 `SettingsWebviewPanel` 类直接触发 `SettingsWebviewPanel.statusUpdate()`。 审核人员建议切换到 VSCode 事件来触发 `statusUpdate()`， 以减少组件之间的紧密耦合。 让我们通过以下步骤实现： 1. 创建一个新的 VSCode 事件 2. 在 `SettingsWebviewPanel` 构造函数中添加事件处理程序 3. 触发这个事件而不是直接调用 `statusUpdate()`
+</code></pre>
+<h3>2. 提供全面的背景信息</h3>
+<ul>
+<li>解释不仅是目标，还有背后的原因和约束条件</li>
+<li>分享相关文档（任务单、GitHub issues、PR）</li>
+<li>包含有用的参考示例</li>
+<li>指定相关关键词和文件位置</li>
+</ul>
+<h3>3. 将复杂任务分解为更小的部分</h3>
+<p>❌ <strong>不好的例子</strong>："阅读任务单 BC-986，实现设置菜单，编写测试并更新文档"</p>
+<p>✅ <strong>好的例子</strong>：先要求阅读任务单 BC-986，然后实现设置菜单，再编写测试并更新文档</p>
+<h3>4. 对于复杂任务，先与 Agent 讨论和完善计划</h3>
+<p>❌ <strong>不好的例子</strong>："在设置菜单中公开时区选择"</p>
+<p>✅ <strong>好的例子</strong>："我需要在设置菜单中公开时区选择。首先提出一个计划，在我批准之前不要跳到实现阶段"</p>
+<h3>5. 利用 Agent 对测试结果进行迭代的能力</h3>
+<p>❌ <strong>不好的例子</strong>：手动运行测试并将输出复制粘贴给 Agent</p>
+<p>✅ <strong>好的例子</strong>："为 '<a href="https://zhida.zhihu.com/search?content_id=256109949&amp;content_type=Article&amp;match_order=1&amp;q=TextGenerator&amp;zhida_source=entity" rel="nofollow">TextGenerator</a>' 类实现测试，并运行它们以确保它们正常工作"</p>
+<h3>6. 尝试在不熟悉的任务上使用 Agent</h3>
+<p>✅ <strong>好的例子</strong>："我需要实现这个新的过滤算法。请探索代码并提出一些可行的实现方案"</p>
+<h3>7. 提供积极反馈</h3>
+<p>✅ <strong>好的例子</strong>："很好，差不多对了！现在让我们处理这个边缘情况..."</p>
+<h2>当 Agent 没有按照预期工作时怎么办？</h2>
+<p>如果 Agent 偏离了轨道，您有两个选择：</p>
+<ol>
+<li>开始一个新的 Agent 会话（如果完全偏离）</li>
+<li>在同一会话中引导它回到正确的方向（如果只是稍微偏离）</li>
+</ol>
+<p>其他提示：</p>
+<ul>
+<li>当 Agent 进行错误的文件编辑时，使用 Augment Agent 的检查点系统</li>
+<li>为不同的逻辑任务创建新的 Agent 会话</li>
+<li>将复杂任务分解为可管理的部分</li>
+<li>考虑使用英语以获得更好的结果（因为英语在 LLM 训练数据中占主导地位）</li>
+<li>如果 Agent 在框架语法方面遇到困难，引导它查阅官方文档</li>
+</ul>
+<h2>如果不信任 Agent 怎么办？</h2>
+<ul>
+<li>开始时使用非自动模式</li>
+<li>如果需要，依靠检查点系统来撤销更改</li>
+<li>首先使用"问答"模式来验证 Agent 对代码库的理解</li>
+<li>尝试简单的、自包含的任务</li>
+<li>随着看到积极的结果，您的信心会自然增长</li>
+</ul>
+<h2>Agent 运行时应该做什么？</h2>
+<p>用户与 Agent 的互动通常会经历三个技能水平：</p>
+<ol>
+<li><strong>初学者</strong>：密切关注 Agent，经常中断以纠正</li>
+<li><strong>中级</strong>：在偶尔检查进度的同时进行多任务处理</li>
+<li><strong>高级</strong>：为不同的任务设置多个 Agent 会话，定期检查</li>
+</ol>
+<h2>如何审查 Agent 编写的代码？</h2>
+<ul>
+<li>在每个子任务后审查更改，避免积累审查债务</li>
+<li>提出澄清性问题（以"只是一个问题："为前缀，以防止误解）</li>
+<li>留下注释，如 <code class="notranslate">#TODO(agent): 在这里使用实用函数</code> 以进行多项改进</li>
+<li>要求 Agent 运行 <code class="notranslate">git diff</code> 以验证完整性</li>
+<li>利用 Agent 通过测试迭代代码的能力</li>
+</ul></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://github.com/suredream/gmeeklip">Web Clip</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suredream/gmeeklip");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
