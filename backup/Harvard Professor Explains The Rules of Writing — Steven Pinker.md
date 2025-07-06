@@ -1,0 +1,676 @@
+Harvard Professor Explains The Rules of Writing — Steven Pinker
+
+https://www.youtube.com/watch?v=nBQPnvmaNcE
+
+I'm here at Harvard in the office of Steven Pinker and he's written nine books and devoted his life to studying language and cognition and writing.
+我正在哈佛大学史蒂芬·平克（Steven Pinker）的办公室里，他写了九本书，一生致力于研究语言、认知和写作。
+
+And so what we did in this interview is we started off with the really practical stuff. We started off with his rules for writing.
+所以在这次采访中，我们从非常实用的部分开始，我们从他的写作规则开始。
+
+And what makes him unique is that he's been thinking about AI since the 1980s. So if you're interested in doing great non-fiction writing in the age of LLMs, well, this interview is for you.
+他的独特之处在于他从20世纪80年代就开始思考人工智能。所以如果你对在大型语言模型（LLM）时代写出优秀的非虚构作品感兴趣，那么这次采访就是为你准备的。
+
+[Music] I want to talk about the curse of knowledge and I want to talk about this this cartoon from your book which says good start needs more gibberish.
+[音乐] 我想谈谈知识的诅咒，我想谈谈你书中的这幅漫画，上面写着“好的开端需要更多胡言乱语”。
+
+Yes. When I uh pose the question why is there so much bad writing? Why? Why is there so much academies and bureaucrates and corporates?
+是的。当我提出问题：为什么有这么多糟糕的写作？为什么？为什么学术界、官僚机构和企业界有那么多糟糕的写作？
+
+People's favorite answer is captured by that cartoon. Namely, that bad writing is a deliberate choice.
+人们最喜欢的答案被那幅漫画捕捉到了。也就是说，糟糕的写作是一种故意的选择。
+
+That it's uh in various versions, it's uh academics with nothing to say dress up banal ideas with gobbledygook to show how sophisticated they are, or uh pastyfaced nerds get revenge on the girls who turned them down for dates in high school.
+在各种版本中，都是那些没什么好说的学者用晦涩的语言来包装平庸的想法，以显示他们有多么高深；或者是那些面色苍白的书呆子报复高中时拒绝他们的女孩。
+
+Mhm. Uh people want to uh uh erect a kind of uh cult that no one else outsiders can't penetrate because they haven't learned the the uh the jargon.
+嗯。人们想要建立一种外人无法 Penetrate 的“教派”，因为他们没有学会那些行话。
+
+I don't think that's the best explanation for bad writing.
+我认为这不是解释糟糕写作的最佳方式。
+
+Uh partly it's personal. I just know enough people who have plenty to say. They're brilliant people. They uh have no desire to offiscate. They're just uh incompetent. They just uh don't know how to express themselves clearly.
+部分原因是个人问题。我认识足够多的人，他们有很多话要说。他们是杰出的人。他们无意混淆视听。他们只是不称职。他们只是不知道如何清晰地表达自己。
+
+There's something called Hanland's razor. Never attribute to malice that which can uh adequately be explained by stupidity.
+有一种说法叫做汉隆的剃刀。永远不要将可以用愚蠢充分解释的事情归咎于恶意。
+
+Yeah. And uh that these are not stupid people I'm talking about, but it's a kind of stupidity in not knowing um where your audience is coming from.
+是的。我说的这些人并不是笨蛋，而是一种不知道你的听众来自何方的愚蠢。
+
+And I illustrate it with an anecdote uh of a conference in technology, entertainment and design, better known by its acronym TED, where a brilliant molecular biologist had been invited to present his uh latest findings.
+我用一个科技、娱乐和设计大会（即TED大会）的轶事来说明这一点。一位杰出的分子生物学家受邀在会上展示他的最新研究成果。
+
+He launched into uh what was obvious to me is the exact kind of talk that he would give to his peers in molecular biology and that uh within about 4 seconds he had lost everyone because he just spoke in jargon without even introducing what problem he was solving, why it was significant.
+他开始了一场在我看来显然是他在分子生物学同行面前会做的演讲，大约四秒钟内，他就让所有人都失去了兴趣，因为他只是用行话说话，甚至没有介绍他正在解决什么问题，为什么这个问题很重要。
+
+It was you know launched right into the the experiments. There was a room of several hundred people from many walks of life from you know to entertainment from design and it was obvious to everyone in the room that no one was understanding a word obvious to everyone except the distinguished biologist who was just clueless.
+他直接就开始了实验。会议室里有几百人，来自各行各业，从娱乐界到设计界，房间里每个人都清楚没有人听懂一个字，除了那位一无所知的杰出生物学家。
+
+Now this is you know not a stupid man but he was very stupid when it came to communication namely not everyone knows what you know.
+现在，这个人你知道，不是个笨人，但在沟通方面他非常笨，也就是说，不是每个人都知道你知道什么。
+
+Now the curse of knowledge term from economics is um the difficulty that we all have in knowing what it's like not to know something that we know.
+现在，经济学中的“知识的诅咒”这个术语，指的是我们所有人都有的困难，即我们知道某件事，却很难理解不知道这件事是怎样的。
+
+That is to subtract something from your brain. Put yourself in the shoes of your your audience your whether it be public speaking or in writing.
+也就是说，从你的大脑中减去一些东西。无论是公开演讲还是写作，都要设身处地为你的听众着想。
+
+Figure out where are they coming from. What do they know? What don't they know? I think that's the main cause of bad writing.
+弄清楚他们来自哪里。他们知道什么？他们不知道什么？我认为这是糟糕写作的主要原因。
+
+But you get um abbreviations and acronyms that no one has any way of knowing. You have jargon that is known only to a tiny little clique.
+但你使用的缩写和首字母缩略词无人知晓。你使用的行话只有一小撮人知道。
+
+You have um abstractions. The level of the stimulus was uh proportional to the intensity of the reaction. And what it really means is that uh you people kids look longer at a bunny than a a truck.
+你还有抽象概念。刺激的强度与反应的强度成比例。而这真正意味着的是，孩子们看兔子比看卡车的时间更长。
+
+Uh so that is it. It's so familiar to you that you don't think it's worth explaining to people concretely what they're supposed to be seeing. Right?
+就是这样。它对你来说太熟悉了，以至于你觉得不值得具体地向人们解释他们应该看到什么。对吧？
+
+So all of these are manifestations of the curse of knowledge. Goes by other names. Egoentrism, absence of a theory of mind.
+所以所有这些都是知识的诅咒的表现。它还有其他名称：自我中心主义，缺乏心智理论。
+
+That is a theory of what's going on in other people's minds. And I if I had to identify the the single biggest flaw in writing and communication, it would be that.
+也就是一种关于他人的想法的理论。如果我必须指出写作和沟通中最大的一个缺陷，那就是这个。
+
+That's it. So when you're writing your books, I know you go up to Cape K, you write for like, you know, as long as you possibly can.
+就是这样。所以当你写书的时候，我知道你会去科德角，尽可能长时间地写作。
+
+Now, I would assume that one way to get around the curse of knowledge is just to talk to the kinds of people who would be reading your book.
+那么，我猜想绕过知识诅咒的一种方法就是和那些会读你书的人交谈。
+
+Yeah. You show it to people. So what do you do? What do you do? Cuz you, you know, you write really intensely. So when you're writing, how do you get around that?
+是的。你把它展示给人们看。那你怎么做呢？你怎么办？因为你，你知道，你写作非常投入。那么当你写作时，你如何克服这个问题？
+
+Well, I do something that is I know is not good enough, but I do it as as best I can, which is I try to imagine what it's like for someone not to know what I know.
+嗯，我做了一件我知道不够好的事情，但我尽力做到了，那就是我试图想象一个人不知道我所知道的事情是什么样子。
+
+that is I I try to cultivate my sense of empathy. But the problem with the curse of knowledge is you don't know when you're subject to the curse of knowledge because something that seems so obvious to you that you don't even question whether other people know it turns out not to be obvious.
+也就是说，我尝试培养我的同理心。但知识诅咒的问题在于，你不知道自己何时受到了知识诅咒的影响，因为对你来说显而易见、甚至无需质疑别人是否知道的事情，结果却并非如此显而易见。
+
+So anyway, I try uh but at the end of the day, I show it to people.
+所以无论如何，我尝试了，但最终，我还是把它给别人看。
+
+Uh when my mother was alive, I would always show her a uh a draft of my book, not for the reason that most academics site with, namely referring to my mother as the epitome of a, you know, unsophisticated, you know, not very well read, not very bright person.
+我母亲在世时，我总是把我的书稿给她看，并非像大多数学者那样，将我母亲视为一个不谙世事、没读过什么书、不太聪明的人的典型。
+
+My mother was uh extremely intelligent, extremely well read, very sophisticated, but she wasn't a cognitive psychologist. She wasn't a psycho linguist.
+我的母亲非常聪明，博览群书，非常老练，但她不是认知心理学家。她不是心理语言学家。
+
+she didn't know what I knew. And you know, when I write, I don't write for just a random sample of the population. They don't they don't buy my books.
+她不知道我知道什么。而且你知道，我写作不是为了随机抽取的人群。他们不买我的书。
+
+Um I I I write for people who are intellectually curious, who have some degree of education. However, not for peers in my field.
+我为那些求知欲强、受过一定教育的人写作。然而，我不是为我领域内的同行写作。
+
+Uh and so my mother being an example, but also of course when you publish for a commercial publisher, you have an editor, and the editor is typically, you know, very smart, but again, not in your field.
+我的母亲就是一个例子，当然，当你为商业出版商出版时，你有一个编辑，编辑通常非常聪明，但同样，他不在你的领域内。
+
+And I show it to people in different fields who are academics. But it's surprising how uh insular even academics are when it comes to other academics.
+我把它展示给不同领域的学者。但令人惊讶的是，即使是学者，在面对其他学者时也显得多么孤立。
+
+Sometimes there'll be people here in this building in my own department, sometimes my own subdivision within my own department like students and they'll give me their thesis proposal and I just don't know what they're talking about.
+有时，在我自己的系里，甚至是我自己的系下属的部门里，比如学生，他们会给我看他们的论文提案，我却根本不知道他们在说什么。
+
+sometimes in my own field because they've been immersed in like five or six people in their lab their supervisor and the other grad students and a couple of posttos and a research assistant and they've all been consuming the same jargon that as soon as they step outside that tiny little circle they're unintelligible.
+有时甚至在我自己的领域里，因为他们一直沉浸在实验室里的五六个人——他们的导师、其他研究生、几个博士后和一个研究助理——他们都在使用相同的行话，以至于他们一走出那个小圈子，就变得难以理解。
+
+Yeah. So even showing it to if I'm showing it to a friend who's, you know, an economist or a historian or a political scientist or an evolutionary biologist, not being a cognitive psychologist, they'll say, "I'm sorry, but I don't just don't know what you're talking about."
+是的。所以即使我把它展示给一个朋友看，比如一个经济学家、历史学家、政治学家或进化生物学家，如果他们不是认知心理学家，他们就会说：“抱歉，我不知道你在说什么。”
+
+Yeah. In terms of your writing, you've done so much work looking at vision and how the brain works. And it seems like a lot of your writing advice is informed by that.
+是的。就你的写作而言，你在视觉和大脑运作方面做了大量研究。你的许多写作建议似乎都受到了这方面的影响。
+
+Like I guess if I were to try to summarize it, it's like a lot of our brain and basically the ma way that we move through the world is indexed heavily on vision and so writing well means being concrete and helping people see what it is that you're trying to write. Is that a good way of describing it?
+我想，如果我尝试总结一下，那就是我们大脑的很大一部分，以及我们感知世界的方式，都严重依赖于视觉，所以写得好意味着要具体，并帮助人们看到你试图写的是什么。这是个好的描述方式吗？
+
+Yes. And that would be my the probably the second bit of second advice on the list. The first one being find some way of getting into get into your reader's heads, but don't just depend on your ability to get in their heads. actually get a flesh and blood person to actually read it and see if it makes any sense to them.
+是的。这可能是我列表中第二条建议。第一条是找到某种方式进入读者的思想，但不要只依赖你自己进入他们思想的能力。实际上，找一个活生生的人来读它，看看他们是否理解。
+
+So that'd be number one. Number two is you know I study language and you know as a writer I live in language but language is kind of overrated in the sense that what understanding consists of is not a bunch of words.
+所以这是第一点。第二点是，你知道我研究语言，作为一名作家，我生活在语言中，但语言在某种程度上被高估了，因为理解并非由一堆词语组成。
+
+It's not blah blah blah blah blah blah blah, but language is a means to an end of getting people to appreciate what you're the ideas you're trying to convey, which are not just a string of verbiage.
+它不是“叽里呱啦叽里呱啦”，而是语言是一种工具，目的是让人们理解你想要传达的思想，而这些思想不仅仅是一连串的空话。
+
+And those ideas very often are visual, you know, and and motoric, that is, you know, bodily, emotional, auditory, but they're they're sensory um or they're even conceptual, but they aren't just a bunch of vowels and consonants, right?
+而这些想法往往是视觉的，你知道，还有运动的，也就是说，身体的，情感的，听觉的，但它们是感官的，或者它们甚至是概念性的，但它们不仅仅是一堆元音和辅音，对吗？
+
+And so constantly allowing your reader to be able to form a mental image uh based on what you're writing is the next key to to to to good writing.
+所以，不断让你的读者能够根据你的文字形成心理图像，是优秀写作的下一个关键。
+
+That is don't talk about a uh a stimulus if you mean a uh a bunny rabbit, right?
+也就是说，如果你指的是一只兔子，就不要谈论一个“刺激”，对吗？
+
+Uh don't talk about a a level or a perspective or a framework or a paradigm or a concept. All of which mean a lot to you in your day-to-day work, but no one can form an image of a paradigm in their mind's eye.
+不要谈论“水平”、“视角”、“框架”、“范式”或“概念”。这些在你日常工作中对你来说意义重大，但没有人能在脑海中形成一个范式的形象。
+
+So, how do you do that? Like one thing you've said is use for example all the time.
+那么，你如何做到这一点呢？比如说，你曾说过要经常使用“例如”。
+
+Uh what else can we do? Um so often you know visual metaphors uh are are helpful.
+我们还能做些什么？嗯，你知道，视觉隐喻通常很有帮助。
+
+One of the reasons that often the the pros of other eras strikes us as so much more vivid is I was going to say lush. Lush. Yes.
+过去时代的散文之所以常常让我们觉得更加生动，其中一个原因是，我本想说“华丽”。是的，华丽。
+
+Partly because they had the advantage of of uh writing before there were you know several hundred years of academia and intellectuals inventing terms and abstractions and they had to appeal to uh images that were part of people's common knowledge.
+部分原因在于，他们在几百年的学术界和知识分子发明术语和抽象概念之前就已开始写作，他们必须诉诸于人们共同知识中的意象。
+
+So instead of saying something like aggression um or antisocial behavior, they might say the spirit of the of the hawk needed into our flesh.
+所以，他们不会说“攻击性”或“反社会行为”，而是可能会说“鹰的精神渗入了我们的肉体”。
+
+Yes. Uh you know, we wouldn't write like that because we can say, you know, aggression or antisocial behavior, but uh and that's jargon that a lot of people are familiar with, but they weren't always with us.
+是的。你知道，我们不会那样写，因为我们可以说“攻击性”或“反社会行为”，但是，那是一种很多人都熟悉的行话，但它们并非一直存在。
+
+And before that, there had to be some way of referring to it in terms of an image that everyone shared.
+在那之前，必须有一种方式，用所有人都能理解的形象来指代它。
+
+And I think that's why often the writing of previous centuries just strikes us as so much more more gripping, so much more evocative and powerful that they had to appeal to visual metaphors.
+我认为这就是为什么过去几个世纪的写作常常让我们觉得如此引人入胜，如此更具启发性和力量，因为他们不得不诉诸于视觉隐喻。
+
+Yeah. I've never thought about that before because a lot of the Bible's like that. I think of like I don't know why the owl of Manurva came to mind. Like there's just all of this symbolism in in in animals. It always is uh is striking.
+是的。我以前从未想过这一点，因为《圣经》中有很多这样的例子。我想到的是，不知为何，雅典娜的猫头鹰浮现在我脑海中。动物中充满了象征意义。这总是令人惊叹的。
+
+And so what you're saying is like a lot of the concepts that academics and and and people brought in obviously they're kind of a more efficient way to communicate, but they do lack that kind of visual quality that makes writing vivid. That's right.
+所以你的意思是，学术界和人们引入的许多概念显然是一种更有效的交流方式，但它们确实缺乏那种使写作生动的视觉品质。没错。
+
+So they they do make it in fact they're essential for doing the work within the profession.
+所以它们确实使之成为可能，事实上，它们对于在专业领域内开展工作是必不可少的。
+
+Um, you have to be able, you know, if you're a biologist, you have to be able to, you know, talk about things like ecosystems and species and and systems and reagents and uh, potentiation.
+嗯，你知道，如果你是生物学家，你必须能够谈论诸如生态系统、物种、系统、试剂以及增效等概念。
+
+All these concepts that you don't want to have to go back to basics and talk about, well, there's a certain amount of chemicals and we call that a concentration and when it increases over time, we call it, you know, you're beyond that after you're a freshman.
+所有这些概念，你都不想回到基本概念去谈论，比如，某种化学物质的量，我们称之为浓度，当它随着时间增加时，我们称之为……你知道，当你成为新生后，你就会超越这些。
+
+And so you have more and more abstract terms that you could refer to enormous bodies of knowledge just with like two syllables. That's very good, right?
+所以你会有越来越多的抽象术语，你可以用两三个音节来指代庞大的知识体系。这非常好，对吧？
+
+The problem is that then now when it's time to convey them to someone who isn't at the pinnacle of of specialization in your field, because of the curse of knowledge, you're apt to forget that these abstractions which are kind of basic to you are just don't even need to be defined aren't basic to anyone else.
+问题在于，当需要将这些知识传达给并非你领域专业巅峰的人时，由于知识的诅咒，你很容易忘记这些对你来说基本到甚至无需定义的抽象概念，对其他人来说并非基本。
+
+Hm. What do we need to know about writers about how hard writing is? And I mean it in this way.
+嗯。我们需要了解作家关于写作有多难吗？我是这样理解的。
+
+Speaking comes so naturally to us, but then writing is something that we sort of have to learn, right?
+说话对我们来说是如此自然，但写作却是我们必须学习的东西，对吧？
+
+You watch a kid and you talk to a parent who has a 20-month-old, they're like, yeah, you know, they're speaking now. They're like, oh, you know, you wouldn't believe it. You know, they're talking so much, they're crawling around, and it's always like, yeah, it's like that.
+你看着一个孩子，你和一个有20个月大孩子的父母交谈，他们会说，是的，你知道，他们现在会说话了。他们会说，哦，你知道，你不会相信的。他们说话很多，到处爬，总是那样。
+
+And then you talk to them who have a parents who have a 8-year-old kid, it's like, how's the writing going? It's like, well, you know, it's going little slow.
+然后你和那些有八岁孩子的父母交谈，他们会说：“写作进展如何？”他们会说：“嗯，你知道，进展有点慢。”
+
+there's not that same excitement. And so it's as if like why is it that writing is so unnatural in a way that speaking is so natural? Like what is going on there scientifically and then practically?
+没有那种相同的兴奋。所以，好像是为什么写作如此不自然，而说话如此自然？从科学和实践角度看，这到底是怎么回事？
+
+A number of things. One of them is that in um in conversation um you don't never have two people that are kind of parachuted on a stage and immediately have to begin a conversation. They have some common ground to begin with.
+有很多原因。其中之一是，在对话中，你永远不会有两个人在舞台上空降，然后立刻开始对话。他们一开始就有一些共同点。
+
+Mhm. They know why they're there. They they're talking about something that is in the air that they're both familiar with. It was the reason for them having the conversation in in the first place.
+嗯。他们知道自己为什么在那里。他们正在谈论一些彼此都熟悉、空气中弥漫着的话题。这是他们最初进行对话的原因。
+
+Uh they can get away with using terms that in context are perfectly clear like this and that and the thing and what I was talking about and uh she uh whereas if you are not privy to that little social circle, you may not know who they're referring to.
+他们可以用在特定语境下非常清楚的词语，比如“这个”、“那个”、“那件事”以及“我刚才说到的”和“她”。然而，如果你不了解那个小社交圈子，你可能就不知道他们在指代谁。
+
+M um in writing you're wrenched from the context. Uh someone's picking a book up off the shelf and you know they've never met you and they may be living in a different country.
+在写作中，你被从语境中抽离出来。有人从书架上拿起一本书，你知道他们从未见过你，他们可能住在不同的国家。
+
+You might be dead. Uh they've got to pick up all of this detail from what's there on the page, not what's in not the the common ground that the two people bring to the conversation. Right?
+你可能已经死了。他们必须从页面上的内容中获取所有细节，而不是两人在对话中带来的共同点。对吗？
+
+Also, you know the when you're speaking, you know that you're speaking to someone. You know their idiosyncrasies.
+此外，当你在说话时，你知道你在和某人说话。你知道他们的怪癖。
+
+You're a little bit better at uh avoiding the curse of knowledge partly because you get feedback like the furrowed brow, the quizzical expression, the uh the what the the request for clarification, I'm sorry, I just don't know what you're talking about.
+你更擅长避免知识的诅咒，部分原因是你得到了反馈，比如皱眉、困惑的表情、要求澄清的“抱歉，我不知道你在说什么”。
+
+uh in real time and you know in the body language, the engagement uh even in in a live audience uh any speaker knows when people are starting to fidget and and and and drift off as opposed to continuing to be riveted.
+在实时互动中，你通过肢体语言、投入程度，甚至在现场观众面前，任何演讲者都知道何时人们开始坐立不安、走神，而不是全神贯注。
+
+None of that is available in uh in writing. Absolutely. How about this one? I think generalizations without examples and examples without generalizations are both useless.
+所有这些在写作中都是无法获得的。绝对如此。这个怎么样？我认为没有例子的概括和没有概括的例子都是无用的。
+
+Yes. Well, and useless might be a bit strong, but yeah, generalizations without examples I find even in my field nine out of 10 times I just don't know what they're talking about.
+是的。嗯，“无用”可能有点言重，但没有例子的概括，我发现即使在我自己的领域，十有八九我也不知道他们在说什么。
+
+It's like what do you like like give me an example. Uh just it's too because a generalization erases detail.
+这就像你喜欢什么，给我举个例子。嗯，这太……因为概括会抹去细节。
+
+um it it uh sweeps over particulars. You often just can't really know what it's referring to.
+它会忽略具体细节。你常常根本不知道它指的是什么。
+
+And and and the abstract words in a language just aren't precise enough. They often have we have probably a hundred concepts for every word in the English language.
+而且语言中的抽象词汇不够精确。英语中可能每个单词都有上百个概念。
+
+And so a particular word uh especially if it's abstract won't call to mind a particular reference. the example pins it down to what's the what's the the general ballpark that you're talking about? What is it? What is theam the generalization generalization about?
+所以一个特定的词，特别是抽象的词，不会让人想起一个特定的指代。例子会将其限定在你所谈论的大致范围是什么？它是什么？这个概括是关于什么的？
+
+Now examples about generalizations it's well why did you just tell me that like you know and your point is uh and appropo of what?
+现在关于概括的例子，就像你刚才告诉我那样，你的观点是什么？以及这与什么相关？
+
+One of my favorite ways to think about this is that there's always a trade-off between context and compression.
+我最喜欢思考这个问题的方式之一是，上下文和压缩之间总有一个权衡。
+
+So, if I could wax poetic for the next 5 hours about my train ride to Boston, but that's way too long. Or I could tell you, yeah, it was an easy train ride, but then you didn't actually get anything from that cuz there's no context there.
+所以，如果我能用接下来5个小时来诗意地描述我坐火车去波士顿的经历，那时间太长了。或者我可以告诉你，是的，那是一段轻松的火车旅程，但那样你就什么也得不到，因为那里没有语境。
+
+And that maybe we're always kind of balancing the examples kind of give us that context. And then the generalizations are the compression.
+也许我们总是在平衡，例子提供了语境。而概括则是压缩。
+
+And it's actually in like the swing in the dance of the two of those that good writing and good communication happens.
+而优秀的写作和沟通实际上就发生在两者摇摆和互动之间。
+
+Yeah. So for example, if I were to say that familiar words don't have to refer to the literal meaning of their their parts, you can understand that.
+是的。所以举例来说，如果我说熟悉的词语不必指代其组成部分的字面意思，你可以理解。
+
+And you kind of say, well, yeah, yeah, okay. And then I say, well, for example, um, a bathroom isn't necessarily a room with a bath.
+你可能会说，嗯，是的，好的。然后我说，举个例子，嗯，浴室不一定是有浴缸的房间。
+
+And going to the bathroom doesn't necessarily mean going to a room that has a bath. Breakfast isn't necessarily breaking a fast and Christmas isn't necessarily doesn't necessarily refer to Christ's mass.
+去洗手间不一定意味着去一个有浴缸的房间。早餐不一定意味着“打破禁食”，圣诞节也不一定指“基督弥撒”。
+
+Um, now having said that, I think you now understand what I mean when I said say that the meaning of a familiar phrase doesn't necessarily correspond to the meanings of its parts. Hopefully that now makes some sense to you now that I've given the examples.
+嗯，话虽如此，我想你现在应该理解我刚才所说的“一个熟悉的短语的意义不一定与其组成部分的意义相符”是什么意思了。希望我现在给出的例子能让你明白一些。
+
+Without the examples, you know, you could nod and say, "Oh, that sounds plausible." But you really wouldn't have understood it. Let's roll with that.
+没有这些例子，你可能会点头说：“哦，听起来很有道理。”但你真的不会理解。我们继续吧。
+
+If adults commit adultery, do infants commit infantry? If olive oil is made from olives, what do they make baby oil from?
+如果成年人通奸，那么婴儿会犯“步兵”罪吗？如果橄榄油是用橄榄做的，那婴儿油是用什么做的？
+
+If a vegetarian eats vegetables, what does a humanitarian consume? A writer is someone who writes, "And a stinger is something that stings. But fingers don't fing, grossers don't gross, hammers don't ham, humdingers don't humding, ushers don't ush, and habarddashers don't habdash. What's going on there? Why'd you pull this out?
+如果素食者吃蔬菜，那人道主义者吃什么？作家是写作的人，“而有刺的东西会蜇人。但手指不会‘指’，总店不会‘总’，锤子不会‘锤’，奇特的玩意不会‘奇特’，引座员不会‘引’，裁缝也不会‘裁’。这到底是怎么回事？你为什么要提出这个？”
+
+So, this is a quote from Richard Letterer. I deserve no credit for that that witism. And and I love this. I think it's so good.
+所以，这是理查德·莱德勒的一句话。我对此妙语无功。我喜欢这个。我觉得它太棒了。
+
+Letterer has written a number of delightful books like Crazy English and Anguished English.
+莱德勒写过一些令人愉快的书，比如《疯狂英语》和《痛苦英语》。
+
+um he's a a has a marvelous ear and a a fabulous collector of quirks and errors and oddities and blunders in in the English language.
+他拥有惊人的听力，并且是一位搜集英语中各种怪癖、错误、奇特之处和失误的绝佳收藏家。
+
+Uh so that that whimsical list is quite profound because it indicates a lot of truths about language such as that uh over time compositions of of words compounds or words with a prefix and suffix can sometimes drift away from the uh original meaning.
+因此，那个异想天开的列表相当深刻，因为它揭示了许多关于语言的真相，比如随着时间的推移，词语的组合、复合词或带有前缀和后缀的词有时会偏离其原始含义。
+
+The case of adultery uh for example it is related to adulterate namely to commit adultery is to you know introduce a foreign substance namely you know semen into a uh the the a woman where it it doesn't belong.
+以通奸为例，它与“ adulterate”（掺假）相关，即通奸是指将外来物质，也就是精液，引入到不属于它的女性体内。
+
+Uh but that whole connection has been completely lost. Also in many kinds of compounds there are uh a number of different semantic relationships that can hold.
+然而，这种联系已经完全消失了。此外，在许多复合词中，存在多种不同的语义关系。
+
+So for example uh olive oil is oil made out of olives. Baby oil is oil for babies.
+所以举个例子，橄榄油是橄榄制成的油。婴儿油是给婴儿用的油。
+
+So there isn't a logical a single logical relationship between the different parts of the the compound. Language is so uh ancient.
+因此，复合词的不同部分之间不存在单一的逻辑关系。语言如此古老。
+
+English itself is um depending on on how you count maybe you know 1500 years old or or more but it came from Germanic which came from Indo-Uropean and who knows where that came from that a lot of words uh can uh completely uh obscure their uh origin.
+英语本身，取决于你如何计算，可能有1500年或更久的历史，但它来源于日耳曼语，而日耳曼语又来源于印欧语系，谁知道那又从何而来，很多词语的起源可能完全模糊不清。
+
+You have to go to a dictionary to find them out, but they're kind of like fossils of processes in the language that are long long dead.
+你必须查字典才能找到它们，但它们就像语言中早已消亡的进程的化石。
+
+You know where how the er got into finger. I I would have to look up the etmology to to tell you, but it's not the same as say singer, which comes from the rule that er uh turns a verb into a noun for the kind of person that typically engages in that activity.
+你知道“er”是如何进入“finger”这个词的吗？我得查词源才能告诉你，但这和“singer”不一样，“singer”来自于“er”将动词变成从事该活动的人的名词的规则。
+
+That's a rule that's still alive and well in the English language. Whereas we have the fossil record of lots of rules that died long ago.
+这是一个在英语中依然活跃的规则。而我们有许多早已消亡的规则的化石记录。
+
+When you're writing, like if I were to basically map out almost like a gradient of our conversation, I'd say like curse of knowledge, I would almost I'm being very haphazard here.
+当你写作时，如果我将我们的对话大致描绘成一个梯度，我会说，知识的诅咒，我在这里说得有点随意。
+
+I'd say like equal parts left brain, right? And then we sort of moved into kind of a leftrain side of the conversation.
+我会说，比如，左右脑各占一半，对吧？然后我们有点转向了对话的左脑部分。
+
+And then I think of what you've said about language should be a source of pleasure. Like I think of that in beauty, right? You talk a lot about beauty, also in your photography. You're very interested in that. That to me is more rightrain.
+然后我想起你曾说过语言应该是一种乐趣的来源。就像我想到美，对吧？你经常谈论美，在你的摄影作品中也是如此。你对此很感兴趣。对我来说，这更偏向右脑。
+
+So like when you're writing, when you're actually sitting down at the keyboard, what are some of the more rightrained maybe less verbal concepts that drive your writing?
+那么，当你写作时，当你真正坐在键盘前时，有哪些更偏向右脑的、可能不那么口头的概念在推动你的写作？
+
+Well, certainly visual imagery, that is, can I form an image? Can my reader form an image?
+当然是视觉意象，也就是说，我能形成一个意象吗？我的读者能形成一个意象吗？
+
+Um, euphan, that is sound, you know, that that is uh is there some poetry in the pros?
+嗯，优美的声音，也就是听觉，你知道，那就是散文中是否有诗意？
+
+Uh, and I uh read aloud or at least mumble or at least mumble to myself, my pros. Something that's again a highly recommended writing tip. I didn't invent it.
+而且，我大声朗读，或者至少低声念叨，或者至少对自己低声念叨我的散文。这又是一个强烈推荐的写作技巧。这不是我发明的。
+
+Yeah. Often when you read a draft of your own pros and if you can't articulate it smoothly, that you probably your reader won't be mentally sounding it out smoothly either, right?
+是的。通常当你阅读自己散文的草稿时，如果你不能流畅地表达出来，那么你的读者在心里也可能无法流畅地读出来，对吧？
+
+Um the aesthetics sometimes come from even things like um uh paying attention to the uh metrical structure of language that is the rhythm.
+嗯，美学有时甚至来源于诸如注意语言的韵律结构，也就是节奏。
+
+Oh, tell me about that. there is a a regular rhythm to to language and that uh it's not perfectly you know tick- tock tick- tock like a metronome but there are beats and if you disrupt it too much then it it does interfere with speech but it also interferes with reading even though it's just characters on a page.
+哦，给我讲讲那个。语言有一种规律的节奏，它不像节拍器那样完美地嘀嗒嘀嗒，但它有节拍，如果你打乱它太多，它就会干扰说话，也会干扰阅读，即使它只是页面上的文字。
+
+Uh even the aesthetics of uh sibilent sounds generally too many chosen uh make it make pros a little unpleasant and I will often um pick a synonym that avoids the sibilent uh at least too many siblance in in a row.
+就连齿擦音的美学，通常选择过多也会让散文听起来有些不悦耳，我常常会选择一个同义词来避免连续出现过多的齿擦音。
+
+Um, I'll often go with um alliteration just because it again there's a little a little spark of pleasure, sense of style. Sense of style. Yep.
+嗯，我常常会选择头韵，仅仅因为它又能带来一点点愉悦的火花，一种风格感。风格感。是的。
+
+Even when it isn't, it you you don't want to make it too conspicuous otherwise it starts to feel forced. But often a bit of alliteration can just make the sentence roll past more easily.
+即使不是这样，你也不想让它太显眼，否则会显得刻意。但通常一点头韵就能让句子更流畅地读下去。
+
+Why do you think that you as much as anybody have been the person to kind of stomp your feet, kick and scream about the how bad academic writing has been over the years?
+你认为为什么你和任何其他人一样，都一直在抱怨、大声疾呼学术写作多年来有多糟糕？
+
+Like when I think of who has been like, "Guys, what are what are we doing?" You sort of been in one of the for the front runners. What about it?
+就像我想到谁会说：“伙计们，我们到底在干什么？”你有点像是领先者之一。那又怎样？
+
+I mean, besides the obvious, what about it has just bothered you so so vividly?
+我的意思是，除了显而易见的之外，它还有什么让你如此生动地感到困扰？
+
+Yeah. Part of it is um just the sheer waste that is there's an awful lot of really brilliant work a lot of really smart people you know in in academia and you know why are they doing it just to u you know entertain each other and you know closed little circle I mean taxpayers pay for it uh it should be accessible they should give it away they should state it in a form that that it's accessible there's also when even within the profession uh there's just an enormous amount of wasted effort and potential for misunderstanding in bad pros.
+是的。一部分原因在于，这简直就是一种巨大的浪费，学术界有大量真正出色的工作，很多真正聪明的人，你知道，他们为什么这样做，只是为了取悦彼此，你知道，在一个封闭的小圈子里。我的意思是纳税人为此买单，它应该易于获取，他们应该将其免费提供，他们应该以一种可访问的形式陈述。此外，即使在专业内部，糟糕的散文也导致了巨大的精力浪费和潜在的误解。
+
+It's like if I'm reading, if I have to read something, it's a student paper or it's a paper in my own field or I'm reviewing a grant proposal or peer-reviewing a manuscript or evaluating for someone for tenure.
+这就像如果我正在阅读，如果我必须阅读一些东西，它可能是学生的论文，或者是我自己领域的一篇论文，或者我在审阅一份资助申请，或者同行评审一份手稿，或者评估某人的终身教职。
+
+If I have to read the same paragraph like five or six times in order to know what they're talking about, for one thing, I might get it wrong.
+如果我必须把同一个段落读上五六遍才能知道他们在说什么，首先，我可能会理解错。
+
+Then what, you know, what's the point? Another is why should I have to read it five or six times?
+那又怎样，你知道，有什么意义？另一个是我为什么要读五六遍？
+
+I'd rather be doing something else and uh so there there's waste, there's confusion.
+我宁愿做点别的，所以，存在浪费，存在困惑。
+
+Uh there's also foregone opportunity for pleasure and and beauty. It's enjoyable to to read um something that's wellcrafted and it's annoying to read something that's stilted and turgid and and bloated.
+此外，还失去了享受和发现美的机会。阅读精雕细琢的作品令人愉悦，而阅读那些生硬、晦涩、冗长的文字则令人恼火。
+
+Um there many reasons and it does it it does get under my skin when academics devote so much brain power into the scholarship and then just blow off the essential task of letting the world know what you've done.
+有很多原因，当学者们将如此多的脑力投入到学术研究中，然后却忽视了让世界了解自己所做之事这一基本任务时，我确实感到恼火。
+
+Yeah. It's a true virus in the modern world. Yeah.
+是的。这在现代世界中真是一种病毒。是的。
+
+uh you know I take a particular interest in it not just because I do try very hard even in my academic writing to be clear but since I'm someone who actually not just studies stuff as an academic but studies language um I get particularly annoyed at people in the field of linguistics and psycho linguistics because so many of them are such bad writers it's like you study language if what you're studying is what makes a sentence difficult to understand why don't to pay attention to your own research and make your sentences less hard to understand.
+你知道，我对它特别感兴趣，不仅因为即使在我的学术写作中，我也非常努力地做到清晰明了，而且因为我不仅是一名研究学问的学者，更是一名研究语言的人。所以我对语言学和心理语言学领域的人尤其恼火，因为他们中有太多人是糟糕的写作者，就像你研究语言，如果你研究的是什么让一个句子难以理解，为什么不关注你自己的研究，让你的句子更容易理解呢？
+
+Yeah. What is it that you love so much about children's explanations? Things like clouds are water vapor. Smoke is fire vapor.
+是的。你为什么如此喜欢孩子们的解释？比如“云是水蒸气”，“烟是火蒸气”。
+
+Oh, yes. Uh you do see things Uh Yes, that was from from my u my grandson. Uh I mean it is it's it's poetry.
+哦，是的。嗯，你确实看到了东西。是的，那是我孙子说的。我的意思是，它就是诗。
+
+It's a a new juxosition. There's such a freshness to children's explanations. Yeah.
+这是一种新的并置。孩子们的解释是如此的新鲜。是的。
+
+Yeah. because they aren't writing in in cliches and partly because they haven't uh accumulated this mass of abstractions like the writers of a few centuries ago who had to grasp for some common image.
+是的。因为他们不用陈词滥调，部分原因是因为他们没有像几个世纪前的作家那样积累大量的抽象概念，那些作家不得不抓住一些共同的形象。
+
+Uh children without the uh decades of of of uh of acquired jargon from academia have to appeal to something that they can see and that other people can see.
+没有几十年学术界习得的术语，孩子们必须诉诸于他们能看到并且其他人也能看到的东西。
+
+Yeah. There's a there's a guy who I follow on Twitter who I've really come to like and in his bio it says listen to children they haven't forgotten how to see.
+是的。我推特上关注的一个人，我真的很喜欢他，他的个人简介上写着“倾听孩子，他们还没有忘记如何去看。”
+
+And um I know a YouTuber and one of the ways that she comes up with her ideas is she has conversations with her friend's kids who just ask these crazy questions like how deep is the ocean? How how high would a tower need to be in order for us to get to heaven?
+而且，我认识一位YouTuber，她产生创意的方式之一就是和朋友的孩子们聊天，孩子们会问一些疯狂的问题，比如海洋有多深？一座塔需要多高才能让我们到达天堂？
+
+And then like I have another friend who when he was a kid he thought that clouds were produced by those little smoke things uh sort of like chimneys. So he thought that those were like cloud creators.
+然后我还有另一个朋友，他小时候认为云是那些小烟囱一样冒烟的东西产生的。所以他认为那些是造云器。
+
+And there's such a freshness to just how children see and how they talk about things. And like you said they're they're they can't possibly think inside the box because they don't even know the box exists.
+孩子们看事物和谈论事物的方式是如此的新鲜。就像你说的，他们不可能墨守成规，因为他们甚至不知道“盒子”的存在。
+
+Yes. Right. And there were there there there are have been in history various features to remind people of the the the originality and the freshness of of kids.
+是的。没错。历史上也有各种各样的特色，提醒人们孩子们的独创性和新鲜感。
+
+There was a regular feature from my childhood called Kids Say the Darnest Things from a television host named Art Art Link Letter.
+我童年时期有一个固定的节目，叫做《孩子们说出最奇怪的话》，主持人是阿特·林克莱特。
+
+Long I've heard of him. Oh, you have? Okay. Yeah. In fact, what has survived him and the uh and the feature of the the program is the say the darnest things or even the verb the darnest nouns which you'll often see in uh adopted in headlines and in it's become itself a kind of a formula but he originated it.
+我久闻大名。哦，你听说过？好的。是的。事实上，他本人和这个节目的特色流传下来的就是“说出最奇怪的话”，甚至还有“最奇怪的名词”这种用法，你经常会在报纸头条看到这种说法，它本身已经成为一种套路，但最初是他创造的。
+
+Johnny Carson the longtime host of the Tonight Show. Yeah. uh would sometimes have features where they he he'd read um answers kids answers to questions to to to much hilarity.
+约翰尼·卡森是《今夜秀》的长期主持人。是的。他有时会有一个环节，他会读孩子们的回答，引得大家哈哈大笑。
+
+How does humor factor into all this into writing? Yeah, exactly. Like and even maybe even the science of humor like words that are funnier because you have that great talk from like 10 years ago where you I'm going to recommend it.
+幽默是如何融入到所有这些写作中的呢？是的，没错。就像甚至可能是幽默的科学，比如哪些词更搞笑，因为你十年前有一个很棒的演讲，我准备推荐它。
+
+Yeah. Well, there's I guess like everything, there's an art to it because you don't want to when it's strained, you get groans instead of laughter.
+是的。嗯，我想，就像所有事情一样，这其中也有艺术，因为你不想在僵硬的时候，得到的是抱怨而不是笑声。
+
+Yeah. So, it has to be appropriate. Um it it can't just be something that has been repeated so often that people have heard heard it 37 times before.
+是的。所以，它必须恰当。它不能只是那种被重复了37遍，人们已经听过无数遍的东西。
+
+Right. And humor specifically depends on freshness. Yeah, it it does. And it also depends.
+没错。幽默尤其取决于新颖性。是的，它确实如此。它也取决于。
+
+Humor does have um much in common with good writing. There's the line from uh Hamlet which uh brevity is the soul of wit.
+幽默与好的写作有很多共同点。哈姆雷特有一句话，简洁是智慧的灵魂。
+
+Yeah. Now uh it's a great saying for a number of reasons. One of them is even the term soul as opposed to is essential for wit or is important for wit or even the essence of wit.
+是的。现在，这是一个很好的说法，原因有很多。其中之一是，即使“灵魂”这个词，而不是“对于机智是必不可少的”或“对于机智很重要”或甚至是“机智的本质”。
+
+Um those are ways that we would say it now. But the soul of wit, you have to think for a minute. Soul being the the deepest deepest essence, but it's a mono syllable and it has so much of resonance that you know I guess that that that Shakespeare really was a good writer, wasn't he?
+嗯，那是我们现在会说的方式。但“智慧的灵魂”，你得想一想。“灵魂”是那最深最深的本质，但它是一个单音节词，却有着如此多的共鸣，以至于你知道我猜莎士比亚真是个好作家，不是吗？
+
+Yeah, I've heard of that guy. Yeah. Um but it's also it is uh it is true and it's a good example of itself because it is so brief.
+是的，我听说过那个人。是的。嗯，但它也是真实的，而且它自身就是一个很好的例子，因为它非常简洁。
+
+M uh it was reiterated centuries later in the famous style manual the elements of style by uh white where um professor uh in lectures at Cornell that EB White uh recalled and then turned into a book uh would say that the first rule of writing is omit needless words.
+在几个世纪后，著名的风格手册《风格的要素》中，怀特教授在康奈尔大学的讲座中重申了这一点，EB·怀特回忆并将其写成书，书中写道，写作的第一条规则是“删除不必要的词语”。
+
+Now again it's a beautiful example of itself because there are no needless words in it.
+现在，它又是一个完美的自证例子，因为它本身没有任何多余的词。
+
+And he said that sometimes professor would be so adamant and um uh so insistent that this was the almost the only thing you needed to know about writing that he would just not know what to do except repeat it and you'd say omit needless words. Omit needless words. Omit needless words.
+他说，有时教授会如此坚定和坚持，认为这是你对写作几乎唯一需要了解的事情，以至于他除了重复之外别无他法，你会说：“省略不必要的词。省略不必要的词。省略不必要的词。”
+
+Uh and you know as with you brevity is the soul of wit. aside from being an example of itself, it is so true that sometimes uh when I have to uh compress an article to fit into some fixed space, especially if I'm writing for a newspaper or magazine and say, you know, unlike academia where you can u blather on uh with no one telling you to shut up, when you have to write for a paper, they'll say, "Sorry, 800 words."
+而且你知道，就像你所说，简洁是智慧的灵魂。除了它本身就是一个例子之外，它确实如此真实，有时当我不得不将一篇文章压缩以适应某个固定空间时，尤其是我为报纸或杂志写作时，他们会说：“抱歉，800字。”不像在学术界，你可以滔滔不绝，没人叫你闭嘴。
+
+And if it's, you know, 800 83 words, the editor will chop off three words and you don't get to say what they are.
+如果它是，你知道，883个字，编辑会删掉三个字，你甚至不能说他们是什么。
+
+And I can often mangle the meaning. So you have to actually learn how to say something in 800 words or however many words it is.
+我常常会扭曲其含义。所以你必须学会如何用800字或任意数量的词语来表达一些东西。
+
+But what I find is often just the exercise of squeezing it into that uh that maximum limit just improves the pros as if by magic.
+但我发现，仅仅是将其压缩到那个最大限制的练习，就能像施了魔法一样改善散文。
+
+It's like oh you know damn I have to like make this shorter and I thought I had said it perfectly.
+就像，哦，该死，我得把它写短点，我还以为我已经说得很完美了。
+
+Then often when you do it, you find, you know, it really has improved in quality having gotten rid of those needless words.
+然后，当你真的去做的时候，你会发现，你知道，摆脱了那些不必要的词语后，它的质量确实提高了。
+
+You know, partly it's because of mental effort. Namely, every every syllable, every word is more cognitive processing by your reader.
+你知道，部分原因在于精神上的努力。也就是说，每一个音节，每一个单词，都需要你的读者进行更多的认知处理。
+
+If you can get the same message in uh quicker, that's often le less work. Uh but it also makes it uh aesthetically more pleasing.
+如果你能更快地传达相同的信息，通常工作量会更少。但它在美学上也更令人愉悦。
+
+You have to work within the constraints of the English language. the the uh the melody, the the rhythm, the music of the language.
+你必须在英语的限制下进行创作。语言的旋律、节奏、音乐。
+
+It forces you into often into concrete language instead of woolly idioms and and and uh cliches.
+它常常迫使你使用具体语言，而不是模糊不清的习语和陈词滥调。
+
+Brevity as a solo is good. It kind of just hit me how good of a line that is. I've heard that a thousand times, but it never it never punched me in the chest like it just did.
+简洁本身就很好。这句话有多好，我刚才才突然领悟到。我听过上千遍，但它从未像现在这样击中我的心。
+
+I got to ask. I mean, sorry. The reason I brought it up is Oh, yeah. In humor. Yeah. And it's a soul of wit.
+我得问一下。我的意思是，抱歉。我之所以提起它是因为，哦，是的。在幽默中。是的。它是智慧的灵魂。
+
+I mean, wit used to mean a lot more than just, you know, haha. Uh, you know, it meant uh, you know, trenchness and appropriateness.
+我的意思是，“智慧”过去的意思远不止“哈哈”。你知道，它意味着尖锐和恰当。
+
+U, but wit in the sense of just raw humor. That's something that comedians know. You pair down the jokes, you pair down the lines. When you're using humor, the shorter, the pathier, the funnier.
+嗯，但“智慧”在这里指的是纯粹的幽默。这是喜剧演员都知道的。你要精简笑话，精简台词。使用幽默时，越短、越切中要害，就越好笑。
+
+Uh, if you drag it out, then you know, it ain't funny. You can step on your own punch line. you can uh telegraph telegraph the uh the punchline.
+如果你拖得太长，那就不搞笑了。你会砸了自己的包袱，也会提前泄露包袱。
+
+So I went to uh Rockefeller Center the other day and there's this called like a big thing of stone and John D. Rockefeller is talking about his theory of society and the good life and it was just remarkably well written.
+所以前几天我去了洛克菲勒中心，那里有一个很大的石碑，上面刻着约翰·D·洛克菲勒关于他的社会理论和美好生活的论述，写得真是好极了。
+
+Remarkably well written and then it's the same thing with the Declaration of Independence. There's just some beautiful lines in there, right?
+写得非常出色，而《独立宣言》也是如此。其中有一些非常优美的句子，对吧？
+
+We hold these truths to be self-evident that all men are created equal. It's just beautiful writing.
+我们认为这些真理不言而喻：人人生而平等。这文字简直美极了。
+
+And what do you make of how older writing, it seems like when people think about it, it's like harder to read. Thank God that writing's gotten so much clearer and easier to read, but at the same time, it does feel like a kind of beauty and poetry, a kind of reverence that I have for language itself has been stripped away from the English language at times.
+你对旧式写作有什么看法？当人们谈论它时，似乎觉得它更难读。感谢上帝，现在的写作变得如此清晰易读，但同时，我确实觉得英语语言中某种美感和诗意，我对语言本身的一种敬畏，有时被剥夺了。
+
+You do sometimes feel that even again Rockefeller is a good example because he did not go down in history as a pro stylist.
+你有时确实会觉得，洛克菲勒又是一个很好的例子，因为他并没有作为一位专业的文体家而载入史册。
+
+Yeah. No, exactly. Thank you. Thank you. That was a very important part of that point. This was the CEO. He was a oil magnet.
+是的。不，完全正确。谢谢。谢谢。那是那一点非常重要的一部分。这是首席执行官。他是个石油大亨。
+
+Yeah. Right. And likewise, I have a quote from Thomas Edison in Enlightenment Now on how the electricity will liberate women.
+是的。没错。同样地，我在《启蒙当下》中引用了托马斯·爱迪生关于电力将如何解放女性的一句话。
+
+Right. And it's just beautifully written. Beautifully written. Uh and and this is a guy who spent, you know, hours with, you know, filaments and life light bulbs.
+没错。而且写得非常漂亮。写得非常漂亮。嗯，这个人，你知道，他花了很多时间研究灯丝和白炽灯泡。
+
+uh and and and uh but and he could but he could write like an angel. Uh Herbert Spencer, uh Oliver Wendel Holmes, senior, that's a great example.
+他，他能写出天使般的文字。赫伯特·斯宾塞，奥利弗·温德尔·霍姆斯（老），这是一个很好的例子。
+
+U you Charles Darwin, uh all these people who were not themselves uh um professional writers, they had something else, but they were very good at it.
+查尔斯·达尔文，所有这些本身并非职业作家的人，他们有别的特长，但他们在这方面却非常擅长。
+
+So it's an interesting question. I think one reason is they were trained themselves on the classics on on um great works of of literature probably because for many of them there wasn't um the telephone radio uh let alone texting social media um the way that you presented yourself was through your pros and so you cultivated it the same way you you know kind of arranged yourself in a mirror.
+所以这是一个有趣的问题。我认为一个原因是他们本身是受经典和文学巨著训练的，这可能是因为对他们中的许多人来说，那时还没有电话、广播，更不用说短信和社交媒体了，你展示自己的方式就是通过你的散文，所以你会像照镜子一样培养它。
+
+This is other people how other people viewed you. But you had this stock because also that they were educated on the the classics. They had many good examples to draw on.
+这就是别人看待你的方式。但你之所以拥有这种储备，也是因为他们受过经典教育。他们有很多好的榜样可以借鉴。
+
+But then the the third reason is one that came up earlier in our conversation. Namely, since they didn't have the benefit of decades and decades of abstractions and cliches, and they were kind of exploring virgin territory, conveying new ideas, and and they didn't couldn't easily reach for uh a canned cliche.
+但第三个原因是我们之前对话中提到的。那就是，由于他们没有受益于几十年的抽象和陈词滥调，他们有点像在探索未开垦的领域，传达新的思想，所以他们无法轻易地找到一个现成的陈词滥调。
+
+They had to put new ideas into forms that their readers or listeners could understand. And that forced them to draw on visual images and metaphors and and um viv vivid expressions and locationions.
+他们必须将新的想法以读者或听众能够理解的形式表达出来。这迫使他们借鉴视觉形象、隐喻以及生动的表达和表述。
+
+And that is that there's been a um a process that's been going on for longer than a century called informalization where uh you can see it in dress where you know men no longer wear hats and women don't wear gloves and
+那就是，有一个持续了一个多世纪的过程，叫做“非正式化”，你可以在着装中看到这一点，男人不再戴帽子，女人不再戴手套，而且，
+
+Sometimes you look at a picture of someone on a hike from a century ago and you know the men are wearing ties and the women are wearing long dresses and you know they're going they're going hiking. This would be inconceivable to us.
+有时你看看一百年前某人徒步旅行的照片，你会发现男人们打着领带，女人们穿着长裙，他们去徒步旅行。这对我们来说是不可思议的。
+
+Um the fact that people used to address each other with you know with you know Mr. and and and and Mrs. and we're all on a firstname basis.
+嗯，人们过去常用“先生”和“夫人”互相称呼，而我们现在都是直呼其名。
+
+Um I got in trouble in the third grade for calling my teacher I went to detention for calling my teacher by her first name.
+三年级的时候，我因为直呼老师的名字而惹上了麻烦，结果被留校了。
+
+Yeah. And that would not happen now. That was I that that's certainly familiar to me from my childhood. It would be unthinkable. I wouldn't have got gotten that attention.
+是的。现在就不会发生这种事了。那是我小时候非常熟悉的事。那是不可想象的。我不会得到那样的关注。
+
+I actually it's been like 20 years and I still feel the shame that I felt in that moment. It's crazy.
+实际上，已经过去了20年，我仍然能感受到那一刻的羞耻感。太疯狂了。
+
+It just wouldn't have occurred to us. It was just you couldn't have done that a million years. The the fact that um taboo language uh profanities are commonly woven into speech which again would have been you know unthinkable a century ago.
+我们根本不会想到。那在一百万年前根本不可能做到。禁忌语，亵渎之词，如今普遍融入言语之中，这在一百年前同样是不可想象的。
+
+But there is this a process of greater familiarity of less hierarchy partly as a byproduct of democratization the the erosion of traditional hierarchies of class and uh education.
+但是，存在一个更大程度的熟悉感和更少等级制度的过程，部分是民主化的副产品，即传统阶级和教育等级制度的侵蚀。
+
+Um there's a kind of romantic um ethos where authenticity, spontaneity are valued as opposed to putting on airs.
+有一种浪漫的……气质，即真诚、自发性受到重视，而不是装腔作势。
+
+Uh thinking carefully before you do anything. Uh all of these have led to fancy language being seen as more pompous stilted uh distancing whereas the cultural value has changed toward spontaneity, intimacy, naturalists, authenticity.
+在做任何事情之前都仔细思考。所有这些都导致了华丽的语言被视为更做作、僵硬、疏远，而文化价值观已经转向了自发性、亲密性、自然主义和真实性。
+
+So I think many of us in having if we had to put the effort into crafting pros the way they may have a century or two centuries ago, we'd feel, "Oh, people are thinking I'm being too fancy and they might you might even perceive you as being too fancy," right?
+所以我认为，我们中的许多人，如果必须像一两个世纪前那样努力雕琢散文，我们会觉得：“哦，人们会觉得我太花哨了，他们甚至可能会觉得你太花哨了，对吗？”
+
+uh and and as a result the conversational vernacular has uh as opposed to the elevated the well the well-crafted uh has come to to characterize modern pros.
+因此，口语化的白话文，而非那种高雅、精雕细琢的语言，已经成为现代散文的特征。
+
+So I got to ask you were talking about being able to pull a cliche or an abstraction. AI takes that completely to the next level.
+所以我不得不问，你刚才谈到能够使用陈词滥调或抽象概念。人工智能将这完全提升到了一个新的水平。
+
+And do you feel like AI then enhances our almost inability to think originally for lack of a better word?
+你觉得人工智能是否增强了我们几乎无法进行原创思考的能力，姑且这么说？
+
+Like does it keep the trend that we're seeing or are LLMs like a new form and then maybe actually create some new way of communicating altogether?
+它会延续我们现在看到的趋势，还是说大型语言模型（LLM）是一种新形式，然后也许会创造出一种全新的交流方式？
+
+Yeah. Uh the the output of LLM is is peculiar in one sense. It's well written in the sense that it tends not to be in academies in jargon in the sentence structure tends to be pretty um plain and sound.
+是的。嗯，大型语言模型的输出在某种意义上是独特的。它的书写很出色，因为它往往不会使用行话，句子结构也相当平实和流畅。
+
+Uh the even the progression of ideas tends to be orderly. There tends to be an introductory sentence and concluding sentence.
+思想的进展也往往井然有序。通常有一个引言句和一个结论句。
+
+Um so in that sense it's good writing. It's bad in the sense that it is so generic and prosaic and you can almost recognize the output of a large language model. It's so so benile.
+嗯，所以从这个意义上说，这是很好的写作。它之所以糟糕，是因为它太过通用和枯燥，你几乎可以辨认出大型语言模型的输出。它太过于平庸了。
+
+Mhm. Uh now perhaps it could be trained and perhaps if you prompted it, you know, don't don't be prosaic, don't be uh plain.
+嗯。现在也许可以训练它，也许如果你提示它，你知道，不要平淡无奇，不要朴素。
+
+Uh uh it'll be interesting to see whether we come up with of uh with any kind of style or or freshness, but it's not the way it's designed.
+看看我们是否能创造出某种风格或新意会很有趣，但这不是它的设计方式。
+
+It's designed as a mashup, as a pastiche of, you know, literally, you know, billions of of examples out there.
+它被设计成一个大杂烩，一个拼贴画，你知道，字面意思上，你知道，数以亿计的例子在那里。
+
+And it's an interesting question why it should be so uh at least why its pro style should be sound. I mean I think that's the best you could say about it.
+而且这是一个有趣的问题，为什么它应该如此，至少它的专业风格应该如此。我的意思是，我认为这是你能对它说的最好的话。
+
+Whereas the pro style of most you know academics you know most lawyers most bureaucrats is not sound. Why is it better?
+然而，大多数学者、律师、官僚的专业文风并不严谨。为什么会这样呢？
+
+One possibility is it's just been hammered into shape through the fine-tuning and the the feedback that is instead of just regurgitating uh an amalgam of right the reinforcement learning the reinforcement learning and the uh the stuff they don't really talk about much but that might be essential that is they're real human beings who force it to uh into a you know a five paragraph essay right the other is that uh and this is completely speculative but we know in visual beauty often a composite is more attractive than the uh elements that went into the composite.
+一种可能性是，它通过微调和反馈被锤炼成形，也就是说，它不是简单地反刍了强化学习的混合物，以及那些他们不怎么谈论但可能很重要的东西，即有真正的人类强迫它写出五段式文章。另一种可能性是，这完全是推测，但我们知道在视觉美学中，复合体通常比构成复合体的元素更具吸引力。
+
+So that if you take a bunch of faces and you morph them together, the um non-existent human being that comes out of the morphing is more handsome or prettier than all of the men's faces and women's faces that went into it.
+所以，如果你把一堆脸合并在一起，合并出来的那个不存在的人类，会比所有合并进去的男人和女人的脸都更英俊或更漂亮。
+
+Really take a high school yearbook and you mash together the several hundred faces and the the result is is is pretty attractive. Is that right? Wow.
+真的，拿一本高中年鉴，把几百张脸拼在一起，结果会非常吸引人。是这样吗？哇。
+
+Now, whether that can be true of pros style, that is that if you were to eliminate all of the um god-awful convoluted constructions and just came up with a kind of the generic sentence structure, it wouldn't be beautiful, but it would be clear.
+现在，这是否也适用于散文风格，也就是说，如果你消除所有糟糕的复杂结构，只保留一种通用的句型结构，它可能不美，但会很清晰。
+
+That's a hypothesis. You've written nine books. You're working on your 10th now. with LLMs and the way they're going, if you were to almost rewrite those books starting now, how would you have written those books differently?
+这是一个假设。你已经写了九本书。你现在正在写你的第十本书。考虑到大型语言模型（LLM）及其发展趋势，如果你现在开始重写这些书，你会如何以不同的方式来写它们？
+
+I mean, knowing what we know about um Yeah, knowing what we know about LLM and also your sense of where the world is going and how it's changing, how the world of writing is changing.
+我的意思是，鉴于我们对……的了解，是的，鉴于我们对大型语言模型的了解，以及你对世界走向和变化的感知，对写作世界变化的感知。
+
+Would you have written the same books? Um, probably not. I think they I think I'd have to give greater um weight to the power of abstracting uh patterns from massive amounts of uh input which in the um uh the the the approach that I uh was kind of trained in and that I then developed of you know computational cognitive science, Chsky linguistics, uh classic AI was much more organized around um rules, algorithms, logic, kind of logical programming.
+你会写同样的书吗？嗯，可能不会。我认为我必须更加重视从大量输入中提取模式的能力，而在我所受训练和随后发展起来的计算认知科学、乔姆斯基语言学、经典人工智能等方法中，更多地围绕着规则、算法、逻辑，以及某种逻辑编程。
+
+It was hard to imagine how with enough just sheer input and training a neural an associative neural network could extract um uh sensible ideas and uh pros out of this huge unstructured mass of input.
+很难想象，仅仅通过足够的纯粹输入和训练，一个联想神经网络如何能从这庞大的非结构化输入中提取出有意义的思想和散文。
+
+Mhm. Now, I don't think that shows that the human mind is a large language model because it would be the equivalent of a child listening to language for, you know, 30,000 years before they could put put their first sentence clearly.
+嗯。现在，我并不认为这表明人类心智是一个大型语言模型，因为这就相当于一个孩子在听了3万年语言之后，才能清晰地说出他们的第一句话。
+
+Uh and also kids don't just need to have massive amounts of text pour into them. They also are in a situated in a world where they can figure out what the people talking to them are trying to say.
+此外，孩子们也不仅仅需要大量文本的灌输。他们还身处一个情境化的世界，在那里他们可以弄清楚和他们说话的人想要表达什么。
+
+uh and they're interacting with a world and that's a very different style of learning than just processing massive amounts of text.
+而且他们与世界互动，这与仅仅处理大量文本的学习方式截然不同。
+
+But still I think I would I I certainly would have had to reconcile the intelligence of large language models with human intelligence with more attention to the power of pattern extraction from large input uh corpora than I than I did.
+但我仍然认为，我当然必须调和大型语言模型的智能与人类智能，更多地关注从大量输入语料库中提取模式的能力，而不是我之前所做的。
+
+Well, thanks very much for doing this. Thank you. It's been a pleasure.
+好的，非常感谢您做这一切。谢谢您。很高兴。
+
+---
+
+### 核心观点总结
+
+史蒂芬·平克在访谈中深入探讨了**写作的本质**及其与**认知**、**语言**和**人工智能**的关系。他的核心观点可以概括为以下几点：
+
+* **知识的诅咒是糟糕写作的根源**：许多写作之所以差，并非出于恶意，而是因为作者难以站在读者的角度思考，忘记了对他们来说显而易见的概念对读者而言可能完全陌生。这导致了大量使用行话、抽象概念和晦涩难懂的缩写，使得内容难以理解。
+* **具象化和视觉化是优秀写作的关键**：由于人类大脑高度依赖视觉进行理解，好的写作应该具体化，帮助读者在大脑中形成清晰的图像。避免使用空洞的抽象词汇，多用例子和具象的描述，能让文字更生动、更易理解。
+* **写作与口语的差异导致写作的难度**：口语交流有即时反馈和共享语境，可以随时调整和澄清。而写作则脱离了语境，读者与作者之间没有直接互动，作者必须在纸面上提供所有必要的信息和背景，这使得写作更加困难和不自然。
+* **简洁是智慧和优秀写作的灵魂**：无论是幽默还是清晰表达，精炼的语言都至关重要。删除不必要的词语不仅能提高效率，也能使文章更具美感，迫使作者使用更具体的语言，避免冗余和陈词滥调。
+* **老式写作的美感与现代写作的非正式化**：过去的作家，由于缺乏现成的抽象概念和陈词滥调，被迫诉诸于视觉隐喻和生动表达，使得他们的作品更具诗意和震撼力。而现代写作则倾向于非正式化和口语化，虽然更易读，但也牺牲了部分美感和庄重感，这与社会等级制度的瓦解和对自发性、真实性的文化推崇有关。
+* **大型语言模型（LLM）的写作特点及对人类写作的启示**：LLM的输出在结构上清晰、语法正确，但往往缺乏新颖性和独创性，显得过于通用和平庸。尽管如此，LLM通过海量数据学习和模式提取的能力，促使我们重新思考人类智能与语言模式处理的关系，并可能为未来写作带来新的沟通方式。
