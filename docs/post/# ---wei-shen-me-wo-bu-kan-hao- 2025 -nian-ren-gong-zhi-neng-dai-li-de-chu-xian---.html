@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# **为什么我不看好 2025 年人工智能代理的出现**
+
+# [https://utkarshkanwat.com/writing/betting-against-agents/](https://utkarshkanwat.com/writing/betting-against-agents/)
+
+Everyone says 2025 is the year of AI agents. The headlines are everywhere: 'Autonomous AI will transform work,' 'Agents are the next frontier,' 'The future is agentic.' Meanwhile, I've spent the last year building many different agent systems that actually work in production. And that's exactly why I'm betting against the current hype.
+人人都说2025年是人工智能代理之年。">
+<meta property="og:title" content="# **为什么我不看好 2025 年人工智能代理的出现**">
+<meta property="og:description" content="# **为什么我不看好 2025 年人工智能代理的出现**
+
+# [https://utkarshkanwat.com/writing/betting-against-agents/](https://utkarshkanwat.com/writing/betting-against-agents/)
+
+Everyone says 2025 is the year of AI agents. The headlines are everywhere: 'Autonomous AI will transform work,' 'Agents are the next frontier,' 'The future is agentic.' Meanwhile, I've spent the last year building many different agent systems that actually work in production. And that's exactly why I'm betting against the current hype.
+人人都说2025年是人工智能代理之年。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://github.com/suredream/gmeeklip/post/%23%20---wei-shen-me-wo-bu-kan-hao-%202025%20-nian-ren-gong-zhi-neng-dai-li-de-chu-xian---.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title># **为什么我不看好 2025 年人工智能代理的出现**</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle"># **为什么我不看好 2025 年人工智能代理的出现**</h1>
+<div class="title-right">
+    <a href="https://github.com/suredream/gmeeklip" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suredream/gmeeklip/issues/30" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1><strong>为什么我不看好 2025 年人工智能代理的出现</strong></h1>
+<h1><a href="https://utkarshkanwat.com/writing/betting-against-agents/" rel="nofollow">https://utkarshkanwat.com/writing/betting-against-agents/</a></h1>
+<p>Everyone says 2025 is the year of AI agents. The headlines are everywhere: "Autonomous AI will transform work," "Agents are the next frontier," "The future is agentic." Meanwhile, I've spent the last year building many different agent systems that actually work in production. And that's exactly why I'm betting against the current hype.<br>
+人人都说2025年是人工智能代理之年。各种头条新闻随处可见：“自主人工智能将改变工作”、“代理是下一个前沿”、“未来属于代理”。与此同时，我去年花了一年时间构建了许多实际投入生产的代理系统。这正是我反对当前炒作的原因。</p>
+<p>I'm not some AI skeptic writing from the sidelines. Over the past year, I've built more than a dozen production agent systems across the entire software development lifecycle:<br>
+我并非旁观者笔下的人工智能怀疑论者。在过去的一年里，我构建了十多个贯穿整个软件开发生命周期的生产代理系统：</p>
+<p><strong>Development agents</strong>: UI generators that create functional React components from natural language, code refactoring agents that modernize legacy codebases, documentation generators that maintain API docs automatically, and function generators that convert specifications into working implementations.<br>
+<strong>开发代理</strong> ：使用自然语言创建功能性 React 组件的 UI 生成器、使遗留代码库现代化的代码重构代理、自动维护 API 文档的文档生成器以及将规范转换为工作实现的函数生成器。</p>
+<p><strong>Data &amp; Infrastructure agents</strong>: Database operation agents that handle complex queries and migrations, DevOps automation AI systems managing infrastructure-as-code across multiple cloud providers.<br>
+<strong>数据和基础设施代理</strong> ：处理复杂查询和迁移的数据库操作代理，跨多个云提供商管理基础设施即代码的 DevOps 自动化 AI 系统。</p>
+<p><strong>Quality &amp; Process agents</strong>: AI-powered CI/CD pipelines that fix lint issues, generate comprehensive test suites, perform automated code reviews, and create detailed pull requests with proper descriptions.<br>
+<strong>质量和流程代理</strong> ：由 AI 驱动的 CI/CD 管道，可修复 lint 问题、生成全面的测试套件、执行自动代码审查并创建具有适当描述的详细拉取请求。</p>
+<p>These systems work. They ship real value. They save hours of manual work every day. And that's precisely why I think much of what you're hearing about 2025 being "the year of agents" misses key realities.<br>
+这些系统确实有效，它们创造了真正的价值，每天节省了数小时的人工工作。正因如此，我认为大家听到的关于2025年是“代理商之年”的说法，很多都忽略了关键的现实。</p>
+<h2>**TL;DR: Three Hard Truths About AI Agents</h2>
+<p>关于人工智能代理的三个残酷事实**</p>
+<p>After building AI systems, here's what I've learned:<br>
+在构建人工智能系统之后，我学到了以下几点：</p>
+<ol>
+<li>Error rates compound exponentially in multi-step workflows. 95% reliability per step = 36% success over 20 steps. Production needs 99.9%+.<br>
+在多步骤工作流程中，错误率会呈指数级增长。每步95%的可靠性=20步内36%的成功率。生产需要99.9%以上的可靠性。</li>
+<li>Context windows create quadratic token costs. Long conversations become prohibitively expensive at scale.<br>
+上下文窗口会产生二次方的令牌成本。长时间对话的成本在规模化之后会变得极其高昂。</li>
+<li>The real challenge isn't AI capabilities, it's designing tools and feedback systems that agents can actually use effectively.<br>
+真正的挑战不是人工智能的能力，而是设计代理可以真正有效使用的工具和反馈系统。</li>
+</ol>
+<h2>The Mathematical Reality No One Talks About</h2>
+<p>无人谈论的数学现实</p>
+<p>Here's the uncomfortable truth that every AI agent company is dancing around: error compounding makes autonomous multi-step workflows mathematically impossible at production scale.<br>
+这是每个人工智能代理公司都在回避的一个令人不安的事实：错误复合使得自主的多步骤工作流程在生产规模上在数学上不可能实现。</p>
+<p>Error Compounding in AI Agent Workflows<br>
+AI 代理工作流中的错误复合</p>
+<p>Let's do the math. If each step in an agent workflow has 95% reliability, which is optimistic for current LLMs,then:<br>
+让我们来算一下。如果代理工作流程中每个步骤的可靠性达到 95%（这对于目前的 LLM 来说是一个乐观的估计），那么：</p>
+<ul>
+<li>5 steps = 77% success rate<br>
+5个步骤=77%的成功率</li>
+<li>10 steps = 59% success rate<br>
+10步=59%成功率</li>
+<li>20 steps = 36% success rate<br>
+20步=36%成功率</li>
+</ul>
+<p>Production systems need 99.9%+ reliability. Even if you magically achieve 99% per-step reliability (which no one has), you still only get 82% success over 20 steps. This isn't a prompt engineering problem. This isn't a model capability problem. This is mathematical reality.<br>
+生产系统需要 99.9% 以上的可靠性。即使你神奇地实现了每步 99% 的可靠性（目前还没有人做到），你在 20 步中的成功率仍然只有 82%。这不是一个即时工程问题。这不是一个模型能力问题。这是数学现实。</p>
+<p>My DevOps agent works precisely because it's not actually a 20-step autonomous workflow. It's 3-5 discrete, independently verifiable operations with explicit rollback points and human confirmation gates. The "agent" handles the complexity of generating infrastructure code, but the system is architected around the mathematical constraints of reliability.<br>
+我的 DevOps 代理之所以能够有效运作，正是因为它实际上并非一个包含 20 步的自主工作流程。它由 3-5 个独立的、可独立验证的操作组成，并带有明确的回滚点和人工确认门。“代理”负责处理生成基础设施代码的复杂性，但整个系统的架构设计却围绕着可靠性的数学约束展开。</p>
+<p>Every successful agent system I've built follows the same pattern: bounded contexts, verifiable operations, and human decision points (sometimes) at critical junctions. The moment you try to chain more than a handful of operations autonomously, the math kills you.<br>
+我构建的每个成功的代理系统都遵循相同的模式：有界上下文、可验证操作，以及（有时）在关键节点处的人为决策点。一旦你尝试自主地串联多个操作，数学计算就会把你逼上绝路。</p>
+<h2>The Token Economics That Don't Add Up</h2>
+<p>不合理的代币经济学</p>
+<p>There's another mathematical reality that agent evangelists conveniently ignore: context windows create quadratic cost scaling that makes conversational agents economically impossible.<br>
+代理布道者很容易忽略另一个数学现实：上下文窗口会产生二次成本缩放，从而让对话代理在经济上变得不可能。</p>
+<p>Here's what actually happens when you build a "conversational" agent:<br>
+当你构建一个“对话”代理时，实际上会发生以下情况：</p>
+<ul>
+<li>Each new interaction requires processing ALL previous context<br>
+每次新的互动都需要处理所有先前的上下文</li>
+<li>Token costs scale quadratically with conversation length<br>
+代币成本与对话长度呈二次方关系</li>
+<li>A 100-turn conversation costs $50-100 in tokens alone<br>
+一次 100 轮对话仅代币成本就高达 50-100 美元</li>
+<li>Multiply by thousands of users and you're looking at unsustainable economics<br>
+乘以数千名用户，你就会面临不可持续的经济效益</li>
+</ul>
+<p>I learned this the hard way when prototyping a conversational database agent. The first few interactions were cheap. By the 50th query in a session, each response was costing multiple dollars - more than the value it provided. The economics simply don't work for most scenarios.<br>
+我在设计一个对话数据库代理的原型时，吃过不少苦头才明白这一点。最初的几次交互成本很低。但到了会话中的第 50 个查询时，每次响应的成本就高达数美元——远远超过了它所提供的价值。在大多数情况下，这种经济效益根本行不通。</p>
+<p>Token Cost Scaling in Conversational Agents<br>
+对话代理中的令牌成本缩放</p>
+<p>My function generation agent succeeds because it's completely stateless: description → function → done. No context to maintain, no conversation to track, no quadratic cost explosion. It's not a "chat with your code" experience, it's a focused tool that solves a specific problem efficiently.<br>
+我的函数生成代理之所以成功，是因为它完全无状态：描述 → 函数 → 完成。无需维护上下文，无需跟踪对话，也不会出现二次成本爆炸。它并非“与代码对话”的体验，而是一个能够高效解决特定问题的专注工具。</p>
+<p>The most successful "agents" in production aren't conversational at all. They're smart, bounded tools that do one thing well and get out of the way.<br>
+生产中最成功的“代理”根本不是对话型的。它们是智能的、有界限的工具，能把一件事做好，然后就不再干扰别人。</p>
+<h2>The Tool Engineering Reality Wall</h2>
+<p>工具工程现实墙</p>
+<p>Even if you solve the math problems, you hit a different kind of wall: building production-grade tools for agents is an entirely different engineering discipline that most teams underestimate.<br>
+即使你解决了数学问题，你也会遇到另一种障碍：为代理构建生产级工具是一门完全不同的工程学科，大多数团队都低估了这一点。</p>
+<p>Tool calls themselves are actually quite precise now. The real challenge is tool design. Every tool needs to be carefully crafted to provide the right feedback without overwhelming the context window. You need to think about:<br>
+现在，工具调用本身实际上已经相当精确了。真正的挑战在于工具设计。每个工具都需要精心设计，才能提供正确的反馈，而不会让上下文窗口变得过于复杂。你需要考虑：</p>
+<ul>
+<li>How does the agent know if an operation partially succeeded? How do you communicate complex state changes without burning tokens?<br>
+代理如何知道操作是否部分成功？如何在不销毁代币的情况下传达复杂的状态变化？</li>
+<li>A database query might return 10,000 rows, but the agent only needs to know "query succeeded, 10k results, here are the first 5." Designing these abstractions is an art.<br>
+数据库查询可能会返回 10,000 行，但代理只需要知道“查询成功，10,000 个结果，这里是前 5 个”。设计这些抽象是一门艺术。</li>
+<li>When a tool fails, what information does the agent need to recover? Too little and it's stuck; too much and you waste context.<br>
+当工具出现故障时，代理需要哪些信息来恢复？信息太少，系统就会卡住；信息太多，就会浪费上下文。</li>
+<li>How do you handle operations that affect each other? Database transactions, file locks, resource dependencies.<br>
+如何处理相互影响的操作？数据库事务、文件锁、资源依赖关系。</li>
+</ul>
+<p>My database agent works not because the tool calls are unreliable, but because I spent weeks designing tools that communicate effectively with the AI. Each tool returns structured feedback that the agent can actually use to make decisions, not just raw API responses.<br>
+我的数据库代理之所以能正常工作，并非因为工具调用不可靠，而是因为我花了数周时间设计能够与人工智能有效通信的工具。每个工具都会返回结构化的反馈，代理可以实际使用这些反馈来做出决策，而不仅仅是原始的 API 响应。</p>
+<p>The companies promising "just connect your APIs and our agent will figure it out" haven't done this engineering work. They're treating tools like human interfaces, not AI interfaces. The result is agents that technically make successful API calls but can't actually accomplish complex workflows because they don't understand what happened.<br>
+那些承诺“只需连接你的 API，我们的代理就能搞定一切”的公司并没有完成这项工程工作。他们把工具当成了人机界面，而不是 AI 界面。结果就是，代理虽然技术上能够成功调用 API，但实际上却无法完成复杂的工作流程，因为它们根本不了解发生了什么。</p>
+<p>The dirty secret of every production agent system is that the AI is doing maybe 30% of the work. The other 70% is tool engineering: designing feedback interfaces, managing context efficiently, handling partial failures, and building recovery mechanisms that the AI can actually understand and use.<br>
+每个生产代理系统都有一个不可告人的秘密：AI 可能只完成了 30% 的工作。剩下的 70% 则属于工具工程：设计反馈接口、高效管理上下文、处理部分故障，以及构建 AI 能够真正理解和使用的恢复机制。</p>
+<h2>The Integration Reality Check</h2>
+<p>整合现实检验</p>
+<p>But let's say you solve the reliability problems and the economics. You still have to integrate with the real world, and the real world is a mess.<br>
+但即使你解决了可靠性问题和经济性问题，你仍然需要与现实世界融合，而现实世界是一团糟。</p>
+<p>Enterprise systems aren't clean APIs waiting for AI agents to orchestrate them. They're legacy systems with quirks, partial failure modes, authentication flows that change without notice, rate limits that vary by time of day, and compliance requirements that don't fit neatly into prompt templates.<br>
+企业系统并非等待 AI 代理进行编排的简洁 API。它们是遗留系统，存在各种怪癖、部分故障模式、未经通知而更改的身份验证流程、随时间变化的速率限制以及无法完全符合提示模板的合规性要求。</p>
+<p>My database agent doesn't just "autonomously execute queries." It navigates connection pooling, handles transaction rollbacks, respects read-only replicas, manages query timeouts, and logs everything for audit trails. The AI handles query generation; everything else is traditional systems programming.<br>
+我的数据库代理不仅仅是“自主执行查询”。它还能导航连接池、处理事务回滚、尊重只读副本、管理查询超时，并记录所有内容以供审计跟踪。AI 负责处理查询生成；其余一切都由传统的系统编程完成。</p>
+<p>The companies promising "autonomous agents that integrate with your entire tech stack" are either overly optimistic or haven't actually tried to build production systems at scale. Integration is where AI agents go to die.<br>
+那些承诺“自主代理能与你的整个技术栈集成”的公司，要么过于乐观，要么实际上并没有尝试构建大规模生产系统。集成才是 AI 代理的死穴。</p>
+<h2>What Actually Works (And Why)</h2>
+<p>什么真正有效（以及为什么）</p>
+<p>After building more than a dozen different agent systems across the entire software development lifecycle, I've learned that the successful ones share a pattern:<br>
+在整个软件开发生命周期中构建了十几个不同的代理系统之后，我了解到成功的系统都有一个共同的模式：</p>
+<ol>
+<li>My UI generation agent works because humans review every generated interface before deployment. The AI handles the complexity of translating natural language into functional React components, but humans make the final decisions about user experience.<br>
+我的 UI 生成代理之所以有效，是因为在部署之前，每个生成的界面都会经过人工审核。AI 负责处理将自然语言转化为 React 功能组件的复杂工作，而最终用户体验的决定权则掌握在人类手中。</li>
+<li>My database agent works because it confirms every destructive operation before execution. The AI handles the complexity of translating business requirements into SQL, but humans maintain control over data integrity.<br>
+我的数据库代理之所以有效，是因为它在执行之前会确认每个破坏性操作。AI 负责处理将业务需求转换为 SQL 的复杂性，而人类则掌控着数据完整性。</li>
+<li>My function generation agent works because it operates within clearly defined boundaries. Give it a specification, get back a function. No side effects, no state management, no integration complexity.<br>
+我的函数生成代理之所以有效，是因为它在明确定义的边界内运行。输入一个规范，它就会返回一个函数。没有副作用，无需状态管理，也没有任何集成复杂性。</li>
+<li>My DevOps automation works because it generates infrastructure-as-code that can be reviewed, versioned, and rolled back. The AI handles the complexity of translating requirements into Terraform, but the deployment pipeline maintains all the safety mechanisms we've learned to rely on.<br>
+我的 DevOps 自动化之所以有效，是因为它能够生成可审查、可版本控制、可回滚的基础设施即代码。AI 处理了将需求转换为 Terraform 的复杂性，而部署流水线则保留了我们习以为常的所有安全机制。</li>
+<li>My CI/CD agent works because each stage has clear success criteria and rollback mechanisms. The AI handles the complexity of analyzing code quality and generating fixes, but the pipeline maintains control over what actually gets merged.<br>
+我的 CI/CD 代理之所以有效，是因为每个阶段都有明确的成功标准和回滚机制。AI 负责处理代码质量分析和生成修复程序的复杂性，而流水线则负责控制实际合并的内容。</li>
+</ol>
+<p>The pattern is clear: AI handles complexity, humans maintain control, and traditional software engineering handles reliability.<br>
+模式很清晰：人工智能处理复杂性，人类保持控制，传统软件工程处理可靠性。</p>
+<h2><strong>My Predictions  我的预测</strong></h2>
+<p>Here's my specific prediction about who will struggle in 2025:<br>
+以下是我对 2025 年哪些人将陷入困境的具体预测：</p>
+<p>Venture-funded "fully autonomous agent" startups will hit the economics wall first. Their demos work great with 5-step workflows, but customers will demand 20+ step processes that break down mathematically. Burn rates will spike as they try to solve unsolvable reliability problems.<br>
+获得风险投资的“完全自主代理”初创公司将首先遭遇经济瓶颈。他们的演示在 5 步工作流程下运行良好，但客户会要求 20 多个步骤的流程，并以数学方式分解。当他们试图解决无法解决的可靠性问题时，资金消耗率将飙升。</p>
+<p>Enterprise software companies that bolted "AI agents" onto existing products will see adoption stagnate. Their agents can't integrate deeply enough to handle real workflows.<br>
+将“AI 代理”嵌入现有产品的企业软件公司将面临采用率停滞的局面。他们的代理无法进行足够深入的集成，无法处理实际的工作流程。</p>
+<p>Meanwhile, the winners will be teams building constrained, domain-specific tools that use AI for the hard parts while maintaining human control or strict boundaries over critical decisions. Think less "autonomous everything" and more "extremely capable assistants with clear boundaries."<br>
+与此同时，获胜者将是那些能够构建受限的、特定领域工具的团队，这些工具利用人工智能处理复杂部分，同时在关键决策上保持人为控制或严格界限。与其说是“万物自主”，不如说是“拥有明确界限的超强能力助手”。</p>
+<p>The market will learn the difference between AI that demos well and AI that ships reliably. That education will be expensive for many companies.<br>
+市场终将学会区分演示效果好的人工智能和交付可靠的人工智能。对许多公司来说，这种教育成本高昂。</p>
+<p>I'm not betting against AI. I'm betting against the current approach to agent architecture. But I believe future is going to be far more valuable than the hype suggests.<br>
+我并非在押注人工智能会失败。我押注的是当前的代理架构方法会失败。但我相信未来人工智能的价值将远超炒作所言。</p>
+<h2>Building the Right Way</h2>
+<p>以正确的方式建设</p>
+<p>If you're thinking about building with AI agents, start with these principles:<br>
+如果您正在考虑使用 AI 代理进行构建，请遵循以下原则：</p>
+<p><strong>Define clear boundaries.</strong> What exactly can your agent do, and what does it hand off to humans or deterministic systems?<br>
+<strong>明确界限。</strong> 你的代理到底能做什么？它会把什么交给人类或确定性系统？</p>
+<p><strong>Design for failure.</strong> How do you handle the 20-40% of cases where the AI makes mistakes? What are your rollback mechanisms?<br>
+<strong>为故障而设计。</strong> 你如何处理 20-40% 的 AI 错误情况？你的回滚机制是什么？</p>
+<p><strong>Solve the economics.</strong> How much does each interaction cost, and how does that scale with usage? Stateless often beats stateful.<br>
+<strong>解决经济问题。</strong> 每次交互的成本是多少？成本如何随使用量变化？无状态通常胜过有状态。</p>
+<p><strong>Prioritize reliability over autonomy.</strong> Users trust tools that work consistently more than they value systems that occasionally do magic.<br>
+<strong>可靠性优先于自主性。</strong> 用户更信任那些稳定运行的工具，而不是那些偶尔能带来神奇效果的系统。</p>
+<p><strong>Build on solid foundations.</strong> Use AI for the hard parts (understanding intent, generating content), but rely on traditional software engineering for the critical parts (execution, error handling, state management).<br>
+<strong>建立在坚实的基础之上。</strong> 使用人工智能处理困难部分（理解意图、生成内容），但依赖传统软件工程处理关键部分（执行、错误处理、状态管理）。</p>
+<p>The agent revolution is coming. It just won't look anything like what everyone's promising in 2025. And that's exactly why it will succeed.<br>
+代理革命即将到来。它与2025年大家所期待的完全不同。而这正是它成功的关键。</p>
+<h2>The Real Lessons from the Trenches</h2>
+<p>来自战壕的真正教训</p>
+<p>The gap between "works in demo" and "works at scale" is enormous, and most of the industry is still figuring this out.<br>
+“演示工作”和“大规模工作”之间的差距是巨大的，大多数行业仍在解决这个问题。</p>
+<p>If you're working on similar problems, I'd love to continue this conversation. The challenges around agent reliability, cost optimization, and integration complexity are fascinating engineering problems that don't have obvious solutions yet.<br>
+如果您正在处理类似的问题，我很乐意继续讨论。围绕代理可靠性、成本优化和集成复杂性的挑战是令人着迷的工程问题，目前尚无明显的解决方案。</p>
+<p>I regularly advise teams and companies navigating these exact challenges - from architecture decisions to avoiding the pitfalls I've learned about firsthand. Whether you're evaluating build vs buy decisions, debugging why your agents aren't working in production, or just want to implement them, feel free to reach out.<br>
+我经常为团队和公司提供建议，帮助他们应对这些挑战——从架构决策到避免我亲身经历过的陷阱。无论您是在评估自建还是购买的决策，调试代理无法在生产环境中运行的原因，还是只想实现它们，欢迎随时联系我们。</p>
+<p>The more people building real systems and sharing honest experiences, the faster we'll all figure out what actually works. You can find me at <a href="mailto:utkarshkanwat@gmail.com">utkarshkanwat@gmail.com</a> or <a href="https://x.com/ukanwat" rel="nofollow">X</a> if you want to dive deeper into any of these topics.<br>
+越多的人构建真实的系统并分享真实的经验，我们就能越快地找到真正有效的方法。你可以通过电子邮件 <a href="mailto:utkarshkanwat@gmail.com">utkarshkanwat@gmail.com</a> 或 <a href="https://x.com/ukanwat" rel="nofollow">X</a> 联系我。 如果您想深入了解这些主题中的任何一个。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://github.com/suredream/gmeeklip">Web Clip</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suredream/gmeeklip");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
