@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="谷歌是梦想杀手
+
+### A quick note on earth engine prices:  
+关于地球发动机价格的简要说明：
+
+-   [Google Earth Engine lowered their prices](https://www.linkedin.com/posts/simon-ilyushchenko-6593201_earth-engine-pricing-google-cloud-activity-7358246298837245953-Gfzx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8)! Simon Ilyushchenko very generously mentioned a previous post I had made referencing the [confusing economics of earth engine](https://christopherren.substack.com/p/the-economics-of-earth-engine?r=22ebo5). While I think removing pricing for individual seats and lowering online pricing is a great step in the right direction, it unfortunately is unlikely to have a huge effect on the calculations in my post which were all based on the batch API. What I think is more likely to happen is that companies will have to choose between switching their batch pipelines (exporting) over to online workflows (high volume API, streaming etc…). Perhaps the lowering of the online API price means we’re likely to see [xee](https://github.com/google/Xee) gain more adoption in commercial settings.  
+    [Google Earth Engine 降价了](https://www.linkedin.com/posts/simon-ilyushchenko-6593201_earth-engine-pricing-google-cloud-activity-7358246298837245953-Gfzx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8) ！Simon Ilyushchenko 非常慷慨地提到了我之前发表的一篇帖子，其中提到了 [Earth Engine 令人困惑的经济学原理](https://christopherren.substack.com/p/the-economics-of-earth-engine?r=22ebo5) 。">
+<meta property="og:title" content="谷歌是梦想杀手">
+<meta property="og:description" content="谷歌是梦想杀手
+
+### A quick note on earth engine prices:  
+关于地球发动机价格的简要说明：
+
+-   [Google Earth Engine lowered their prices](https://www.linkedin.com/posts/simon-ilyushchenko-6593201_earth-engine-pricing-google-cloud-activity-7358246298837245953-Gfzx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8)! Simon Ilyushchenko very generously mentioned a previous post I had made referencing the [confusing economics of earth engine](https://christopherren.substack.com/p/the-economics-of-earth-engine?r=22ebo5). While I think removing pricing for individual seats and lowering online pricing is a great step in the right direction, it unfortunately is unlikely to have a huge effect on the calculations in my post which were all based on the batch API. What I think is more likely to happen is that companies will have to choose between switching their batch pipelines (exporting) over to online workflows (high volume API, streaming etc…). Perhaps the lowering of the online API price means we’re likely to see [xee](https://github.com/google/Xee) gain more adoption in commercial settings.  
+    [Google Earth Engine 降价了](https://www.linkedin.com/posts/simon-ilyushchenko-6593201_earth-engine-pricing-google-cloud-activity-7358246298837245953-Gfzx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8) ！Simon Ilyushchenko 非常慷慨地提到了我之前发表的一篇帖子，其中提到了 [Earth Engine 令人困惑的经济学原理](https://christopherren.substack.com/p/the-economics-of-earth-engine?r=22ebo5) 。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://github.com/suredream/gmeeklip/post/gu-ge-shi-meng-xiang-sha-shou.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>谷歌是梦想杀手</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">谷歌是梦想杀手</h1>
+<div class="title-right">
+    <a href="https://github.com/suredream/gmeeklip" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suredream/gmeeklip/issues/32" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>谷歌是梦想杀手</p>
+<h3>A quick note on earth engine prices:</h3>
+<p>关于地球发动机价格的简要说明：</p>
+<ul>
+<li><a href="https://www.linkedin.com/posts/simon-ilyushchenko-6593201_earth-engine-pricing-google-cloud-activity-7358246298837245953-Gfzx?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8" rel="nofollow">Google Earth Engine lowered their prices</a>! Simon Ilyushchenko very generously mentioned a previous post I had made referencing the <a href="https://christopherren.substack.com/p/the-economics-of-earth-engine?r=22ebo5" rel="nofollow">confusing economics of earth engine</a>. While I think removing pricing for individual seats and lowering online pricing is a great step in the right direction, it unfortunately is unlikely to have a huge effect on the calculations in my post which were all based on the batch API. What I think is more likely to happen is that companies will have to choose between switching their batch pipelines (exporting) over to online workflows (high volume API, streaming etc…). Perhaps the lowering of the online API price means we’re likely to see <a href="https://github.com/google/Xee">xee</a> gain more adoption in commercial settings.<br>
+<a href="https://www.linkedin.com/posts/simon-ilyushchenko-6593201_earth-engine-pricing-google-cloud-activity-7358246298837245953-Gfzx?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8" rel="nofollow">Google Earth Engine 降价了</a> ！Simon Ilyushchenko 非常慷慨地提到了我之前发表的一篇帖子，其中提到了 <a href="https://christopherren.substack.com/p/the-economics-of-earth-engine?r=22ebo5" rel="nofollow">Earth Engine 令人困惑的经济学原理</a> 。虽然我认为取消单机定价并降低在线定价是朝着正确方向迈出的一大步，但遗憾的是，这不太可能对我帖子中基于批处理 API 的计算产生重大影响。我认为更有可能发生的是，公司必须在将批处理流程（导出）转换为在线工作流程（高容量 API、流媒体等）之间做出选择。或许，在线 API 价格的降低意味着我们可能会看到 <a href="https://github.com/google/Xee">xee</a> 在商业环境中获得更广泛的应用。</li>
+</ul>
+<h3>TLDR;  TLDR；</h3>
+<ul>
+<li>
+<p>Google shows that FMs don’t appear to scale effectively for linear-probing on tasks: I would not train another general EO FM right now.<br>
+Google 表明，FM 似乎无法有效地扩展到线性探测任务：我现在不会训练另一个通用的 EO FM。</p>
+</li>
+<li>
+<p>It does not make sense to try to build a business on unproven and expensive technology economically. It does make sense to try to sell cloud services.<br>
+从经济角度来看，尝试在未经证实且昂贵的技术上开展业务毫无意义。尝试销售云服务才有意义。</p>
+</li>
+<li>
+<p>Even if embeddings were a proven geospatial company, it is impossible to compete with <a href="https://radiant.earth/blog/2024/01/unicorns-show-ponies-and-gazelles/" rel="nofollow">a killer unicorn when you are a show pony</a>. Competing with Google’s distribution and subsidies is a brutal game<br>
+即使 Embeddings 是一家成熟的地理空间公司，当你只是一匹“表演马”时，也不可能与<a href="https://radiant.earth/blog/2024/01/unicorns-show-ponies-and-gazelles/" rel="nofollow">杀手级独角兽</a>竞争 。与谷歌的分销和补贴竞争是一场残酷的游戏。</p>
+</li>
+</ul>
+<h3>Thoughts on AlphaEarth Foundations</h3>
+<p>关于 AlphaEarth Foundations 的思考</p>
+<p>Google recently released global embeddings from their <a href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/alphaearth-foundations.pdf" rel="nofollow">alphaearth foundation model</a> (AEF). There’s been a lot of buzz around the embeddings themselves, here are some thoughts on what this means for Big Embeddings as an industry.<br>
+谷歌最近发布了基于其 <a href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/alphaearth-foundations.pdf" rel="nofollow">alphaearth 基础模型</a> (AEF) 的全局嵌入。这些嵌入本身引起了广泛关注，以下是一些关于这对“大嵌入”行业意味着什么的看法。</p>
+<h3>1. Read my lips: no new foundation models.</h3>
+<p>1. 听我的唇语：没有新的基础模型。</p>
+<p>At least not in the general case. Google scaled their experiment beyond what any other company in the space could reasonably do. Have a look at the training data:<br>
+至少在一般情况下并非如此。谷歌的实验规模超出了该领域任何其他公司的合理范围。看看训练数据：</p>
+<p>Although some sensors are conspicuously missing (notably MODIS and VIIRS), we can see they threw the kitchen sink at this model. Some interesting choices include: text from the <a href="https://www.gbif.org/" rel="nofollow">Global Biodiversity Information Facility</a> (GBIF) + Wikipedia, NLCD (only available in the US) and monthly aggregates of ERA5-Land. These are not all used as inputs. Let’s look at how the results scaled with increasing data:<br>
+虽然一些传感器明显缺失（尤其是 MODIS 和 VIIRS），但我们可以看出，他们为这个模型付出了巨大的努力。一些有趣的选择包括：来自<a href="https://www.gbif.org/" rel="nofollow">全球生物多样性信息机构</a> （GBIF）+维基百科的文本、NLCD（仅在美国提供）以及 ERA5-Land 的月度汇总数据。这些并非全部用作输入。让我们看看结果如何随着数据的增加而扩展：</p>
+<p>[</p>
+<p><a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/dd0a90d01b4b746291e3c1671f6c61ad7d77b7ce048df13fad36bb79162aa818/68747470733a2f2f737562737461636b63646e2e636f6d2f696d6167652f66657463682f24735f2152656e55212c775f323430302c635f6c696d69742c665f6175746f2c715f6175746f3a676f6f642c666c5f70726f67726573736976653a73746565702f6874747073253341253246253246737562737461636b2d706f73742d6d656469612e73332e616d617a6f6e6177732e636f6d2532467075626c6963253246696d6167657325324632633335336662362d363662612d343561332d383633302d6230663563373536336432315f3136323278313732362e706e67"><img src="https://camo.githubusercontent.com/dd0a90d01b4b746291e3c1671f6c61ad7d77b7ce048df13fad36bb79162aa818/68747470733a2f2f737562737461636b63646e2e636f6d2f696d6167652f66657463682f24735f2152656e55212c775f323430302c635f6c696d69742c665f6175746f2c715f6175746f3a676f6f642c666c5f70726f67726573736976653a73746565702f6874747073253341253246253246737562737461636b2d706f73742d6d656469612e73332e616d617a6f6e6177732e636f6d2532467075626c6963253246696d6167657325324632633335336662362d363662612d343561332d383633302d6230663563373536336432315f3136323278313732362e706e67" alt="" data-canonical-src="https://substackcdn.com/image/fetch/$s_!RenU!,w_2400,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c353fb6-66ba-45a3-8630-b0f5c7563d21_1622x1726.png" style="max-width: 100%;"></a></p>
+<p>](<a href="https://substackcdn.com/image/fetch/$s_!RenU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c353fb6-66ba-45a3-8630-b0f5c7563d21_1622x1726.png" rel="nofollow">https://substackcdn.com/image/fetch/$s_!RenU!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c353fb6-66ba-45a3-8630-b0f5c7563d21_1622x1726.png</a>)</p>
+<p>Scaling observations for linear-probing. Many tasks appear to plateau with increasing compute/data. X-axis is logarithmic. Brown <em>et al.</em> 2025.<br>
+线性探测的缩放观测值。许多任务似乎随着计算量/数据的增加而趋于稳定。X 轴是对数。Brown <em>等人，</em> 2025 年。</p>
+<p>Across many of the 15 tasks, linear-probe performance saturates around 10^7-10^8 observations, with additional data yielding changes within the confidence intervals. A few tasks still improve, but the slope is quite small beyond this point on most tasks. On some tasks, the performance <strong>actually decreases with increasing data.</strong> This suggests weak returns for <strong>general-purpose</strong> embeddings in linear-probe evaluation, making large-scale training a highly questionable investment unless targeting a specific task that demonstrably benefits from scale. I will note that AEF appears to scale better than some other existing foundation models, but higher performing ones such as <a href="https://arxiv.org/pdf/2504.11171" rel="nofollow">TerraMind</a> are missing from these comparisons.<br>
+在 15 项任务中的许多任务中，线性探测性能在 10^7-10^8 个观测值左右达到饱和，而额外的数据会产生置信区间内的变化。少数任务仍在改进，但超过此点后，大多数任务的斜率都很小。在某些任务中，性能<strong>实际上会随着数据的增加而下降。</strong> 这表明<strong>通用</strong>嵌入在线性探测评估中的回报较弱，因此大规模训练是一项非常值得怀疑的投资，除非针对的是能够明显受益于规模化的特定任务。需要指出的是，AEF 的扩展性似乎优于其他一些现有的基础模型，但这些比较中缺少性能更高的模型，例如 <a href="https://arxiv.org/pdf/2504.11171" rel="nofollow">TerraMind</a> 。</p>
+<p>While AEF appears to outperform all other methods on the chosen benchmarks, it is also worth noting that both CCDC and MOSAIKS, two unsupervised methods appear to <a href="https://www.linkedin.com/posts/christopherren_bruno-sanchez-andrade-nu%C3%B1o-for-the-sake-of-activity-7356918939731316736-yIXd?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8" rel="nofollow">perform solidly on all benchmark tasks</a> at much lower complexity than foundation models. In general, I’m growing a little weary of squinting at benchmark plots and tables: if AEF achieves balanced accuracy of 0.22 on us_trees and Satclip got 0.18 I’m unlikely to use either for a task that ressembles us_trees. Benchmarks are just the price of entry: we need them to know that a model is worth even looking at, but the <a href="https://christopherren.substack.com/p/the-model-is-not-the-map?r=22ebo5" rel="nofollow">true test is the real world</a>!<br>
+虽然 AEF 在所选基准上的表现似乎优于所有其他方法，但值得注意的是，CCDC 和 MOSAIKS 这两种无监督方法似乎<a href="https://www.linkedin.com/posts/christopherren_bruno-sanchez-andrade-nu%C3%B1o-for-the-sake-of-activity-7356918939731316736-yIXd?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8" rel="nofollow">在所有基准任务上都表现稳健，</a> 而且复杂度远低于基础模型。总的来说，我越来越厌倦眯着眼看基准图表了：如果 AEF 在 us_trees 上达到了 0.22 的平衡准确率，而 Satclip 获得了 0.18，那么我不太可能将它们用于类似于 us_trees 的任务。基准只是入门的门槛：我们需要它们来证明一个模型值得一看，但<a href="https://christopherren.substack.com/p/the-model-is-not-the-map?r=22ebo5" rel="nofollow">真正的考验在于现实世界</a> ！</p>
+<h3>2. Embeddings don’t look like a business:</h3>
+<p>2. 嵌入看起来不像一门生意：</p>
+<p><a href="https://www.linkedin.com/posts/nasonurb_geoembeddings-activity-7356794717633703937-7Awu?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8" rel="nofollow">I see people claiming that the future of EO is based on ‘geo-embeddings’</a>, and that Google must think so too, because they released these embedding. I think this is wrong: zoom out! The product here is not the embeddings but where they were released: Google Earth Engine and associated cloud products. If anything, the fact that these were released globally without an explicit pay-wall should tell you what value Google assigns to these. While this is indeed a big moment as it represents the first global set of embeddings which are so widely and easily accessible, I think this will play out more like the release of <a href="https://dynamicworld.app/" rel="nofollow">Dynamic World</a> or <a href="https://ieeexplore.ieee.org/document/9553499" rel="nofollow">Impact Observatory’s LULC map</a> rather than ChatGPT (sorry <a href="https://www.linkedin.com/in/krishna-karra-8765811b/" rel="nofollow">Krishna</a> I stole your point but imitation is the sincerest form of flattery). These are impactful data products that need to be used with others in order to be useful. Meanwhile, if you <strong>do want to access these</strong>, and use them in conjunction with other raster datasets, you know where to do that. And don’t forget to sign up for a cloud project, and can we also interest you in some cloud storage and compute while you’re here 😉?<br>
+<a href="https://www.linkedin.com/posts/nasonurb_geoembeddings-activity-7356794717633703937-7Awu?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAAAcf-00ByCyr-aE1iW-tnBWOR9lBLztXmi8" rel="nofollow">我看到有人声称 EO 的未来基于“地理嵌入”</a> ，而谷歌也一定这么认为，因为他们发布了这些嵌入。我认为这是错误的：缩小！这里的产品不是嵌入，而是它们的发布地点：谷歌地球引擎和相关的云产品。如果有的话，这些产品在全球发布且没有明确的付费墙这一事实应该告诉你谷歌赋予它们什么价值。虽然这确实是一个重要的时刻，因为它代表了第一组如此广泛和容易访问的全球嵌入，但我认为这将更像是 <a href="https://dynamicworld.app/" rel="nofollow">Dynamic World</a> 或 <a href="https://ieeexplore.ieee.org/document/9553499" rel="nofollow">Impact Observatory 的 LULC 地图</a>的发布， 而不是 ChatGPT（对不起 <a href="https://www.linkedin.com/in/krishna-karra-8765811b/" rel="nofollow">Krishna</a> ，我偷了你的观点，但模仿是最真诚的奉承）。这些都是有影响力的数据产品，需要与其他产品一起使用才能发挥作用。同时，如果您<strong>确实想要访问这些数据</strong> ，并将它们与其他栅格数据集结合使用，您知道在哪里可以做到这一点。并且不要忘记注册一个云项目，当您在这里时，我们还可以对您感兴趣的一些云存储和计算吗？</p>
+<p>Being an embedding application layer is simply a losing proposition for every company: you pay for cloud resources to host and store your embeddings, millions to train your own models (please don’t), engineers to build your APIs, and THEN you have to convince customers to hand over their cash for your embeddings. This equation changes when you provide the compute, storage, and your embeddings just happen to be a cherry on top that users can choose to use, provided they pay for cloud resources that you provide.<br>
+对于每家公司来说，成为嵌入应用层都是一个亏本的生意：你需要支付云资源来托管和存储你的嵌入数据，花费数百万美元来训练你自己的模型（千万不要），雇佣工程师来构建你的 API，然后你还要说服客户为你的嵌入数据掏钱。当你提供计算和存储时，这个等式就发生了变化，而你的嵌入数据恰好是锦上添花的，用户可以选择使用，前提是他们支付你提供的云资源费用。</p>
+<p>Playing devil’s advocate for a second: the flip side here is that you potentially be able to pick up customers that can’t and won’t use GEE. There is also a case to be made for problem-specific embeddings with <strong>verified gains in task cost</strong>, but we have yet to see anyone in the space show hard data on embeddings being a cheaper way to develop valuable applications.<br>
+先说一下唱反调：这样做的坏处是，你可能会吸引到那些无法使用也不愿使用 GEE 的客户。针对特定问题的嵌入也有其优势，并且<strong>已经证实可以降低任务成本</strong> ，但我们还没有看到该领域有人拿出确凿的数据，证明嵌入是一种更经济的开发有价值应用程序的方法。</p>
+<h3>3. The race to the bottom:</h3>
+<p>3. 竞相压价：</p>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfxnmqM2PEKdphTWXh44jsy83SRBkn0grjg6shRS-mLJTsKrQ/viewform?fbzx=2991992422263447311" rel="nofollow">Google is offering $5k grants to support people building on this product</a>. Have you ever heard of a company paying people to use their killer product? What are the implications of this? Even if we take the counterfactual position that these embeddings are indeed a killer product and Google is attempting to flood the market a-la Uber with their cheap rides, what does this mean for start-ups looking to compete against something that’s currently been assigned financial cost of almost $0?<br>
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSfxnmqM2PEKdphTWXh44jsy83SRBkn0grjg6shRS-mLJTsKrQ/viewform?fbzx=2991992422263447311" rel="nofollow">谷歌将提供 5000 美元的资助，以支持基于该产品进行开发的人员</a> 。你听说过有公司会付钱给用户使用他们的杀手级产品吗？这意味着什么？即使我们假设这些嵌入确实是一款杀手级产品，而谷歌正试图像 Uber 那样用廉价的乘车服务占领市场，但这对于那些希望与目前财务成本几乎为 0 美元的产品竞争的初创公司来说意味着什么？</p>
+<p>From my initial experiments on retrieval on smallholder crops: these embeddings are appear to be potentially useful (more on this coming soon), although I have some reservations <a href="https://christopherren.substack.com/p/embedding-fields-forever?r=22ebo5" rel="nofollow">about how they were trained</a>. It’s still clear we have not figured out how to effectively interact with geospatial embeddings, and what the true cost and time savings are from using them. <strong>Verification is still the biggest problem</strong>, and we encounter it over and over again in EO: you can build a great looking model, but how do you go about verifying it’s detecting the actual signal you care about? I would love to see more companies working to solve this problem, although the answer may be buy timely high-resolution imagery.<br>
+从我最初针对小农作物进行检索的实验来看，这些嵌入似乎具有潜在的用途（更多内容即将发布），尽管我对<a href="https://christopherren.substack.com/p/embedding-fields-forever?r=22ebo5" rel="nofollow">它们的训练方式</a>有所保留 。显然，我们尚未弄清楚如何有效地与地理空间嵌入进行交互，以及使用它们真正能节省多少成本和时间。 <strong>验证仍然是最大的问题</strong> ，我们在地理空间数据（EO）中一次又一次地遇到它：你可以构建一个看起来很棒的模型，但如何验证它是否检测到你真正关心的信号？我希望看到更多公司致力于解决这个问题，尽管答案可能是购买及时的高分辨率图像。</p>
+<h3>4. One more time with feeling:</h3>
+<p>4. 再感慨一下：</p>
+<p>What does this mean from an industry perspective? A complex solution looking for a problem is a major red flag: sometimes ideas consume so much capital and energy that they become too big to fail. Whole companies stake their future on them, people bet their careers, and investors bet their dollars. However, there are few companies in the space that can afford to sustain these types of ideas until they become useful, so if you are considering it please consider the economics of the endeavour as much as you consider the technology. Having organizations spin-up and fail unnecessarily erodes trust in the industry as a whole and is likely to harm it in the long term.<br>
+从行业角度来看，这意味着什么？一个复杂的解决方案却在寻找问题，这是一个严重的危险信号：有时，一个想法会耗费大量的资金和精力，以至于变得“大到不能倒”。整个公司都把未来押注于此，人们把职业生涯押注于此，投资者也押注于他们的金钱。然而，在这个领域，很少有公司能够负担得起维持这类想法直至其真正发挥作用，所以如果你正在考虑，请在考虑技术的同时，也考虑其经济效益。让组织快速发展并最终倒闭，会不必要地削弱人们对整个行业的信任，并可能对行业造成长期损害。</p>
+<h3>4. Shameless self-plug:  4. 无耻的自我推销：</h3>
+<p>I’m starting a podcast with my good friend <a href="https://www.linkedin.com/in/krishna-karra-8765811b/" rel="nofollow">Krishna Karra</a>. The first episode will probably be about embeddings, unless we all lose interest before we record.<br>
+我和我的好朋友 <a href="https://www.linkedin.com/in/krishna-karra-8765811b/" rel="nofollow">Krishna Karra</a> 开始播客了 。第一集可能会讲嵌入，除非我们在录制前就失去了兴趣。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://github.com/suredream/gmeeklip">Web Clip</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suredream/gmeeklip");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
