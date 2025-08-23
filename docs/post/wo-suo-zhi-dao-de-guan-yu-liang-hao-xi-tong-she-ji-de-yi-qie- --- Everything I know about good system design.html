@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="我所知道的关于良好系统设计的一切 --- Everything I know about good system design
+
+我看到过很多糟糕的系统设计建议。">
+<meta property="og:title" content="我所知道的关于良好系统设计的一切 --- Everything I know about good system design">
+<meta property="og:description" content="我所知道的关于良好系统设计的一切 --- Everything I know about good system design
+
+我看到过很多糟糕的系统设计建议。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://github.com/suredream/gmeeklip/post/wo-suo-zhi-dao-de-guan-yu-liang-hao-xi-tong-she-ji-de-yi-qie-%20---%20Everything%20I%20know%20about%20good%20system%20design.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>我所知道的关于良好系统设计的一切 --- Everything I know about good system design</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">我所知道的关于良好系统设计的一切 --- Everything I know about good system design</h1>
+<div class="title-right">
+    <a href="https://github.com/suredream/gmeeklip" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suredream/gmeeklip/issues/33" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>我所知道的关于良好系统设计的一切 --- Everything I know about good system design</p>
+<p>我看到过很多糟糕的系统设计建议。一个经典的例子是 LinkedIn 上那种“我打赌你从来没听说过_队列_ ”式的帖子，大概是针对行业新手的。另一个例子是 Twitter 上那种“如果你把布尔值存储在数据库中，那你就是个糟糕的工程师”式的巧妙伎俩 <sup id="user-content-fnref-1"><a href="https://www.seangoedecke.com/good-system-design/#fn-1" rel="nofollow">1。</a></sup> 即使是好的系统设计建议也可能有点糟糕。我喜欢 <em>《设计数据密集型应用程序》</em> ，但我认为它对工程师遇到的大多数系统设计问题并不是特别有用。</p>
+<p>什么是系统设计？在我看来，如果软件设计是组装代码的方式，那么系统设计就是组装_服务的_方式。软件设计的原语是变量、函数、类等等。系统设计的原语是应用服务器、数据库、缓存、队列、事件总线、代理等等。</p>
+<p>这篇文章旨在粗略地写下我所了解的关于良好系统设计的一切。很多具体的判断都依赖于经验，我无法在这篇文章中详尽阐述。但我尽力写下我所能写的内容。</p>
+<h3>识别好的设计</h3>
+<p>好的系统设计是什么样的？我之前写过，它<a href="https://www.seangoedecke.com/great-software-design" rel="nofollow">看起来令人失望</a> 。实际上，它看起来很长时间都没有出错。如果你有这样的想法：“哈，这比我预期的要容易”，或者“我从来都不用考虑系统的这个部分，没问题”，那么你就可以知道你面对的是好的设计。矛盾的是，好的设计是谦逊的：糟糕的设计往往比好的设计更令人印象深刻。我总是对看起来令人印象深刻的系统持怀疑态度。如果一个系统有分布式共识机制、许多不同形式的事件驱动通信、CQRS 和其他巧妙的技巧，我想知道是否存在一些根本性的错误决策需要补偿（或者系统是否只是直接过度设计）。</p>
+<p>我经常独自思考这个问题。工程师们看到包含许多有趣部分的复杂系统，会想：“哇，这里面居然有这么多系统设计！” 事实上，复杂系统通常反映出缺乏良好的设计。我说“通常”是因为有时你确实需要复杂的系统。我开发过许多系统，它们本身就很复杂。然而，一个有效的复杂系统总是从一个有效的简单系统发展而来。从零开始开发一个复杂的系统是一个非常糟糕的主意。</p>
+<h3>国家与无国籍</h3>
+<p>软件设计的难点在于状态。如果你要存储任何类型的信息，无论存储多长时间，你都需要做出许多关于如何保存、存储和提供这些信息的棘手决策。如果你不存储信息 <sup id="user-content-fnref-2"><a href="https://www.seangoedecke.com/good-system-design/#fn-2" rel="nofollow">2</a></sup> ，你的应用就是“无状态的”。举个不寻常的例子，GitHub 有一个内部 API，它接收 PDF 文件并返回其 HTML 渲染结果。这是一个真正的无状态服务。任何写入数据库的操作都是有状态的。</p>
+<p>您应该尝试在任何系统中最小化有状态组件的数量。 （从某种意义上说，这是显而易见的，因为您应该尝试最小化系统中_所有_组件的数量，但是有状态组件特别危险。）您应该这样做的原因是<strong>有状态组件可能会陷入不良状态</strong> 。只要您执行广泛合理的操作，我们的无状态 PDF 渲染服务就会永远安全运行：例如，在可重启的容器中运行它，这样如果出现任何问题，它可以被自动终止并恢复到工作状态。有状态服务无法像这样自动修复。如果您的数据库中出现错误条目（例如，条目的格式会触发应用程序崩溃），您必须手动进入并修复它。如果您的数据库空间不足，您必须想办法修剪不需要的数据或扩展它。</p>
+<p>这在实践中意味着，一个服务了解状态（即与数据库通信），其他服务执行无状态操作。避免五个不同的服务都写入同一张表。相反，让其中四个服务向第一个服务发送 API 请求（或发出事件），并将写入逻辑保留在该服务中。如果可以，读取逻辑也值得这样做，尽管我对此并不绝对。 <em>有时，</em> 服务快速读取 <code class="notranslate">user_sessions</code> 表比向内部会话服务发送慢两倍的 HTTP 请求更好。</p>
+<h3>数据库</h3>
+<p>由于状态管理是系统设计中最重要的部分，因此最重要的组件通常就是状态所在的位置：数据库。我大部分时间都在使用 SQL 数据库（MySQL 和 PostgreSQL），所以我接下来要讨论的就是这些。</p>
+<h4>模式和索引</h4>
+<p>如果您需要在数据库中存储数据，首先要做的就是定义一个包含所需模式的表。模式设计应该灵活，因为一旦拥有数千或数百万条记录，更改模式就会非常麻烦。但是，如果您将其设计得过于灵活（例如，将所有内容都放在 JSON 的“值”列中，或者使用“键”和“值”表来跟踪任意数据），则会给应用程序代码带来极大的复杂性（并且可能会带来一些非常棘手的性能限制）。在这里划清界限需要根据具体情况进行判断，但总的来说，我的目标是让我的表易于理解：您应该能够浏览数据库模式，并大致了解应用程序存储的内容及其原因。</p>
+<p>如果您预计表的数据量会超过几行，则应该为其创建索引。尽量使索引与您发送的最常见查询匹配（例如，如果您通过 <code class="notranslate">email</code> 和 <code class="notranslate">type</code> 进行查询，则应为这两个字段创建索引）。索引的工作原理类似于嵌套字典，因此请确保将基数最高的字段放在最前面（否则每次索引查找都必须扫描所有 <code class="notranslate">type</code> 的用户，才能找到具有正确 <code class="notranslate">email</code> 的用户）。不要对您能想到的每一个字段都创建索引，因为每个索引都会增加写入开销。</p>
+<h4>瓶颈</h4>
+<p>在高流量应用程序中，访问数据库通常是瓶颈。即使计算效率相对较低（例如，Ruby on Rails 运行在像 Unicorn 这样的预分叉服务器上），情况也是如此。这是因为复杂的应用程序需要进行_大量的_数据库调用——每个请求都要进行数百次调用，而且通常是顺序进行的（因为在确认用户没有滥用权限之前，你不知道是否需要检查用户是否属于某个组织，等等）。如何避免瓶颈？</p>
+<p>查询数据库时， <em>直接查询数据库</em> 。让数据库来做这项工作几乎总是比自己做更高效。例如，如果您需要来自多个表的数据，请将它们 <code class="notranslate">JOIN</code> 而不是分别进行查询，然后在内存中将它们拼接起来。尤其是在使用 ORM 时，要小心在内部循环中意外进行查询。这很容易将 <code class="notranslate">select id, name from table</code> 变成“ <code class="notranslate">select id from table</code> 和 100 <code class="notranslate">select name from table where id = ?</code> ”。</p>
+<p>有时你确实需要拆分查询。这种情况并不常见，但我遇到过一些非常丑陋的查询，在数据库中拆分它们比尝试将它们作为单个查询运行更容易。我相信构建索引和提示总是可以的，这样数据库就可以更好地处理查询，但偶尔进行策略性的查询拆分仍然是一个值得在你的工具箱中拥有的工具。</p>
+<p>向数据库副本发送尽可能多的读取查询。典型的数据库设置通常包含一个写入节点和多个读取副本。越能避免从写入节点读取数据越好——因为写入节点已经足够忙于处理所有写入操作了。例外情况是，你真的无法容忍任何复制延迟（因为读取副本的运行速度总是比写入节点至少慢几毫秒）。但在大多数情况下，复制延迟可以通过一些简单的技巧来解决：例如，当你更新一条记录但需要立即使用它时，你可以将更新的详细信息填充到内存中，而不是在写入后立即重新读取。</p>
+<p>警惕查询峰值（尤其是写入查询， _以及_事务）。一旦数据库过载，速度就会变慢，从而进一步加剧数据库过载。事务和写入操作很容易导致数据库过载，因为它们需要为每个查询执行大量的数据库工作。如果您正在设计一个可能产生大量查询峰值的服务（例如某种批量导入 API），请考虑限制查询速度。</p>
+<h3>Slow operations, fast operations</h3>
+<p>A service has to do some things fast. If a user is interacting with something (say, an API or a web page), they should see a response within a few hundred ms<sup id="user-content-fnref-3"><a href="https://www.seangoedecke.com/good-system-design/#fn-3" rel="nofollow">3</a></sup>. But a service has to do other things that are slow. Some operations just take a long time (converting a very large PDF to HTML, for instance). The general pattern for this is splitting out <strong>the minimum amount of work needed to do something useful for the user</strong> and doing the rest of the work in the background. In the PDF-to-HTML example, you might render the first page to HTML immediately and queue up the rest in a background job.</p>
+<p>What’s a background job? It’s worth answering this in detail, because “background jobs” are a core system design primitive. Every tech company will have some kind of system for running background jobs. There will be two main components: a collection of queues, e.g. in Redis, and a job runner service that will pick up items from the queues and execute them. You enqueue a background job by putting an item like <code class="notranslate">{job_name, params}</code> on the queue. It’s also possible to schedule background jobs to run at a set time (which is useful for periodic cleanups or summary rollups). Background jobs should be your first choice for slow operations, because they’re typically such a well-trodden path.</p>
+<p>Sometimes you want to roll your own queue system. For instance, if you want to enqueue a job to run in a month, you probably shouldn’t put an item on the Redis queue. Redis persistence is typically not guaranteed over that period of time (and even if it is, you likely want to be able to query for those far-future enqueued jobs in a way that would be tricky with the Redis job queue). In this case, I typically create a database table for the pending operation with columns for each param plus a <code class="notranslate">scheduled_at</code> column. I then use a daily job to check for these items with <code class="notranslate">scheduled_at &lt;= today</code>, and either delete them or mark them as complete once the job has finished.</p>
+<h3>Caching</h3>
+<p>Sometimes an operation is slow because it needs to do an expensive (i.e. slow) task that’s the same between users. For instance, if you’re calculating how much to charge a user in a billing service, you might need to do an API call to look up the current prices. If you’re charging users per-use (like OpenAI does per-token), that could (a) be unacceptably slow and (b) cause a lot of traffic for whatever service is serving the prices. The classic solution here is <strong>caching</strong>: only looking up the prices every five minutes, and storing the value in the meantime. It’s easiest to cache in-memory, but using some fast external key-value store like Redis or Memcached is also popular (since it means you can share one cache across a bunch of app servers).</p>
+<p>The typical pattern is that junior engineers learn about caching and want to cache <em>everything</em>, while senior engineers want to cache as little as possible. Why is that? It comes down to the first point I made about the danger of statefulness. A cache is a source of state. It can get weird data in it, or get out-of-sync with the actual truth, or cause mysterious bugs by serving stale data, and so on. You should never cache something without first making a serious effort to speed it up. For instance, it’s silly to cache an expensive SQL query that isn’t covered by a database index. You should just add the database index!</p>
+<p>I use caching a lot. One useful caching trick to have in the toolbox is using a scheduled job and a document storage like S3 or Azure Blob Storage as a large-scale persistent cache. If you need to cache the result of a <em>really</em> expensive operation (say, a weekly usage report for a large customer), you might not be able to fit the result in Redis or Memcached. Instead, stick a timestamped blob of the results in your document storage and serve the file directly from there. Like the database-backed long-term queue I mentioned above, this is an example of using the caching <em>idea</em> without using a specific cache technology.</p>
+<h3>Events</h3>
+<p>As well as some kind of caching infrastructure and background job system, tech companies will typically have an <em>event hub</em>. The most common implementation of this is Kafka. An event hub is just a queue - like the one for background jobs - but instead of putting “run this job with these params” on the queue, you put “this thing happened” on the queue. One classic example is firing off a “new account created” event for each new account, and then having multiple services consume that event and take some action: a “send a welcome email” service, a “scan for abuse” service, a “set up per-account infrastructure” service, and so on.</p>
+<p>You shouldn’t overuse events. Much of the time it’s better to just have one service make an API request to another service: all the logs are in the same place, it’s easier to reason about, and you can immediately see what the other service responded with. Events are good for when the code sending the event doesn’t necessarily care what the consumers do with the event, or when the events are high-volume and not particularly time-sensitive (e.g. abuse scanning on each new Twitter post).</p>
+<h3>Pushing and pulling</h3>
+<p>When you need data to flow from one place to a lot of other places, there are two options. The simplest is to <em>pull</em>. This is how most websites work: you have a server that owns some data, and when a user wants it they make a request (via their browser) to the server to pull that data down to them. The problem here is that users might do a lot of pulling down the same data - e.g. refreshing their email inbox to see if they have any new emails, which will pull down and reload the entire web application instead of just the data about the emails.</p>
+<p>The alternative is to <em>push</em>. Instead of allowing users to ask for the data, you allow them to register as clients, and then when the data changes, the server pushes the data down to each client. This is how GMail works: you don’t have to refresh the page to get new emails, because they’ll just appear when they arrive.</p>
+<p>If we’re talking about background services instead of users with web browsers, it’s easy to see why pushing can be a good idea. Even in a very large system, you might only have a hundred or so services that need the same data. For data that doesn’t change much, it’s much easier to make a hundred HTTP requests (or RPC, or whatever) whenever the data changes than to serve up the same data a thousand times a second.</p>
+<p>Suppose you did need to serve up-to-date data to a million clients (like GMail, does). Should those clients be pushing or pulling? It depends. Either way, you won’t be able to run it all from a single server, so you’ll need to farm it out to other components of the system. If you’re pushing, that will likely mean sticking each push on an event queue and having a horde of event processors each pulling from the queue and sending out your pushes. If you’re pulling, that will mean standing up a bunch (say, a hundred) of fast<sup id="user-content-fnref-4"><a href="https://www.seangoedecke.com/good-system-design/#fn-4" rel="nofollow">4</a></sup> read-replica cache servers that will sit in front of your main application and handle all the read traffic<sup id="user-content-fnref-5"><a href="https://www.seangoedecke.com/good-system-design/#fn-5" rel="nofollow">5</a></sup>.</p>
+<h3>Hot paths</h3>
+<p>When you’re designing a system, there are lots of different ways users can interact with it or data can flow through it. It can get a bit overwhelming. The trick is to mainly focus on the “hot paths”: the part of the system that is most critically important, and the part of the system that is going to handle the most data. For instance, in a metered billing system, those pieces might be the part that decides whether or not a customer gets charged, and the part that needs to hook into all user actions on the platform to identify how much to charge.</p>
+<p>Hot paths are important because they have fewer possible solutions than other design areas. There are a thousand ways you can build a billing settings page and they’ll all mainly work. But there might be only a handful of ways that you can sensibly consume the firehose of user actions. Hot paths also go wrong more spectacularly. You have to really screw up a settings page to take down the entire product, but any code you write that’s triggered on all user actions can easily cause huge problems.</p>
+<h3>Logging and metrics</h3>
+<p>How do you know if you’ve got problems? One thing I’ve learned from my most paranoid colleagues is to log aggressively during unhappy paths. If you’re writing a function that checks a bunch of conditions to see if a user-facing endpoint should respond 422, you should log out the condition that was hit. If you’re writing billing code, you should log every decision made (e.g. “we’re not billing for this event because of X”). Many engineers don’t do this because it adds a bunch of logging boilerplate and makes it hard to write beautifully elegant code, but you should do it anyway. You’ll be happy you did when an important customer is complaining that they’re getting a 422 - even if that customer did something wrong, you still need to figure out <em>what they did wrong</em> for them.</p>
+<p>You should also have basic observability into the operational parts of the system. That means CPU/memory on the hosts or containers, queue sizes, average time per-request or per-job, and so on. For user-facing metrics like time per-request, you also need to watch the p95 and p99 (i.e. how slow your slowest requests are). Even one or two very slow requests are scary, because they’re disproportionately from your largest and most important users. If you’re just looking at averages, it’s easy to miss the fact that some users are finding your service unusable.</p>
+<h3>Killswitches, retries, and failing gracefully</h3>
+<p>I wrote a <a href="https://www.seangoedecke.com/killswitches" rel="nofollow">whole post</a> about killswitches that I won’t repeat here, but the gist is that you should think carefully about what happens when the system fails badly.</p>
+<p>Retries are not a magic bullet. You need to make sure you’re not putting extra load on other services by blindly retrying failed requests. If you can, put high-volume API calls inside a “circuit breaker”: if you get too many 5xx responses in a row, stop sending requests for a while to let the service recover. You also need to make sure you’re not retrying write events that may or may not have succeeded (for instance, if you send a “bill this user” request and get back a 5xx, <em>you don’t know</em> if the user has been billed or not). The classic solution to this is to use an “idempotency key”, which is a special UUID in the request that the other service uses to avoid re-running old requests: every time they do something, they save the idempotency key, and if they get another request with the same key, they silently ignore it.</p>
+<p>It’s also important to decide what happens when part of your system fails. For instance, say you have some rate limiting code that checks a Redis bucket to see if a user has made too many requests in the current window. What happens when that Redis bucket is unavailable? You have two options: fail <em>open</em> and let the request through, or fail <em>closed</em> and block the request with a 429.</p>
+<p>Whether you should fail open or closed depends on the specific feature. In my view, a rate limiting system should almost always fail open. That means that a problem with the rate limiting code isn’t necessarily a big user-facing incident. However, auth should (obviously) always fail closed: it’s better to deny a user access to their own data than to give a user access to some other user’s data. There are a lot of cases where it’s not clear what the right behavior is. It’s often a difficult tradeoff.</p>
+<h3>Final thoughts</h3>
+<p>There are some topics I’m deliberately not covering here. For instance, whether or when to split your monolith out into different services, when to use containers or VMs, tracing, good API design. Partly this is because I don’t think it matters that much (in my experience, monoliths are fine), or because I think it’s too obvious to talk about (you should use tracing), or because I just don’t have the time (API design is complicated).</p>
+<p>The main point I’m trying to make is what I said at the start of this post: good system design is not about clever tricks, it’s about knowing how to use boring, well-tested components in the right place. I’m not a plumber, but I imagine good plumbing is similar: if you’re doing something too exciting, you’re probably going to end up with crap all over yourself.</p>
+<p>Especially at large tech companies, where these components already exist off the shelf (i.e. your company already has some kind of event bus, caching service, etc), good system design is going to look like nothing. There are very, very few areas where you want to do the kind of system design you could talk about at a conference. They do exist! I have seen hand-rolled data structures make features possible that wouldn’t have been possible otherwise. But I’ve only seen that happen once or twice in ten years. I see boring system design every single day.</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://github.com/suredream/gmeeklip">Web Clip</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suredream/gmeeklip");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
