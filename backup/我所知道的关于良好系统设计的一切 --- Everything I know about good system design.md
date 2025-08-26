@@ -1,3 +1,5 @@
+source: https://www.seangoedecke.com/good-system-design/
+
 我所知道的关于良好系统设计的一切 --- Everything I know about good system design
 
 我看到过很多糟糕的系统设计建议。一个经典的例子是 LinkedIn 上那种“我打赌你从来没听说过_队列_ ”式的帖子，大概是针对行业新手的。另一个例子是 Twitter 上那种“如果你把布尔值存储在数据库中，那你就是个糟糕的工程师”式的巧妙伎俩 <sup id="fnref-1"><a href="https://www.seangoedecke.com/good-system-design/#fn-1">1。</a></sup> 即使是好的系统设计建议也可能有点糟糕。我喜欢 _《设计数据密集型应用程序》_ ，但我认为它对工程师遇到的大多数系统设计问题并不是特别有用。

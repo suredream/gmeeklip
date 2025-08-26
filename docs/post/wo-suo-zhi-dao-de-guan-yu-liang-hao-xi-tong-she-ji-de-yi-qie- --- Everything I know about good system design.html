@@ -10,11 +10,15 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="我所知道的关于良好系统设计的一切 --- Everything I know about good system design
+<meta name="description" content="source: https://www.seangoedecke.com/good-system-design/
+
+我所知道的关于良好系统设计的一切 --- Everything I know about good system design
 
 我看到过很多糟糕的系统设计建议。">
 <meta property="og:title" content="我所知道的关于良好系统设计的一切 --- Everything I know about good system design">
-<meta property="og:description" content="我所知道的关于良好系统设计的一切 --- Everything I know about good system design
+<meta property="og:description" content="source: https://www.seangoedecke.com/good-system-design/
+
+我所知道的关于良好系统设计的一切 --- Everything I know about good system design
 
 我看到过很多糟糕的系统设计建议。">
 <meta property="og:type" content="article">
@@ -77,7 +81,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>我所知道的关于良好系统设计的一切 --- Everything I know about good system design</p>
+<div class="markdown-body" id="postBody"><p>source: <a href="https://www.seangoedecke.com/good-system-design/" rel="nofollow">https://www.seangoedecke.com/good-system-design/</a></p>
+<p>我所知道的关于良好系统设计的一切 --- Everything I know about good system design</p>
 <p>我看到过很多糟糕的系统设计建议。一个经典的例子是 LinkedIn 上那种“我打赌你从来没听说过_队列_ ”式的帖子，大概是针对行业新手的。另一个例子是 Twitter 上那种“如果你把布尔值存储在数据库中，那你就是个糟糕的工程师”式的巧妙伎俩 <sup id="user-content-fnref-1"><a href="https://www.seangoedecke.com/good-system-design/#fn-1" rel="nofollow">1。</a></sup> 即使是好的系统设计建议也可能有点糟糕。我喜欢 <em>《设计数据密集型应用程序》</em> ，但我认为它对工程师遇到的大多数系统设计问题并不是特别有用。</p>
 <p>什么是系统设计？在我看来，如果软件设计是组装代码的方式，那么系统设计就是组装_服务的_方式。软件设计的原语是变量、函数、类等等。系统设计的原语是应用服务器、数据库、缓存、队列、事件总线、代理等等。</p>
 <p>这篇文章旨在粗略地写下我所了解的关于良好系统设计的一切。很多具体的判断都依赖于经验，我无法在这篇文章中详尽阐述。但我尽力写下我所能写的内容。</p>
@@ -191,7 +196,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 cmButton=document.getElementById("cmButton");
     span=document.createElement("span");
     span.setAttribute("class","Counter");
-    span.innerHTML="1";
+    span.innerHTML="3";
     cmButton.appendChild(span);
 
 
